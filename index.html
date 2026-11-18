@@ -103,6 +103,42 @@
 .system-core{background:radial-gradient(circle,#e1eee51c,#172b37f2 70%);border-color:#b6d6c288;box-shadow:0 0 0 12px #dce8e108,0 0 45px #79bba02a}
 .core-mark span:nth-child(1){background:#79c5a2}.core-mark span:nth-child(2){background:#e2b875}.core-mark span:nth-child(3){background:#7bc4e2}
 
+
+/* Three-domain Venn diagram */
+.heroart.venn-art{min-height:430px;display:block;position:relative;overflow:hidden;border:1px solid #ffffff2b;border-radius:5px;background:radial-gradient(ellipse at 50% 52%,#405b5055 0%,#1a303b 48%,#142631 100%)}
+.venn-stage{position:absolute;inset:47px 8px 35px}
+.venn-circle{position:absolute;width:236px;height:236px;border-radius:50%;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding-top:40px;border:1.5px solid;mix-blend-mode:screen;transition:transform .35s ease,filter .35s ease}
+.venn-circle strong{font:800 12px Manrope;letter-spacing:.11em;color:#f2f5f2;text-shadow:0 1px 8px #10202a}
+.venn-circle small{font:7px 'DM Mono';letter-spacing:.06em;color:#e0e9e4;margin-top:5px;text-align:center;text-shadow:0 1px 6px #10202a}
+.venn-number{font:8px 'DM Mono';letter-spacing:.13em;margin-bottom:6px;opacity:.8}
+.venn-ops{left:calc(50% - 222px);top:14px;background:radial-gradient(circle at 35% 28%,#39b8899c,#16866b50 70%);border-color:#78d6ad}
+.venn-ops .venn-number{color:#9ce5c2}
+.venn-fin{left:calc(50% - 14px);top:14px;background:radial-gradient(circle at 65% 28%,#e8b45e9c,#b87b3450 70%);border-color:#f0c77e}
+.venn-fin .venn-number{color:#ffdc9b}
+.venn-energy{left:calc(50% - 118px);top:158px;padding-top:125px;background:radial-gradient(circle at 50% 75%,#49a9d99c,#236f9b52 70%);border-color:#82d1f0}
+.venn-energy .venn-number{color:#a8e5fa}
+.venn-intersection{position:absolute;z-index:5;left:50%;top:53%;transform:translate(-50%,-50%);width:118px;height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px solid #f4f6e7a6;border-radius:50%;background:radial-gradient(ellipse,#203b3beF 0%,#152c36eF 78%);box-shadow:0 0 0 5px #e4eee31c,0 0 30px #d4e9dc3d}
+.venn-intersection span{font:6px 'DM Mono';letter-spacing:.14em;color:#c4d9cb;margin-bottom:5px}
+.venn-intersection strong{font:800 9px/1.2 Manrope;letter-spacing:.025em;color:#fff}
+.venn-intersection i{width:20px;height:2px;background:linear-gradient(90deg,#77d1a7,#e7b96c,#7bc9e9);margin-top:6px}
+.venn-art .art-bottom{z-index:6}
+.venn-art .art-bottom i{padding:0 3px}
+@media(max-width:850px){.heroart.venn-art{min-height:410px}}
+@media(max-width:560px){
+.heroart.venn-art{min-height:390px}
+.venn-stage{inset:48px 0 32px}
+.venn-circle{width:184px;height:184px;padding-top:31px}
+.venn-ops{left:calc(50% - 174px);top:14px}
+.venn-fin{left:calc(50% - 10px);top:14px}
+.venn-energy{left:calc(50% - 92px);top:128px;padding-top:100px}
+.venn-circle strong{font-size:10px}.venn-circle small{font-size:6px;letter-spacing:.025em}
+.venn-intersection{top:52%;width:102px;height:78px}
+.venn-intersection strong{font-size:8px}
+.venn-intersection span{font-size:5px}
+.venn-art .art-bottom{font-size:6px;letter-spacing:.07em}
+}
+@media(max-width:380px){.venn-circle{width:166px;height:166px}.venn-ops{left:calc(50% - 157px)}.venn-fin{left:calc(50% - 9px)}.venn-energy{left:calc(50% - 83px);top:118px;padding-top:91px}.venn-circle small{font-size:5px}.venn-intersection{top:52%;width:94px;height:72px}}
+
 /* Inline SVG icon system */
 .node{display:flex;align-items:center;gap:8px}
 .node svg{width:17px;height:17px;color:var(--sage);flex:0 0 auto}
@@ -161,21 +197,15 @@
 <p class="lead" data-en="Engineering sustainable industrial systems through quantitative modelling, operational excellence, and evidence-based decision-making." data-id="Merekayasa sistem industri berkelanjutan melalui pemodelan kuantitatif, keunggulan operasional, dan pengambilan keputusan berbasis bukti.">Engineering sustainable industrial systems through quantitative modelling, operational excellence, and evidence-based decision-making.</p>
 <div class="meta"><span data-en="East Java, Indonesia" data-id="Jawa Timur, Indonesia">East Java, Indonesia</span><span data-en="Professional portfolio · 2026" data-id="Portofolio profesional · 2026">Professional portfolio · 2026</span></div>
 <div class="buttons"><a class="btn primary" href="#work" data-en="Explore selected work ↘" data-id="Jelajahi karya pilihan ↘">Explore selected work ↘</a><a class="btn ghost" href="cv-english.html" data-href-en="cv-english.html" data-href-id="cv-indonesia.html" data-en="View résumé ↗" data-id="Lihat CV ↗">View résumé ↗</a></div>
-</div><div class="heroart systems-art" role="img" aria-label="Integrated industrial systems framework connecting operations, finance, and energy">
-<div class="art-head"><span class="art-kicker">SYSTEMS MAP / 01</span><span class="art-live"><i></i> INTEGRATED VIEW</span></div>
-<svg class="systems-lines" viewBox="0 0 520 390" fill="none" aria-hidden="true" preserveAspectRatio="none">
-<defs><linearGradient id="flowLine" x1="70" y1="50" x2="440" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#91B39F" stop-opacity=".18"/><stop offset=".52" stop-color="#D7E4DB" stop-opacity=".9"/><stop offset="1" stop-color="#B99B6C" stop-opacity=".5"/></linearGradient></defs>
-<path d="M105 105 C155 105 165 155 220 177 S320 205 410 105" stroke="url(#flowLine)" stroke-width="1.5" stroke-dasharray="5 7"/>
-<path d="M105 105 C95 205 160 285 260 292 S390 250 410 105" stroke="url(#flowLine)" stroke-width="1.5" stroke-dasharray="3 8"/>
-<path d="M105 105 C150 55 350 55 410 105" stroke="#AFC4B7" stroke-opacity=".22"/>
-<circle cx="105" cy="105" r="4" fill="#BFD3C6"/><circle cx="410" cy="105" r="4" fill="#C8AD7E"/><circle cx="260" cy="292" r="4" fill="#BFD3C6"/>
-<circle cx="260" cy="190" r="112" stroke="#C8D8CE" stroke-opacity=".12"/><circle cx="260" cy="190" r="84" stroke="#C8D8CE" stroke-opacity=".16" stroke-dasharray="2 7"/>
-</svg>
-<div class="system-core"><span class="core-overline">DECISION ENGINE</span><div class="core-mark"><span></span><span></span><span></span></div><strong>INDUSTRIAL<br>SYSTEMS</strong><small>ENGINEERING THE INTERSECTIONS</small></div>
-<div class="system-card op-card"><div class="system-card-top"><span class="system-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V9l6 3V8l6 4V4h6v16H3Z"/><path d="M7 16h.01M12 16h.01M17 16h.01" /></svg></span><span class="card-index">01 / FLOW</span></div><b data-en="OPERATIONS" data-id="OPERASI">OPERATIONS</b><small data-en="PROCESS · QUALITY · CAPACITY" data-id="PROSES · MUTU · KAPASITAS">PROCESS · QUALITY · CAPACITY</small><div class="mini-flow"><i></i><i></i><i></i><i></i><i></i></div></div>
-<div class="system-card fin-card"><div class="system-card-top"><span class="system-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V4M3 20h18"/><path d="m7 15 4-5 3 3 6-8"/><path d="M16 5h4v4"/></svg></span><span class="card-index">02 / VALUE</span></div><b data-en="FINANCE" data-id="KEUANGAN">FINANCE</b><small data-en="COST · NPV · INVESTMENT" data-id="BIAYA · NPV · INVESTASI">COST · NPV · INVESTMENT</small><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
-<div class="system-card energy-card"><div class="system-card-top"><span class="system-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-3 9h7l-6 11 2-9H6l7-11Z"/></svg></span><span class="card-index">03 / TRANSITION</span></div><b data-en="ENERGY" data-id="ENERGI">ENERGY</b><small data-en="SOLAR PV · EMISSIONS · LCA" data-id="PLTS · EMISI · LCA">SOLAR PV · EMISSIONS · LCA</small><div class="energy-track"><i></i></div></div>
-<div class="art-bottom"><span>OPERATIONS <i>×</i> ECONOMICS <i>×</i> SUSTAINABILITY</span><span>AG / 2026</span></div>
+</div><div class="heroart systems-art venn-art" role="img" aria-label="Three-circle Venn diagram showing the intersection of operations, finance, and energy in sustainable industrial systems">
+<div class="art-head"><span class="art-kicker">SYSTEMS MAP / 01</span><span class="art-live"><i></i> INTERCONNECTED DOMAINS</span></div>
+<div class="venn-stage" aria-hidden="true">
+<div class="venn-circle venn-ops"><span class="venn-number">01</span><strong data-en="OPERATIONS" data-id="OPERASI">OPERATIONS</strong><small data-en="PROCESS · QUALITY · FLOW" data-id="PROSES · MUTU · ALUR">PROCESS · QUALITY · FLOW</small></div>
+<div class="venn-circle venn-fin"><span class="venn-number">02</span><strong data-en="FINANCE" data-id="KEUANGAN">FINANCE</strong><small data-en="COST · VALUE · INVESTMENT" data-id="BIAYA · NILAI · INVESTASI">COST · VALUE · INVESTMENT</small></div>
+<div class="venn-circle venn-energy"><span class="venn-number">03</span><strong data-en="ENERGY" data-id="ENERGI">ENERGY</strong><small data-en="SOLAR PV · CARBON · LCA" data-id="PLTS · KARBON · LCA">SOLAR PV · CARBON · LCA</small></div>
+<div class="venn-intersection"><span>SHARED VALUE</span><strong>SUSTAINABLE<br>INDUSTRIAL<br>SYSTEMS</strong><i></i></div>
+</div>
+<div class="art-bottom"><span>EFFICIENCY <i>×</i> VIABILITY <i>×</i> SUSTAINABILITY</span><span>AG / 2026</span></div>
 </div></div><div class="herofoot"><span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span><span>AGUS RIANTO / 2026</span></div></div></section>
 <section class="proof"><div class="wrap proofgrid">
 <div class="metric"><strong>5<i>+</i></strong><div><b data-en="Years of experience" data-id="Tahun pengalaman">Years of experience</b><small data-en="Manufacturing & industrial systems" data-id="Manufaktur & sistem industri">Manufacturing & industrial systems</small></div></div>
