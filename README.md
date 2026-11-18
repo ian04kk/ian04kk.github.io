@@ -24,3 +24,7 @@ The website is hosted free on GitHub Pages as a GitHub user site. The repository
 ## Content accuracy
 
 The portfolio is based on the supplied English and Indonesian CV documents. The rooftop solar PV financial and emissions results are described as a thesis simulation for anonymized PT XYZ. Ministry of Industry and GIZ research initiatives are labelled as planning-stage work, with their ToR status stated.
+
+## Visual assets
+
+Selected project-card photographs are illustrative editorial visuals sourced from Pexels. Photographer/source links are displayed directly on the relevant images. They are not presented as photographs of Agus Rianto's workplace or research project sites.
