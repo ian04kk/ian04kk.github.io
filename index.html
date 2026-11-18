@@ -134,6 +134,9 @@
       const translation = element.getAttribute("data-" + selected);
       if (translation !== null) element.innerHTML = translation;
     });
+    document.querySelectorAll("[data-href-en][data-href-id]").forEach((link) => {
+      link.setAttribute("href", link.getAttribute("data-href-" + selected));
+    });
     buttons.forEach((button) => {
       const active = button.dataset.langSwitch === selected;
       button.classList.toggle("active", active);
