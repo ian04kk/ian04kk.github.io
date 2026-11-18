@@ -12,9 +12,7 @@ Bilingual (English / Indonesian), responsive static portfolio website built with
 
 ## Hosting and deployment
 
-The website is hosted free on GitHub Pages. No custom domain is configured.
-
-The `Publish portfolio files` GitHub Actions workflow publishes the static website from `main` to the `gh-pages` branch. GitHub Pages is configured to deploy from `gh-pages` at the repository root (`/(root)`).
+The website is hosted free on GitHub Pages as a GitHub user site. The repository name is `ian04kk.github.io`; the recommended publishing source is the `main` branch at the repository root (`/(root)`). No custom domain is configured.
 
 ## Website files
 
@@ -22,7 +20,6 @@ The `Publish portfolio files` GitHub Actions workflow publishes the static websi
 - `cv-english.html` — printable English résumé; use **Print / Save as PDF** in the browser
 - `cv-indonesia.html` — printable Indonesian CV; use **Cetak / Simpan sebagai PDF** in the browser
 - `favicon.svg` — site icon using the full name
-- `.github/workflows/pages.yml` — automatic publishing workflow
 
 ## Content accuracy
 
