@@ -1,20 +1,26 @@
 # Agus Rianto — Professional Portfolio
 
-Bilingual professional portfolio for Agus Rianto, built as a responsive static website.
+Bilingual English / Indonesian professional website, built as a regular static HTML, CSS and JavaScript site.
 
-## Website
+## Target public URL
+
 https://ian04kk.github.io/Portofolio-Agus-Rianto/
 
-## Contents
-- \`index.html\` — complete bilingual website (English / Indonesian)
-- \`favicon.svg\` — site icon
-- \`downloads/\` — English and Indonesian CV files
-- \`.github/workflows/pages.yml\` — automatic GitHub Pages deployment
+## Enable GitHub Pages
 
-## Deployment
-The included GitHub Actions workflow deploys the site whenever changes are pushed to \`main\`. Check the **Actions** tab for the deployment status. If Pages is not enabled yet, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source.
+1. Open [Repository Settings → Pages](https://github.com/ian04kk/Portofolio-Agus-Rianto/settings/pages).
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select branch **gh-pages** and folder **/(root)**, then click **Save**.
 
-## Accuracy and disclosure
-- The solar PV thesis results are a modelled techno-economic assessment for anonymized PT XYZ, not a claim of an implemented installation.
-- The GIZ agrivoltaics and Ministry of Industry decarbonization initiatives are labelled as planning-stage work.
-- Contact details appear as included in the supplied CV. Review before sharing broadly.
+GitHub Actions automatically publishes the site files from `main` to the `gh-pages` branch whenever `main` changes.
+
+## Files
+
+- `index.html` — bilingual homepage
+- `cv-english.html` — English résumé; use Print / Save as PDF
+- `cv-indonesia.html` — Indonesian CV; use Cetak / Simpan sebagai PDF
+- `favicon.svg` — full-name site icon
+- `downloads/` — original CV files
+- `.github/workflows/pages.yml` — publishing workflow
+
+Project statements and status labels are based on the supplied CV. The solar PV thesis is a simulation; the Kemenperin and GIZ initiatives are labelled as planning-stage work.
