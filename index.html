@@ -56,6 +56,35 @@
 @media(max-width:850px){.value-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.visual{height:164px}.value-grid{grid-template-columns:1fr}.value-card{min-height:0}.value-intro{margin-top:28px}}
 
+
+/* Advanced systems map in the hero */
+.heroart.systems-art{min-height:420px;display:block;overflow:hidden;border:1px solid #ffffff24;border-radius:5px;background:radial-gradient(ellipse at 50% 48%,#526d5c55 0%,#1a303b 48%,#142631 100%);box-shadow:0 22px 60px #08131d38}
+.systems-art:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#dce8e108 1px,transparent 1px),linear-gradient(90deg,#dce8e108 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at center,#000 10%,transparent 78%);pointer-events:none}
+.art-head{position:absolute;top:17px;left:19px;right:19px;display:flex;justify-content:space-between;align-items:center;z-index:4;color:#9eafb5;font:9px 'DM Mono';letter-spacing:.13em}
+.art-live{display:flex;align-items:center;gap:7px;color:#b9cbbf}.art-live i{width:6px;height:6px;border-radius:50%;background:#a8c6b1;box-shadow:0 0 12px #a8c6b1;display:inline-block}
+.systems-lines{position:absolute;inset:28px 0 18px;width:100%;height:calc(100% - 46px);z-index:0}
+.systems-lines path{stroke-dasharray:5 8;animation:systemFlow 18s linear infinite}
+@keyframes systemFlow{to{stroke-dashoffset:-150}}
+.system-core{position:absolute;left:50%;top:47%;transform:translate(-50%,-50%);width:154px;height:154px;border:1px solid #c4d8ca55;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#dce8e112,#172b37eF 70%);box-shadow:0 0 0 12px #dce8e108,0 0 45px #a7c3b31a;z-index:2}
+.core-overline{font:8px 'DM Mono';letter-spacing:.16em;color:#9db8a7;margin-bottom:10px}
+.core-mark{height:20px;display:flex;align-items:end;gap:4px;margin-bottom:8px}.core-mark span{width:4px;border-radius:3px;background:#b6cdbd}.core-mark span:nth-child(1){height:9px;opacity:.55}.core-mark span:nth-child(2){height:17px}.core-mark span:nth-child(3){height:12px;opacity:.75}
+.system-core strong{font:800 15px/1.06 Manrope;letter-spacing:.02em;color:#f0f4f1}.system-core small{font:7px 'DM Mono';letter-spacing:.09em;color:#9babb1;margin-top:9px}
+.system-card{position:absolute;z-index:3;width:172px;padding:12px 13px 11px;background:linear-gradient(145deg,#203845f5,#172b36f5);border:1px solid #b6c9bf55;border-radius:4px;box-shadow:0 12px 28px #07131d45;color:#e4ece7}
+.system-card:after{content:"";position:absolute;inset:4px;border:1px solid #ffffff08;pointer-events:none;border-radius:2px}
+.op-card{top:67px;left:18px}.fin-card{top:67px;right:18px;border-color:#c7ad805e}.energy-card{bottom:50px;left:50%;transform:translateX(-50%);width:205px}
+.system-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
+.system-icon{width:25px;height:25px;border:1px solid #a9c0b044;border-radius:6px;display:grid;place-items:center;color:#b7cfbf}.system-icon svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fin-card .system-icon{color:#d0b487}.card-index{font:7px 'DM Mono';letter-spacing:.1em;color:#8fa49a}
+.system-card>b{display:block;font:700 11px Manrope;letter-spacing:.08em;color:#f0f4f1}
+.system-card>small{display:block;font:7px 'DM Mono';letter-spacing:.045em;color:#9eafb5;margin-top:4px;white-space:nowrap}
+.mini-flow{display:flex;gap:4px;margin-top:10px}.mini-flow i{height:3px;flex:1;background:#9db9a7;border-radius:3px;opacity:.8}.mini-flow i:nth-child(2),.mini-flow i:nth-child(4){opacity:.35}
+.mini-bars{height:14px;display:flex;align-items:end;gap:4px;margin-top:6px}.mini-bars i{width:13px;background:#c3a77c;border-radius:2px 2px 0 0;height:35%;opacity:.8}.mini-bars i:nth-child(2){height:60%}.mini-bars i:nth-child(3){height:45%}.mini-bars i:nth-child(4){height:85%}.mini-bars i:nth-child(5){height:100%}
+.energy-card .system-icon{color:#b7cfbf}.energy-track{height:3px;background:#ffffff18;margin-top:10px;border-radius:4px;overflow:hidden}.energy-track i{display:block;width:68%;height:100%;background:linear-gradient(90deg,#8da995,#c3d6c8);border-radius:4px}
+.art-bottom{position:absolute;bottom:14px;left:17px;right:17px;display:flex;justify-content:space-between;gap:8px;color:#82969c;font:7px 'DM Mono';letter-spacing:.11em;z-index:4}.art-bottom i{font-style:normal;color:#b4c9bc;padding:0 2px}
+@media(max-width:850px){.heroart.systems-art{min-height:390px}}
+@media(max-width:560px){.heroart.systems-art{min-height:350px}.op-card{top:58px;left:9px;width:145px}.fin-card{top:58px;right:9px;width:145px}.system-card{padding:10px}.energy-card{bottom:46px;width:190px}.system-core{width:130px;height:130px;top:48%}.system-core strong{font-size:13px}.system-card>small{font-size:6px}.art-head{left:12px;right:12px}.art-bottom{left:10px;right:10px;font-size:6px;letter-spacing:.07em}}
+@media(prefers-reduced-motion:reduce){.systems-lines path{animation:none}}
+
 /* Inline SVG icon system */
 .node{display:flex;align-items:center;gap:8px}
 .node svg{width:17px;height:17px;color:var(--sage);flex:0 0 auto}
@@ -114,10 +143,21 @@
 <p class="lead" data-en="Engineering sustainable industrial systems through quantitative modelling, operational excellence, and evidence-based decision-making." data-id="Merekayasa sistem industri berkelanjutan melalui pemodelan kuantitatif, keunggulan operasional, dan pengambilan keputusan berbasis bukti.">Engineering sustainable industrial systems through quantitative modelling, operational excellence, and evidence-based decision-making.</p>
 <div class="meta"><span data-en="East Java, Indonesia" data-id="Jawa Timur, Indonesia">East Java, Indonesia</span><span data-en="Professional portfolio · 2026" data-id="Portofolio profesional · 2026">Professional portfolio · 2026</span></div>
 <div class="buttons"><a class="btn primary" href="#work" data-en="Explore selected work ↘" data-id="Jelajahi karya pilihan ↘">Explore selected work ↘</a><a class="btn ghost" href="cv-english.html" data-href-en="cv-english.html" data-href-id="cv-indonesia.html" data-en="View résumé ↗" data-id="Lihat CV ↗">View résumé ↗</a></div>
-</div><div class="heroart" aria-label="Operations, finance, energy framework">
-<div class="orbit"></div><div class="orbit orbit2"></div><div class="core"><small data-en="COMPLEXITY" data-id="KOMPLEKSITAS">COMPLEXITY</small><b>↗</b><small data-en="CLARITY" data-id="KEJELASAN">CLARITY</small></div>
-<div class="node n1"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 3V9l6 3V5h6v16H3Z"/><path d="M7 17h.01M11 17h.01M15 17h.01M19 17h.01"/></svg><span data-en="OPERATIONS" data-id="OPERASI">OPERATIONS</span></div><div class="node n2"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 6-7"/><path d="M16 6h4v4"/></svg><span data-en="FINANCE" data-id="KEUANGAN">FINANCE</span></div><div class="node n3"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 9h7l-6 11 2-9H6l7-11Z"/></svg><span data-en="ENERGY" data-id="ENERGI">ENERGY</span></div>
-<div class="artfoot"><span data-en="STRUCTURE" data-id="STRUKTUR">STRUCTURE</span><span data-en="→ INSIGHT → IMPACT" data-id="→ WAWASAN → DAMPAK">→ INSIGHT → IMPACT</span></div>
+</div><div class="heroart systems-art" role="img" aria-label="Integrated industrial systems framework connecting operations, finance, and energy">
+<div class="art-head"><span class="art-kicker">SYSTEMS MAP / 01</span><span class="art-live"><i></i> INTEGRATED VIEW</span></div>
+<svg class="systems-lines" viewBox="0 0 520 390" fill="none" aria-hidden="true" preserveAspectRatio="none">
+<defs><linearGradient id="flowLine" x1="70" y1="50" x2="440" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#91B39F" stop-opacity=".18"/><stop offset=".52" stop-color="#D7E4DB" stop-opacity=".9"/><stop offset="1" stop-color="#B99B6C" stop-opacity=".5"/></linearGradient></defs>
+<path d="M105 105 C155 105 165 155 220 177 S320 205 410 105" stroke="url(#flowLine)" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M105 105 C95 205 160 285 260 292 S390 250 410 105" stroke="url(#flowLine)" stroke-width="1.5" stroke-dasharray="3 8"/>
+<path d="M105 105 C150 55 350 55 410 105" stroke="#AFC4B7" stroke-opacity=".22"/>
+<circle cx="105" cy="105" r="4" fill="#BFD3C6"/><circle cx="410" cy="105" r="4" fill="#C8AD7E"/><circle cx="260" cy="292" r="4" fill="#BFD3C6"/>
+<circle cx="260" cy="190" r="112" stroke="#C8D8CE" stroke-opacity=".12"/><circle cx="260" cy="190" r="84" stroke="#C8D8CE" stroke-opacity=".16" stroke-dasharray="2 7"/>
+</svg>
+<div class="system-core"><span class="core-overline">DECISION ENGINE</span><div class="core-mark"><span></span><span></span><span></span></div><strong>INDUSTRIAL<br>SYSTEMS</strong><small>ENGINEERING THE INTERSECTIONS</small></div>
+<div class="system-card op-card"><div class="system-card-top"><span class="system-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V9l6 3V8l6 4V4h6v16H3Z"/><path d="M7 16h.01M12 16h.01M17 16h.01" /></svg></span><span class="card-index">01 / FLOW</span></div><b data-en="OPERATIONS" data-id="OPERASI">OPERATIONS</b><small data-en="PROCESS · QUALITY · CAPACITY" data-id="PROSES · MUTU · KAPASITAS">PROCESS · QUALITY · CAPACITY</small><div class="mini-flow"><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="system-card fin-card"><div class="system-card-top"><span class="system-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V4M3 20h18"/><path d="m7 15 4-5 3 3 6-8"/><path d="M16 5h4v4"/></svg></span><span class="card-index">02 / VALUE</span></div><b data-en="FINANCE" data-id="KEUANGAN">FINANCE</b><small data-en="COST · NPV · INVESTMENT" data-id="BIAYA · NPV · INVESTASI">COST · NPV · INVESTMENT</small><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="system-card energy-card"><div class="system-card-top"><span class="system-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-3 9h7l-6 11 2-9H6l7-11Z"/></svg></span><span class="card-index">03 / TRANSITION</span></div><b data-en="ENERGY" data-id="ENERGI">ENERGY</b><small data-en="SOLAR PV · EMISSIONS · LCA" data-id="PLTS · EMISI · LCA">SOLAR PV · EMISSIONS · LCA</small><div class="energy-track"><i></i></div></div>
+<div class="art-bottom"><span>OPERATIONS <i>×</i> ECONOMICS <i>×</i> SUSTAINABILITY</span><span>AG / 2026</span></div>
 </div></div><div class="herofoot"><span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span><span>AGUS RIANTO / 2026</span></div></div></section>
 <section class="proof"><div class="wrap proofgrid">
 <div class="metric"><strong>5<i>+</i></strong><div><b data-en="Years of experience" data-id="Tahun pengalaman">Years of experience</b><small data-en="Manufacturing & industrial systems" data-id="Manufaktur & sistem industri">Manufacturing & industrial systems</small></div></div>
