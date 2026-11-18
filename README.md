@@ -4,7 +4,11 @@ Bilingual English / Indonesian professional website, built as a regular static H
 
 ## Target public URL
 
-https://ian04kk.github.io/Portofolio-Agus-Rianto/
+https://agusrianto.id/
+
+## Custom domain: agusrianto.id
+
+The publishing source includes a root `CNAME` file for `agusrianto.id`. Configure the DNS records at the domain registrar, then verify the custom domain under GitHub Pages settings.
 
 ## Enable GitHub Pages
 
