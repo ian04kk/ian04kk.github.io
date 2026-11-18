@@ -1,25 +1,20 @@
 # Agus Rianto — Professional Portfolio
 
-Bilingual (English / Indonesian) portfolio website for Agus Rianto.
+Bilingual professional portfolio for Agus Rianto, built as a responsive static website.
 
-## Published website
-
+## Website
 https://ian04kk.github.io/Portofolio-Agus-Rianto/
 
-## GitHub Pages
+## Contents
+- \`index.html\` — complete bilingual website (English / Indonesian)
+- \`favicon.svg\` — site icon
+- \`downloads/\` — English and Indonesian CV files
+- \`.github/workflows/pages.yml\` — automatic GitHub Pages deployment
 
-This repository is configured for a project site. In GitHub, open **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, then save if Pages is not already enabled.
+## Deployment
+The included GitHub Actions workflow deploys the site whenever changes are pushed to \`main\`. Check the **Actions** tab for the deployment status. If Pages is not enabled yet, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source.
 
-## Files
-
-- `index.html` — portfolio content and bilingual sections
-- `styles.css` — responsive visual system
-- `script.js` — language switcher and mobile navigation
-- `favicon.svg` — site icon
-- `downloads/` — English and Indonesian CV files
-
-## Notes
-
-- Contact details are published as provided in the supplied CV.
-- Project descriptions distinguish documented experience, research collaboration, and thesis simulation.
-- The solar PV thesis is presented as a techno-economic simulation for anonymized PT XYZ.
+## Accuracy and disclosure
+- The solar PV thesis results are a modelled techno-economic assessment for anonymized PT XYZ, not a claim of an implemented installation.
+- The GIZ agrivoltaics and Ministry of Industry decarbonization initiatives are labelled as planning-stage work.
+- Contact details appear as included in the supplied CV. Review before sharing broadly.
