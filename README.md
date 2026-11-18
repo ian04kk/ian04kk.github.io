@@ -4,11 +4,11 @@ Bilingual (English / Indonesian), responsive static portfolio website built with
 
 ## Live website
 
-- Main website: https://ian04kk.github.io/Portofolio-Agus-Rianto/
-- English: https://ian04kk.github.io/Portofolio-Agus-Rianto/?lang=en
-- Bahasa Indonesia: https://ian04kk.github.io/Portofolio-Agus-Rianto/?lang=id
-- English résumé: https://ian04kk.github.io/Portofolio-Agus-Rianto/cv-english.html
-- CV Bahasa Indonesia: https://ian04kk.github.io/Portofolio-Agus-Rianto/cv-indonesia.html
+- Main website: https://ian04kk.github.io/
+- English: https://ian04kk.github.io/?lang=en
+- Bahasa Indonesia: https://ian04kk.github.io/?lang=id
+- English résumé: https://ian04kk.github.io/cv-english.html
+- CV Bahasa Indonesia: https://ian04kk.github.io/cv-indonesia.html
 
 ## Hosting and deployment
 
