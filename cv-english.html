@@ -3,6 +3,50 @@
 <style>
 :root{--navy:#101d2b;--ink:#1b2933;--muted:#64727b;--paper:#f5f5f1;--line:#dfe3e1;--sage:#829b8d}*{box-sizing:border-box}body{margin:0;background:#e9ece9;color:var(--ink);font:14px/1.55 Arial,sans-serif}.top{background:var(--navy);color:#fff;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}.top a{color:#dce8e1;text-decoration:none;font-size:12px}.top button{border:1px solid #8ca596;background:#dce8e1;color:#17232d;padding:9px 13px;border-radius:3px;font-weight:bold;cursor:pointer}.sheet{max-width:900px;margin:28px auto;background:white;padding:48px 58px;box-shadow:0 15px 45px #1b29331a}.name{font:800 34px/1.1 Arial,sans-serif;letter-spacing:-1.3px;margin-bottom:5px}.headline{font-weight:bold;color:#51695c}.contact{font-size:12px;color:var(--muted);margin:8px 0 22px}.section{margin-top:20px}.section h2{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;border-bottom:1.5px solid var(--navy);padding-bottom:5px;margin:0 0 10px;color:var(--navy)}.role{display:flex;justify-content:space-between;gap:20px}.role b{font-size:14px}.date{font-size:12px;color:var(--muted);white-space:nowrap}.sub{font-size:12px;color:var(--muted);margin:2px 0 6px}.item{margin:0 0 10px}.item p{margin:4px 0}.item ul{margin:5px 0;padding-left:18px}.item li{margin:3px 0}.skill{margin:5px 0}.skill b{color:#263b32}.footnote{font-size:11px;color:var(--muted);margin-top:28px;border-top:1px solid var(--line);padding-top:10px}@page{size:A4;margin:13mm}@media print{body{background:white;font-size:10.5px}.top{display:none}.sheet{max-width:none;margin:0;padding:0;box-shadow:none}.name{font-size:27px}.section{margin-top:13px}.section h2{font-size:11px}.contact,.sub,.date{font-size:10px}.footnote{font-size:9px;page-break-inside:avoid}}
 @media(max-width:650px){.top{padding:12px 16px}.sheet{margin:0;padding:25px 20px}.role{display:block}.date{margin-top:2px;white-space:normal}}
+
+/* Refined résumé layout: consistent hierarchy, readable rhythm and print-safe structure */
+:where(a,button):focus-visible{outline:3px solid #c69c63;outline-offset:3px}
+body{background:radial-gradient(ellipse at 50% 0%,#dce4df 0%,#e9ece9 52%,#e5e9e6 100%);font-family:Arial,sans-serif;line-height:1.62}
+.top{background:linear-gradient(110deg,#101d2b,#1c3742 72%,#29483e);min-height:58px}
+.top a{font-weight:700}
+.top button{transition:transform .18s ease,background .18s ease}
+.top button:hover{background:#edf5ef;transform:translateY(-1px)}
+.sheet{border:1px solid #dfe5e1;border-radius:3px;position:relative;overflow:hidden}
+.sheet:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,#789a87,#c69c63,#6b9db0)}
+.name{font-family:Arial,sans-serif;font-size:36px;letter-spacing:-1.5px;color:#101d2b}
+.headline{font-size:13px;line-height:1.5;color:#496958}
+.contact{line-height:1.7}
+.section{margin-top:23px;break-inside:auto}
+.section h2{font-size:12px;font-weight:800;letter-spacing:1.35px;color:#173344;border-bottom:1px solid #cfd9d3;padding:0 0 7px;position:relative}
+.section h2:after{content:"";position:absolute;left:0;bottom:-1px;width:54px;height:2px;background:linear-gradient(90deg,#8eae9a,#c69c63)}
+.role{align-items:baseline}
+.role b{line-height:1.4;color:#1c2c35}
+.date{font-family:Arial,sans-serif;font-weight:600;color:#6b7b81}
+.sub{line-height:1.5;color:#60766a}
+.item{margin:0 0 13px;break-inside:avoid}
+.item p,.item li{line-height:1.58}
+.item ul{padding-left:19px}
+.item li::marker{color:#7d9b89}
+.skill{padding:5px 0;border-bottom:1px solid #edf0ed}
+.skill:last-child{border-bottom:0}
+.skill b{color:#294c3c}
+.footnote{line-height:1.5}
+@media(max-width:650px){
+ .sheet{border-left:0;border-right:0}
+ .name{font-size:31px}
+ .section{margin-top:20px}
+ .role{gap:4px}
+}
+@media print{
+ body{background:#fff!important;color:#1b2933}
+ .sheet{border:0;border-radius:0}
+ .sheet:before{height:3px;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .section h2:after{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .item{break-inside:avoid}
+ a{color:inherit;text-decoration:none}
+}
+@media(prefers-reduced-motion:reduce){.top button{transition:none}}
+
 </style></head><body><div class="top"><a href="index.html">← Back to portfolio</a><button onclick="window.print()">Print / Save as PDF ↓</button></div><main class="sheet"><header><div class="name">AGUS RIANTO</div><div class="headline">Master of Engineering, Systems and Industrial Engineering | Manufacturing Systems and Quality · Energy Techno-Economics · Industrial Sustainability</div><div class="contact">Nganjuk, East Java, Indonesia · +62 893 008 2643 · ianrian980305@gmail.com</div></header>
 <section class="section"><h2>Professional Summary</h2><p>Industrial engineering graduate (Master of Engineering, ITS) with more than five years in manufacturing and state-owned enterprises across production, quality, and cost compliance, currently supporting the planning of research projects with the Ministry of Industry and GIZ. Research interests: industrial decarbonization, renewable energy integration, agrivoltaics, carbon economics, and circular economy.</p></section>
 <section class="section"><h2>Professional Experience</h2>
