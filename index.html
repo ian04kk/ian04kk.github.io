@@ -203,7 +203,7 @@
 .pv-caption span{display:block;font-size:11px;color:#a9bec5;margin-top:4px}
 .pv-footnote{font-size:11px;color:#9fb6bd;margin:15px 2px 0}
 @media(max-width:760px){.pv-caption{grid-template-columns:1fr 1fr}.pv-shell{padding:8px}}
-@media(max-width:480px){.pv-caption{grid-template-columns:1fr}.pv-svg text{font-size:16px}}
+@media(max-width:480px){.pv-caption{grid-template-columns:1fr}.pv-svg text{font-size:inherit}}
 
 
 /* Editorial typography and layout refinement */
@@ -353,7 +353,7 @@ h1,h2,h3,h4,.sectionhead h2,.splithead h2,.case h2,.body h3,.job h3,.research h3
  .venn-intersection strong{font-size:9px;line-height:1.16}
  .case-pv-visual{margin-top:0}
  .case-pv-visual .pv-shell{padding:8px}
- .case-pv-visual .pv-svg text{font-size:16px}
+ .case-pv-visual .pv-svg text{font-size:inherit}
 }
 
 
@@ -662,6 +662,26 @@ footer .foot a{color:#c3d8c7}
  .venn-intersection strong{font-size:7px}
  .expertise-item{font-size:9px}
 }
+
+/* PV diagram legibility and output-heading balance */
+.case-pv-visual .pv-svg{overflow:hidden}
+.case-pv-visual .pv-svg text{font-size:inherit}
+.case-pv-visual .pv-svg{shape-rendering:geometricPrecision;text-rendering:geometricPrecision}
+.outputs-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:34px;padding-bottom:14px;border-bottom:1px solid #ffffff26}
+.outputs-heading>.mono{font:800 10px/1.4 'DM Mono',monospace;letter-spacing:.14em;color:#b9e4c9;flex:0 0 auto}
+.outputs-heading-note{max-width:245px;text-align:right;color:#d9bd91;font:700 8px/1.65 'DM Mono',monospace;letter-spacing:.12em}
+.primarykpi{padding-top:20px}
+@media(max-width:600px){
+ .outputs-heading{align-items:flex-start;gap:10px}
+ .outputs-heading>.mono{font-size:9px;max-width:42%}
+ .outputs-heading-note{font-size:7px;max-width:54%;line-height:1.6}
+ .case-pv-visual .pv-svg text{font-size:inherit}
+}
+@media(max-width:390px){
+ .outputs-heading{gap:7px}
+ .outputs-heading-note{font-size:6px;letter-spacing:.08em}
+}
+
 </style>
 </head>
 <body data-current-lang="en">
@@ -867,7 +887,7 @@ footer .foot a{color:#c3d8c7}
   </div>
   <p class="pv-footnote" data-en="Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements." data-id="Visualisasi konseptual untuk portofolio, bukan gambar konstruksi. Desain single-line, koordinasi proteksi, pembatasan ekspor, dan skema meter aktual harus direkayasa sesuai profil beban lokasi dan persyaratan interkoneksi PLN.">Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements.</p>
 </div>
-<div class="outputs"><div class="mono" data-en="MODELLED PROJECT OUTPUT" data-id="HASIL PEMODELAN PROYEK">MODELLED PROJECT OUTPUT</div><div class="primarykpi"><strong>138.24 kWp</strong><span data-en="Rooftop PV system capacity" data-id="Kapasitas sistem PLTS atap">Rooftop PV system capacity</span></div><div class="emissions-viz" role="img" aria-label="Modelled emissions: 42.07 percent avoided and 57.93 percent remaining compared with baseline emissions of 193.42 tonnes of carbon dioxide equivalent">
+<div class="outputs"><div class="outputs-heading"><div class="mono" data-en="MODELLED PROJECT OUTPUT" data-id="HASIL PEMODELAN PROYEK">MODELLED PROJECT OUTPUT</div><div class="outputs-heading-note" data-en="ENERGY PERFORMANCE · CARBON IMPACT · FINANCIAL VIABILITY" data-id="KINERJA ENERGI · DAMPAK KARBON · KELAYAKAN FINANSIAL">ENERGY PERFORMANCE · CARBON IMPACT · FINANCIAL VIABILITY</div></div><div class="primarykpi"><strong>138.24 kWp</strong><span data-en="Rooftop PV system capacity" data-id="Kapasitas sistem PLTS atap">Rooftop PV system capacity</span></div><div class="emissions-viz" role="img" aria-label="Modelled emissions: 42.07 percent avoided and 57.93 percent remaining compared with baseline emissions of 193.42 tonnes of carbon dioxide equivalent">
 <h3 data-en="Modelled emissions impact" data-id="Dampak emisi hasil pemodelan">Modelled emissions impact</h3>
 <p data-en="Illustrative split against the baseline emissions inventory" data-id="Proporsi ilustratif terhadap inventarisasi emisi baseline">Illustrative split against the baseline emissions inventory</p>
 <div class="emissions-bar" aria-hidden="true"><span class="emissions-avoided"></span><span class="emissions-remaining"></span></div>
