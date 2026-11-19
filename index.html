@@ -201,7 +201,7 @@
 .pv-caption div{padding:13px 14px;border:1px solid #ffffff20;border-radius:7px;background:#ffffff08}
 .pv-caption b{display:block;font:800 11px Manrope;color:#dff5e9;letter-spacing:.06em}
 .pv-caption span{display:block;font-size:11px;color:#a9bec5;margin-top:4px}
-.pv-footnote{font-size:11px;color:#9fb6bd;margin:15px 2px 0}
+.pv-footnote{display:block;width:100%;max-width:none;box-sizing:border-box;font-size:11px;line-height:1.85;color:#b7cbd0;text-align:justify;text-justify:inter-word;margin:16px 0 0;padding:0 clamp(12px,2vw,24px)}
 @media(max-width:760px){.pv-caption{grid-template-columns:1fr 1fr}.pv-shell{padding:8px}}
 @media(max-width:480px){.pv-caption{grid-template-columns:1fr}}
 
@@ -911,39 +911,45 @@ footer .foot a{color:#c3d8c7}
 <!-- Utility interface and facility load -->
 <g font-family="Arial, sans-serif">
  <text x="720" y="466" text-anchor="middle" fill="#d9e9e5" font-size="11" font-weight="800" letter-spacing="2">POINT OF COMMON COUPLING (PCC) & FACILITY CONNECTION</text>
- <!-- Utility grid card -->
- <rect x="72" y="510" width="300" height="132" rx="11" fill="#183d50" stroke="#83c9ef" stroke-opacity=".85"/>
- <g transform="translate(112 532)" stroke="#8bcdf0" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <!-- Three lower interface cards: centered icon above dedicated text area -->
+ <rect x="72" y="500" width="300" height="150" rx="12" fill="#183d50" stroke="#83c9ef" stroke-opacity=".85"/>
+ <rect x="570" y="500" width="300" height="150" rx="12" fill="#183d50" stroke="#83c9ef" stroke-opacity=".85"/>
+ <rect x="1068" y="500" width="300" height="150" rx="12" fill="#1b403d" stroke="#b6d98e" stroke-opacity=".9"/>
+ <!-- Utility grid icon, centered -->
+ <g transform="translate(199 510) scale(.66)" stroke="#8bcdf0" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path d="M34 0L7 82M34 0L61 82M15 57H53M11 69H57M2 22H66M0 31H68M15 57L53 22M53 57L15 22"/>
   <path d="M-5 22H73M0 31H68" stroke-width="3"/>
  </g>
- <text x="225" y="554" text-anchor="middle" fill="#a8e2f5" font-size="14" font-weight="800">PLN UTILITY GRID</text>
- <text x="225" y="579" text-anchor="middle" fill="#c8dadd" font-size="10">Three-phase distribution network</text>
- <text x="225" y="603" text-anchor="middle" fill="#91b9c7" font-size="9" letter-spacing="1">IMPORT / EXPORT INTERFACE</text>
- <!-- Bidirectional meter -->
- <rect x="570" y="510" width="300" height="132" rx="11" fill="#183d50" stroke="#83c9ef" stroke-opacity=".85"/>
- <g transform="translate(610 535)">
+ <g text-anchor="middle" font-family="Arial, sans-serif">
+  <text x="222" y="582" fill="#a8e2f5" font-size="14" font-weight="800" letter-spacing=".25">PLN UTILITY GRID</text>
+  <text x="222" y="605" fill="#c8dadd" font-size="10">Three-phase distribution network</text>
+  <text x="222" y="627" fill="#91b9c7" font-size="9" font-weight="700" letter-spacing=".8">IMPORT / EXPORT INTERFACE</text>
+ </g>
+ <!-- Bidirectional meter icon, centered -->
+ <g transform="translate(698 510) scale(.68)">
   <rect x="0" y="0" width="64" height="76" rx="7" fill="#285d70" stroke="#9ddcf0" stroke-width="2"/>
   <rect x="10" y="10" width="44" height="24" rx="3" fill="#0d2d3b" stroke="#8bcfe4"/>
   <path d="M17 23H47" stroke="#9ce7d0" stroke-width="2"/>
   <circle cx="20" cy="51" r="4" fill="#9ce7d0"/><circle cx="44" cy="51" r="4" fill="#f0c879"/>
   <path d="M14 65H50" stroke="#a6d9e6" stroke-width="2"/>
  </g>
- <text x="755" y="554" text-anchor="middle" fill="#a8e2f5" font-size="14" font-weight="800">BIDIRECTIONAL METER</text>
- <text x="755" y="579" text-anchor="middle" fill="#c8dadd" font-size="10">Import / export energy measurement</text>
- <text x="755" y="603" text-anchor="middle" fill="#91b9c7" font-size="9" letter-spacing="1">kWh · PCC METERING</text>
- <!-- Industrial load -->
- <rect x="1068" y="510" width="300" height="132" rx="11" fill="#1b403d" stroke="#b6d98e" stroke-opacity=".9"/>
- <g transform="translate(1102 538)" stroke="#b8d991" stroke-width="2" fill="none" stroke-linejoin="round">
+ <g text-anchor="middle" font-family="Arial, sans-serif">
+  <text x="720" y="582" fill="#a8e2f5" font-size="14" font-weight="800" letter-spacing=".1">BIDIRECTIONAL METER</text>
+  <text x="720" y="605" fill="#c8dadd" font-size="10">Import / export energy measurement</text>
+  <text x="720" y="627" fill="#91b9c7" font-size="9" font-weight="700" letter-spacing=".8">kWh · PCC METERING</text>
+ </g>
+ <!-- Industrial facility icon, centered -->
+ <g transform="translate(1188 514) scale(.68)" stroke="#b8d991" stroke-width="2" fill="none" stroke-linejoin="round">
   <path d="M0 35L44 12L88 35V77H0Z" fill="#315c52"/>
   <path d="M-7 35L44 7L95 35" stroke-width="3"/>
   <path d="M12 48H30V77H12ZM43 48H62V65H43ZM69 48H81V77H69Z" fill="#153d3a"/>
   <path d="M6 82H92" stroke-width="3"/>
  </g>
- <text x="1234" y="554" text-anchor="middle" fill="#c7e8a7" font-size="14" font-weight="800">INDUSTRIAL LOAD</text>
- <text x="1234" y="579" text-anchor="middle" fill="#d2e0d4" font-size="10">Factory LV distribution & demand</text>
- <text x="1234" y="603" text-anchor="middle" fill="#a9c9a0" font-size="9" letter-spacing="1">SELF-CONSUMPTION</text>
-</g>
+ <g text-anchor="middle" font-family="Arial, sans-serif">
+  <text x="1218" y="582" fill="#c7e8a7" font-size="14" font-weight="800" letter-spacing=".3">INDUSTRIAL LOAD</text>
+  <text x="1218" y="605" fill="#d2e0d4" font-size="10">Factory LV distribution &amp; demand</text>
+  <text x="1218" y="627" fill="#a9c9a0" font-size="9" font-weight="700" letter-spacing=".8">SELF-CONSUMPTION</text>
+ </g>
 <!-- PCC connections: grid <-> meter <-> LV bus; LV bus -> facility -->
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
  <path d="M372 575H560" stroke="#83c9ef" stroke-width="3" marker-start="url(#pvArrowGrid2)" marker-end="url(#pvArrowGrid2)"/>
