@@ -205,6 +205,43 @@
 @media(max-width:760px){.pv-caption{grid-template-columns:1fr 1fr}.pv-shell{padding:8px}}
 @media(max-width:480px){.pv-caption{grid-template-columns:1fr}.pv-svg text{font-size:16px}}
 
+
+/* Editorial typography and layout refinement */
+:root{--text-measure:68ch}
+body{font-size:15.5px;line-height:1.72;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+p{max-width:var(--text-measure);line-height:1.75}
+h1,h2,h3,h4{line-height:1.18;text-wrap:balance}
+h1{letter-spacing:-.045em}
+h2{letter-spacing:-.035em}
+h3{letter-spacing:-.018em}
+.sectionhead{align-items:end;gap:clamp(24px,4vw,64px)}
+.sectionhead>div{min-width:0}
+.sectionhead>p{max-width:46ch;font-size:13px;line-height:1.75;font-weight:650;color:var(--muted)}
+.eyebrow,.tag,.date{font-weight:600}
+.body h3,.job h3,.research h3,.edurow h3,.value-card h3,.skill h3{font-weight:800;line-height:1.28}
+.body p,.job li,.research p,.detail,.value-card p,.skill p{line-height:1.75}
+.fact b,.metric b,.pv-caption b{font-weight:800}
+.venn-intersection{width:132px;height:104px;padding:10px}
+.venn-intersection strong{font-size:10px;line-height:1.22;letter-spacing:.035em}
+.venn-intersection span{display:none}
+.value-icon{background:linear-gradient(145deg,#fff0ca,#e7b35f);color:#74440b;border-color:#d39b42;box-shadow:0 5px 14px #9a641c30}
+.value-card:nth-child(2) .value-icon{background:linear-gradient(145deg,#e5efff,#9dbdf4);color:#174b9a;border-color:#729ce1}
+.value-card:nth-child(3) .value-icon{background:linear-gradient(145deg,#e5f8ef,#9ed9bd);color:#075d3e;border-color:#65b88e}
+.skill-icon svg,.value-icon svg{stroke-width:2.25}
+.node svg{filter:drop-shadow(0 1px 2px #0002)}
+.pv-caption b{font-size:11px;line-height:1.45}
+.pv-caption span{line-height:1.65}
+.pv-footnote{line-height:1.7}
+@media(max-width:760px){
+ .sectionhead{align-items:start;gap:12px}
+ .sectionhead>p{max-width:62ch}
+}
+@media(max-width:560px){
+ .venn-intersection{width:108px;height:86px}
+ .venn-intersection strong{font-size:8.5px}
+ body{font-size:15px}
+}
+
 </style>
 </head>
 <body data-current-lang="en">
@@ -236,7 +273,7 @@
 <div class="venn-circle venn-ops"><span class="venn-number">01</span><strong data-en="OPERATIONS" data-id="OPERASI">OPERATIONS</strong><small data-en="PROCESS · QUALITY · FLOW" data-id="PROSES · MUTU · ALUR">PROCESS · QUALITY · FLOW</small></div>
 <div class="venn-circle venn-fin"><span class="venn-number">02</span><strong data-en="FINANCE" data-id="KEUANGAN">FINANCE</strong><small data-en="COST · VALUE · INVESTMENT" data-id="BIAYA · NILAI · INVESTASI">COST · VALUE · INVESTMENT</small></div>
 <div class="venn-circle venn-energy"><span class="venn-number">03</span><strong data-en="ENERGY" data-id="ENERGI">ENERGY</strong><small data-en="SOLAR PV · CARBON · LCA" data-id="PLTS · KARBON · LCA">SOLAR PV · CARBON · LCA</small></div>
-<div class="venn-intersection"><span>SHARED VALUE</span><strong>SUSTAINABLE<br>INDUSTRIAL<br>SYSTEMS</strong><i></i></div>
+<div class="venn-intersection" aria-label="Sustainable Industrial Systems"><strong>SUSTAINABLE<br>INDUSTRIAL<br>SYSTEMS</strong><i></i></div>
 </div>
 <div class="art-bottom"><span>EFFICIENCY <i>×</i> VIABILITY <i>×</i> SUSTAINABILITY</span><span>AG / 2026</span></div>
 </div></div><div class="herofoot"><span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span><span>AGUS RIANTO / 2026</span></div></div></section>
@@ -415,7 +452,7 @@
 <div class="edurow"><div class="date">2018 — 2022</div><div><h3 data-en="Bachelor of Engineering, Industrial Engineering" data-id="Sarjana Teknik, Teknik Industri">Bachelor of Engineering, Industrial Engineering</h3><p data-en="Universitas 17 Agustus 1945 Surabaya · GPA 3.71 / 4.00 · Cum Laude" data-id="Universitas 17 Agustus 1945 Surabaya · IPK 3,71 / 4,00 · Cum Laude">Universitas 17 Agustus 1945 Surabaya · GPA 3.71 / 4.00 · Cum Laude</p></div></div>
 <div class="edurow"><div class="date">2013 — 2016</div><div><h3 data-en="Vocational High School, Light Vehicle Engineering" data-id="SMK Teknik Kendaraan Ringan">Vocational High School, Light Vehicle Engineering</h3><p>SMK Negeri 1 Nganjuk</p></div></div>
 <h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Certifications" data-id="Sertifikasi">Certifications</h3><div class="pill">ISO 9001:2015 Quality Management System</div><div class="pill">ISO 19011 Internal Auditor</div><div class="pill">ISO 2307:2020 Product Testing</div><div class="pill">ISO 1346:2019</div><div class="pill">Certified Supply Chain Analyst Professional (CSCAP)</div>
-<h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Selected honors" data-id="Penghargaan pilihan">Selected honors</h3><p style="font-size:13px;color:#65727b" data-en="4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016." data-id="Juara 4 tingkat regional Wilayah VII dan finalis tingkat provinsi, Kompetisi Debat Mahasiswa Indonesia (KDMI), Kemenristekdikti, 2019 · Penghargaan tugas akhir kategori media, Universitas 17 Agustus 1945 Surabaya, 2022 · Pendanaan MBKM Kredensial Mikro (KMMI), Kemendikbudristek: manajemen bisnis ayam ras petelur, Universitas Muhammadiyah Malang, 2021 · Juara 2 Lomba Debat Bahasa Indonesia, BEM Universitas 17 Agustus 1945 Surabaya, 2018 · Peringkat 1 seangkatan dan beasiswa prestasi, SMK Negeri 1 Nganjuk, 2013–2016.">4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016.</p><p style="font-size:13px;color:#65727b" data-en="<b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL ITP 510)" data-id="<b>Bahasa:</b> Indonesia — Penutur asli · Inggris — Kemahiran kerja profesional (TOEFL ITP 510)"><b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL ITP 510)</p><h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Organizations & activities" data-id="Organisasi & kegiatan">Organizations & activities</h3><p style="font-size:13px;color:#65727b" data-en="Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews." data-id="Sudut Lensa, Kabupaten Nganjuk (2017–2018): menyelenggarakan lomba film pendek tingkat SMA/SMK se-Kabupaten Nganjuk (2017), menulis naskah film, dan bertugas sebagai jurnalis film dokumenter, dari riset hingga wawancara narasumber.">Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews.</p>
+<h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Selected honors" data-id="Penghargaan pilihan">Selected honors</h3><p style="font-size:13px;color:#65727b" data-en="4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016." data-id="Juara 4 tingkat regional Wilayah VII dan finalis tingkat provinsi, Kompetisi Debat Mahasiswa Indonesia (KDMI), Kemenristekdikti, 2019 · Penghargaan tugas akhir kategori media, Universitas 17 Agustus 1945 Surabaya, 2022 · Pendanaan MBKM Kredensial Mikro (KMMI), Kemendikbudristek: manajemen bisnis ayam ras petelur, Universitas Muhammadiyah Malang, 2021 · Juara 2 Lomba Debat Bahasa Indonesia, BEM Universitas 17 Agustus 1945 Surabaya, 2018 · Peringkat 1 seangkatan dan beasiswa prestasi, SMK Negeri 1 Nganjuk, 2013–2016.">4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016.</p><p style="font-size:13px;color:#65727b" data-en="<b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL ITP®: 510)" data-id="<b>Bahasa:</b> Indonesia — Penutur asli · Inggris — Kemahiran kerja profesional (TOEFL ITP 510)"><b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL ITP 510)</p><h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Organizations & activities" data-id="Organisasi & kegiatan">Organizations & activities</h3><p style="font-size:13px;color:#65727b" data-en="Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews." data-id="Sudut Lensa, Kabupaten Nganjuk (2017–2018): menyelenggarakan lomba film pendek tingkat SMA/SMK se-Kabupaten Nganjuk (2017), menulis naskah film, dan bertugas sebagai jurnalis film dokumenter, dari riset hingga wawancara narasumber.">Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews.</p>
 </div></div></section>
 <section class="cta" id="contact"><div class="wrap contactgrid"><div><div class="eyebrow">07 / <span data-en="GET IN TOUCH" data-id="HUBUNGI SAYA">GET IN TOUCH</span></div><h2 data-en="Let's turn insight into <em>action.</em>" data-id="Mari ubah insight menjadi <em>aksi.</em>">Let's turn insight into <em>action.</em></h2><p data-en="For professional opportunities, research collaboration, or conversations around industrial systems, energy, and business analysis." data-id="Untuk peluang profesional, kolaborasi riset, atau diskusi seputar sistem industri, energi, dan analisis bisnis.">For professional opportunities, research collaboration, or conversations around industrial systems, energy, and business analysis.</p><a class="email" href="mailto:ianrian980305@gmail.com">ianrian980305@gmail.com ↗</a></div>
 <div class="contactcard"><div class="mono" data-en="CONTACT DETAILS · AGUS RIANTO / 2026" data-id="DETAIL KONTAK · AGUS RIANTO / 2026">CONTACT DETAILS · AGUS RIANTO / 2026</div><small data-en="EMAIL" data-id="EMAIL">EMAIL</small><a href="mailto:ianrian980305@gmail.com">ianrian980305@gmail.com</a><small data-en="PHONE" data-id="TELEPON">PHONE</small><a href="tel:+628930082643">+62 893 008 2643</a><small data-en="LOCATION" data-id="LOKASI">LOCATION</small><span data-en="Nganjuk, East Java, Indonesia" data-id="Nganjuk, Jawa Timur, Indonesia">Nganjuk, East Java, Indonesia</span><div class="downloads"><a href="cv-english.html" data-en="English résumé ↗" data-id="CV Bahasa Inggris ↗">English résumé ↗</a><a href="cv-indonesia.html" data-en="Indonesian CV ↗" data-id="CV Bahasa Indonesia ↗">Indonesian CV ↗</a></div></div></div></section>
