@@ -1130,3 +1130,69 @@ footer .foot a{color:#c3d8c7}
 })();
 </script>
 </body></html>
+
+/* Responsive hardening for desktop, tablet and mobile screens */
+html{width:100%;max-width:100%;overflow-x:clip}
+body{width:100%;max-width:100%;overflow-x:clip}
+img,svg,video,canvas{max-width:100%}
+.wrap,.hero-grid,.split,.casegrid,.contactgrid,.cards,.skills,.outputs,.pv-simulator{min-width:0}
+.hero-grid>* ,.split>* ,.casegrid>* ,.contactgrid>* ,.cards>* ,.skills>*{min-width:0}
+p,li,a,h1,h2,h3,small,strong{overflow-wrap:anywhere}
+button,a,input{touch-action:manipulation}
+a,button{ -webkit-tap-highlight-color:transparent }
+.header .nav{min-width:0}
+.brand{flex:0 1 auto;min-width:0}
+.actions{flex:0 0 auto}
+@media(max-width:850px){
+  .header .nav{flex-wrap:nowrap}
+  .mobile-menu-toggle{flex:0 0 40px}
+  .brand{font-size:clamp(12px,2.3vw,16px);letter-spacing:.035em}
+  .actions{gap:8px}
+  .lang button{padding:7px 8px}
+  .hero-grid,.split,.casegrid,.contactgrid{grid-template-columns:minmax(0,1fr)}
+  .proofgrid,.cards,.skills{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sectionhead{gap:12px}
+  .outputs{min-width:0}
+}
+@media(max-width:600px){
+  .wrap{width:calc(100% - 30px)}
+  .nav{height:62px}
+  .brand{font-size:12px;white-space:normal;line-height:1.15;max-width:calc(100% - 112px)}
+  .actions{gap:5px}
+  .lang{padding:2px}
+  .lang button{font-size:10px;padding:6px 7px}
+  .hero h1{font-size:clamp(34px,9.4vw,46px);overflow-wrap:normal}
+  .lead{font-size:15px}
+  .meta{gap:10px 15px;font-size:9px}
+  .buttons{gap:8px}
+  .btn{padding:11px 12px;font-size:12px}
+  .heroart.venn-art{width:100%;max-width:100%}
+  .proofgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .metric{min-width:0}
+  .metric strong{font-size:clamp(21px,6vw,27px)}
+  .metric>div{min-width:0}
+  .sectionhead h2,.splithead h2,.case h2,.contactgrid h2{font-size:clamp(29px,8vw,36px)}
+  .cards,.skills,.value-grid{grid-template-columns:minmax(0,1fr)}
+  .job,.research,.edurow{grid-template-columns:minmax(0,1fr);gap:7px}
+  .stats{gap:14px;flex-wrap:wrap}
+  .outputs{padding:14px}
+  .outputs .kpigrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contactcard{padding:18px}
+  .downloads{gap:12px}
+  .foot{gap:10px}
+  .foot span{line-height:1.6}
+}
+@media(max-width:360px){
+  .wrap{width:calc(100% - 24px)}
+  .brand{font-size:11px;max-width:calc(100% - 106px)}
+  .mobile-menu-toggle{width:36px;flex-basis:36px}
+  .actions{gap:3px}
+  .lang button{padding:5px}
+  .hero h1{font-size:33px}
+  .proofgrid{gap:9px}
+  .metric strong{font-size:21px}
+  .venn-intersection{max-width:50%}
+}
+@media(hover:none){
+  .card:hover,.skill:hover,.value-card:hover{transform:none}
+}
