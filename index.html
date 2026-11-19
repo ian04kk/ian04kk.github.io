@@ -300,6 +300,62 @@ h3{letter-spacing:-.018em}
 }
 @media(prefers-reduced-motion:reduce){.mobile-menu-toggle span{transition:none}}
 
+
+/* Final legibility, Venn centering and featured solar case layout */
+:root{--ink:#13232d;--muted:#4e5f69}
+body{color:#172630}
+p,.copy p,.body p,.job li,.research p,.detail,.value-card p,.skill p{color:#40515b;font-weight:500}
+h1,h2,h3,h4,.sectionhead h2,.splithead h2,.case h2,.body h3,.job h3,.research h3,.edurow h3,.value-card h3,.skill h3{font-weight:800}
+.eyebrow,.tag,.date,.mono{font-weight:700}
+.sectionhead>p{color:#3e505a;font-weight:650}
+.case p{color:#e0e8ec;font-weight:550}
+.case .note{color:#e0e8ec;font-weight:550}
+.case-pv-visual{grid-column:1/-1;min-width:0;margin-top:6px}
+.case-pv-heading{margin:0 0 16px}
+.case-pv-heading .mono{display:block;color:#a8d5bd;font-size:11px;font-weight:700;letter-spacing:.12em}
+.case-pv-heading p{color:#d2dde2;font-size:13px;margin:8px 0 0;max-width:75ch}
+.case-pv-visual .pv-shell{width:100%;background:linear-gradient(145deg,#122a38,#1b3947);border-color:#6ea7aa88}
+.case-pv-visual .pv-simulator{margin-top:18px}
+.case-pv-visual .pv-caption b{color:#f0f8f3;font-weight:800}
+.case-pv-visual .pv-caption span{color:#d1e0e4}
+.proofgrid{grid-template-columns:repeat(5,minmax(0,1fr))}
+.toefl-metric strong{color:#2d7059}
+.toefl-metric{border-right:0}
+.heroart.venn-art{min-height:430px;overflow:hidden}
+.venn-stage{inset:48px 12px 42px;overflow:visible}
+.venn-circle{width:206px;height:206px;padding-top:32px;justify-content:flex-start}
+.venn-ops{left:calc(50% - 184px);top:12px}
+.venn-fin{left:calc(50% - 22px);top:12px}
+.venn-energy{left:calc(50% - 103px);top:145px;padding-top:112px}
+.venn-circle strong{font-size:12px;font-weight:800;letter-spacing:.07em}
+.venn-circle small{font-size:8px;font-weight:600;letter-spacing:.025em}
+.venn-intersection{left:50%;top:52%;transform:translate(-50%,-50%);width:142px;height:112px;padding:10px;display:flex;align-items:center;justify-content:center;text-align:center}
+.venn-intersection strong{display:block;width:100%;font:800 11px/1.18 Manrope;letter-spacing:.015em;text-align:center;overflow-wrap:normal;white-space:normal}
+.venn-intersection i{flex:none}
+.venn-art .art-bottom{left:12px;right:12px}
+@media(max-width:850px){
+ .proofgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .metric:nth-child(3){border-right:0}
+ .heroart.venn-art{min-height:410px}
+}
+@media(max-width:560px){
+ .proofgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .metric{border-right:0}
+ .heroart.venn-art{min-height:390px}
+ .venn-stage{inset:48px 0 36px}
+ .venn-circle{width:166px;height:166px;padding-top:27px}
+ .venn-ops{left:calc(50% - 160px);top:10px}
+ .venn-fin{left:calc(50% - 6px);top:10px}
+ .venn-energy{left:calc(50% - 83px);top:119px;padding-top:91px}
+ .venn-circle strong{font-size:10px}
+ .venn-circle small{font-size:6.5px}
+ .venn-intersection{top:51%;width:116px;height:90px;padding:7px}
+ .venn-intersection strong{font-size:9px;line-height:1.16}
+ .case-pv-visual{margin-top:0}
+ .case-pv-visual .pv-shell{padding:8px}
+ .case-pv-visual .pv-svg text{font-size:16px}
+}
+
 </style>
 </head>
 <body data-current-lang="en">
@@ -341,6 +397,7 @@ h3{letter-spacing:-.018em}
 <div class="metric"><strong>12<i>%</i></strong><div><b data-en="Lead-time reduction" data-id="Penurunan lead time">Lead-time reduction</b><small data-en="Production planning improvement" data-id="Perbaikan perencanaan produksi">Production planning improvement</small></div></div>
 <div class="metric"><strong>5<i>%</i></strong><div><b data-en="Defect-rate reduction" data-id="Penurunan tingkat cacat">Defect-rate reduction</b><small data-en="Quality improvement" data-id="Perbaikan kualitas">Quality improvement</small></div></div>
 <div class="metric"><strong>24.6<i>%</i></strong><div><b data-en="Modelled project IRR" data-id="IRR proyek hasil pemodelan">Modelled project IRR</b><small data-en="Master's thesis · rooftop solar PV" data-id="Tesis magister · PLTS atap">Master's thesis · rooftop solar PV</small></div></div>
+<div class="metric toefl-metric"><strong>510</strong><div><b data-en="TOEFL ITP®" data-id="TOEFL ITP®">TOEFL ITP®</b><small data-en="English proficiency test" data-id="Tes kemahiran bahasa Inggris">English proficiency test</small></div></div>
 </div></section>
 <section class="section white" id="about"><div class="wrap split">
 <div class="splithead"><div class="eyebrow">01 / <span data-en="PROFILE" data-id="PROFIL">PROFILE</span></div><h2 data-en="An engineer's lens.<br><em>A business mindset.</em>" data-id="Perspektif seorang engineer.<br><em>Pola pikir bisnis.</em>">An engineer's lens.<br><em>A business mindset.</em></h2></div>
@@ -371,6 +428,111 @@ h3{letter-spacing:-.018em}
 <article class="card"><div class="visual gold"><div class="tag" data-en="04 / INDUSTRIAL DECARBONIZATION" data-id="04 / DEKARBONISASI INDUSTRI">04 / INDUSTRIAL DECARBONIZATION</div><div class="vtitle" data-en="NINE INDUSTRIAL<br>SECTORS" data-id="SEMBILAN SEKTOR<br>INDUSTRI">NINE INDUSTRIAL<br>SECTORS</div><div class="vfoot" data-en="MINISTRY OF INDUSTRY · 2026—PRESENT" data-id="KEMENTERIAN PERINDUSTRIAN · 2026—SEKARANG">MINISTRY OF INDUSTRY · 2026—PRESENT</div></div><div class="body"><span class="status amber" data-en="Planning · ToR under review" data-id="Perencanaan · TOR dalam reviu">Planning · ToR under review</span><h3 data-en="National industrial decarbonization program" data-id="Program dekarbonisasi industri nasional">National industrial decarbonization program</h3><p data-en="Planned baseline assessment and prioritization across nine industrial sectors: cement, iron and steel, fertilizer, chemicals, pulp and paper, textiles, glass and ceramics, automotive, and food and beverage. The six-month planned methodology comprises desk research, baseline analysis, FGDs with Kemenperin and industry representatives to validate existing conditions and technology needs, multi-criteria analysis, prioritization, and reporting." data-id="Rencana penilaian baseline dan penyusunan prioritas pada sembilan sektor industri: semen, besi dan baja, pupuk, kimia, pulp dan kertas, tekstil, kaca dan keramik, otomotif, serta makanan dan minuman. Metodologi enam bulan yang direncanakan mencakup desk research, analisis baseline, FGD bersama Kemenperin dan perwakilan industri untuk memvalidasi kondisi eksisting dan kebutuhan teknologi, analisis multikriteria, penyusunan prioritas, dan pelaporan.">Planned baseline assessment and prioritization across nine industrial sectors: cement, iron and steel, fertilizer, chemicals, pulp and paper, textiles, glass and ceramics, automotive, and food and beverage. The six-month planned methodology comprises desk research, baseline analysis, FGDs with Kemenperin and industry representatives to validate existing conditions and technology needs, multi-criteria analysis, prioritization, and reporting.</p><a class="more" href="#research" data-en="View research scope ↗" data-id="Lihat ruang lingkup riset ↗">View research scope ↗</a></div></article>
 </div></div></section>
 <section class="section case" id="case-solar"><div class="wrap casegrid"><div><div class="eyebrow" data-en="FEATURED CASE / 01 · MASTER'S THESIS" data-id="STUDI KASUS UTAMA / 01 · TESIS MAGISTER">FEATURED CASE / 01 · MASTER'S THESIS</div><h2 data-en="From emissions baseline to an <em>investment case.</em>" data-id="Dari baseline emisi menjadi <em>kajian investasi.</em>">From emissions baseline to an <em>investment case.</em></h2><p data-en="Simulation of Solar PV Design for Energy Efficiency Optimization through Self-Consumption, Tax Reduction, and Carbon Trading at PT XYZ." data-id="Simulasi perancangan PLTS untuk optimalisasi efisiensi energi melalui self-consumption, pengurangan pajak, dan perdagangan karbon pada PT XYZ.">Simulation of Solar PV Design for Energy Efficiency Optimization through Self-Consumption, Tax Reduction, and Carbon Trading at PT XYZ.</p><div class="note" data-en="The company is anonymized as PT XYZ. Results represent a modelled assessment, not a claim of an implemented installation." data-id="Nama perusahaan disamarkan sebagai PT XYZ. Hasil yang disajikan merupakan kajian berbasis pemodelan, bukan klaim bahwa instalasi telah diterapkan.">The company is anonymized as PT XYZ. Results represent a modelled assessment, not a claim of an implemented installation.</div></div>
+<div class="case-pv-visual">
+<div class="case-pv-heading"><span class="mono" data-en="ENGINEERING SIMULATION / 3D ON-GRID PV SYSTEM" data-id="SIMULASI REKAYASA / SISTEM PLTS ON-GRID 3D">ENGINEERING SIMULATION / 3D ON-GRID PV SYSTEM</span><p data-en="Conceptual system architecture and interactive instantaneous power balance. No battery is modelled." data-id="Arsitektur sistem konseptual dan neraca daya sesaat interaktif. Sistem tidak menggunakan baterai.">Conceptual system architecture and interactive instantaneous power balance. No battery is modelled.</p></div>
+<div class="pv-shell">
+   <svg class="pv-svg" viewBox="0 0 1200 590" role="img" aria-labelledby="featured-pvTitle featured-pvDesc">
+    <title id="featured-pvTitle">Industrial on-grid solar PV system architecture</title>
+    <desc id="featured-pvDesc">PV modules feed DC protection and a grid-tie inverter. AC output passes through ACDB to the main low-voltage switchboard, which supplies industrial loads and connects through a bidirectional meter to the PLN utility grid. No battery is included.</desc>
+    <defs>
+     <linearGradient id="featured-pvPanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ee6c2"/><stop offset="1" stop-color="#237d8b"/></linearGradient>
+     <linearGradient id="featured-pvBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ad8ee"/><stop offset="1" stop-color="#2874a4"/></linearGradient>
+     <linearGradient id="featured-pvGold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe0a0"/><stop offset="1" stop-color="#b77b32"/></linearGradient>
+     <linearGradient id="featured-pvFace" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#284b59"/><stop offset="1" stop-color="#142b39"/></linearGradient>
+     <filter id="featured-pvShadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="8"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+     <marker id="featured-pvArrowDC" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#f1bd62"/></marker>
+     <marker id="featured-pvArrowAC" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#79dcb0"/></marker>
+     <marker id="featured-pvArrowGrid" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#7dc8ed"/></marker>
+    </defs>
+    <g opacity=".17" stroke="#9bc1c8" stroke-width="1"><path d="M25 510H1170M25 450H1170M25 390H1170M25 330H1170M25 270H1170M25 210H1170"/><path d="M100 35V540M220 35V540M340 35V540M460 35V540M580 35V540M700 35V540M820 35V540M940 35V540M1060 35V540"/></g>
+    <text x="38" y="38" fill="#8fe0bf" font-size="13" font-family="monospace" letter-spacing="2">SINGLE-LINE CONCEPT / ON-GRID PV</text>
+    <text x="1160" y="38" text-anchor="end" fill="#9eb8c0" font-size="11" font-family="monospace">DC → AC → LV BUS → GRID / LOAD</text>
+    <!-- PV array isometric structure -->
+    <g filter="url(#featured-pvShadow)">
+     <path d="M70 165L230 115L325 155L165 207Z" fill="#0b1b28" stroke="#8fe0bf" stroke-width="2"/>
+     <path d="M70 165L165 207V224L70 181Z" fill="#1c4650"/><path d="M165 207L325 155V173L165 224Z" fill="#173b48"/>
+     <g fill="url(#featured-pvPanel)" stroke="#c5ffe5" stroke-width="1.5">
+      <path d="M82 164L151 142L181 155L112 178Z"/><path d="M157 140L226 118L256 131L187 153Z"/><path d="M119 181L188 158L218 171L149 194Z"/><path d="M194 157L263 135L293 148L224 170Z"/>
+     </g>
+     <g stroke="#d9fff0" stroke-width="1" opacity=".55"><path d="M117 153L147 166M192 130L222 144M154 171L184 184M229 147L259 160"/></g>
+     <path d="M90 225L305 225" stroke="#81b9a8" stroke-width="4"/><path d="M115 182L115 225M270 170L270 225" stroke="#6f9b9a" stroke-width="5"/>
+    </g>
+    <g fill="#f5d28b" font-family="monospace"><text x="195" y="85" text-anchor="middle" font-size="14">PV MODULE ARRAY</text><text x="195" y="101" text-anchor="middle" font-size="11" fill="#b8cbd0">Solar DC generation</text></g>
+    <!-- DC protection -->
+    <g filter="url(#featured-pvShadow)">
+     <path d="M370 183L435 163L492 184L427 205Z" fill="#4b6670" stroke="#f1bd62" stroke-width="1.5"/>
+     <path d="M370 183V280L427 302V205Z" fill="#203d49" stroke="#8caeb5"/><path d="M427 205L492 184V262L427 302Z" fill="url(#featured-pvFace)" stroke="#8caeb5"/>
+     <rect x="388" y="218" width="24" height="40" rx="3" fill="#b77b32"/><path d="M400 225V249" stroke="#fff0c8" stroke-width="3"/><circle cx="456" cy="225" r="7" fill="#f1bd62"/>
+    </g>
+    <text x="430" y="330" text-anchor="middle" fill="#f5d28b" font-size="13" font-family="monospace">DC PROTECTION</text><text x="430" y="347" text-anchor="middle" fill="#a9bec5" font-size="11">Isolator · SPD · string combiner*</text>
+    <!-- Inverter -->
+    <g filter="url(#featured-pvShadow)">
+     <path d="M535 160L630 132L705 160L610 190Z" fill="#527c8a" stroke="#8ad8ee" stroke-width="1.5"/>
+     <path d="M535 160V295L610 326V190Z" fill="#21485b" stroke="#8ad8ee"/><path d="M610 190L705 160V290L610 326Z" fill="url(#featured-pvBlue)" stroke="#b9efff"/>
+     <rect x="627" y="213" width="58" height="48" rx="4" fill="#12364a" opacity=".9"/><path d="M639 239L649 225L660 246L672 229" fill="none" stroke="#8fe0bf" stroke-width="3"/><circle cx="643" cy="278" r="4" fill="#9cf0c3"/><circle cx="661" cy="278" r="4" fill="#f1bd62"/>
+    </g>
+    <text x="620" y="355" text-anchor="middle" fill="#9fe5f5" font-size="13" font-family="monospace">GRID-TIE INVERTER</text><text x="620" y="372" text-anchor="middle" fill="#a9bec5" font-size="11">MPPT · DC/AC conversion · anti-islanding</text>
+    <!-- ACDB -->
+    <g filter="url(#featured-pvShadow)">
+     <path d="M750 205L810 185L870 207L810 228Z" fill="#4b6670" stroke="#79dcb0" stroke-width="1.5"/><path d="M750 205V290L810 312V228Z" fill="#1d4650" stroke="#79dcb0"/><path d="M810 228L870 207V290L810 312Z" fill="#214b50" stroke="#79dcb0"/>
+     <rect x="824" y="238" width="29" height="35" rx="3" fill="#0d2b36"/><path d="M838 243V267M830 255H846" stroke="#8fe0bf" stroke-width="2"/>
+    </g>
+    <text x="810" y="338" text-anchor="middle" fill="#8fe0bf" font-size="13" font-family="monospace">ACDB / PROTECTION</text><text x="810" y="355" text-anchor="middle" fill="#a9bec5" font-size="11">AC breaker · SPD · protection</text>
+    <!-- Main LV panel -->
+    <g filter="url(#featured-pvShadow)">
+     <path d="M920 155L990 132L1060 158L990 182Z" fill="#54717a" stroke="#8ad8ee" stroke-width="1.5"/><path d="M920 155V307L990 333V182Z" fill="#204557" stroke="#8ad8ee"/><path d="M990 182L1060 158V309L990 333Z" fill="url(#featured-pvBlue)" stroke="#b9efff"/>
+     <rect x="1005" y="208" width="39" height="81" rx="3" fill="#153748"/><path d="M1014 220H1035M1014 236H1035M1014 252H1035" stroke="#8fe0bf" stroke-width="3"/><circle cx="1024" cy="273" r="5" fill="#f1bd62"/>
+    </g>
+    <text x="990" y="365" text-anchor="middle" fill="#9fe5f5" font-size="13" font-family="monospace">MAIN LV PANEL</text><text x="990" y="382" text-anchor="middle" fill="#a9bec5" font-size="11">Main busbar · incomer · feeder</text>
+    <!-- Utility and facility endpoint cards -->
+    <g transform="translate(55 400)">
+     <path d="M0 35L65 12L126 35L61 58Z" fill="#234a55" stroke="#8fe0bf"/><path d="M0 35V92L61 116V58Z" fill="#173744" stroke="#8fe0bf"/><path d="M61 58L126 35V92L61 116Z" fill="#285260" stroke="#8fe0bf"/>
+     <path d="M22 53L61 68L101 53M22 70L61 85L101 70" fill="none" stroke="#9be4c4" stroke-width="3"/>
+     <text x="63" y="140" text-anchor="middle" fill="#d9f5e7" font-size="13" font-family="monospace">INDUSTRIAL LOAD</text><text x="63" y="156" text-anchor="middle" fill="#a9bec5" font-size="11">Motors · process · lighting</text>
+    </g>
+    <g transform="translate(845 420)">
+     <path d="M0 48L50 20L100 48V105H0Z" fill="#214653" stroke="#8ad8ee" stroke-width="2"/><path d="M-9 48L50 12L109 48" fill="none" stroke="#8ad8ee" stroke-width="4"/><rect x="16" y="65" width="19" height="40" fill="#102d3b"/><rect x="58" y="65" width="25" height="18" fill="#9bdcf0"/><path d="M50 12V-4M43 3L50 -4L57 3" stroke="#8ad8ee" stroke-width="2"/>
+     <text x="50" y="132" text-anchor="middle" fill="#d9f5e7" font-size="13" font-family="monospace">PLN GRID</text><text x="50" y="148" text-anchor="middle" fill="#a9bec5" font-size="11">Utility network</text>
+    </g>
+    <!-- Bidirectional meter -->
+    <g filter="url(#featured-pvShadow)">
+     <path d="M700 420L760 399L820 420L760 442Z" fill="#6a8590" stroke="#7dc8ed" stroke-width="1.5"/><path d="M700 420V484L760 506V442Z" fill="#20495a" stroke="#7dc8ed"/><path d="M760 442L820 420V484L760 506Z" fill="#27627a" stroke="#7dc8ed"/><rect x="773" y="444" width="33" height="26" rx="3" fill="#102e3c"/><path d="M778 457H801M790 450L783 457L790 464M795 450L802 457L795 464" stroke="#8ad8ee" stroke-width="1.5"/>
+    </g>
+    <text x="760" y="535" text-anchor="middle" fill="#9fe5f5" font-size="12" font-family="monospace">BIDIRECTIONAL METER</text>
+    <text x="760" y="551" text-anchor="middle" fill="#a9bec5" font-size="10">Import / export kWh</text>
+    <!-- Electrical paths -->
+    <g fill="none" stroke-linecap="round" stroke-width="4">
+     <path d="M325 170H370" stroke="#f1bd62" marker-end="url(#featured-pvArrowDC)"/><path d="M492 230H535" stroke="#f1bd62" marker-end="url(#featured-pvArrowDC)"/>
+     <path d="M705 230H750" stroke="#79dcb0" marker-end="url(#featured-pvArrowAC)"/><path d="M870 250H920" stroke="#79dcb0" marker-end="url(#featured-pvArrowAC)"/>
+     <path d="M990 333V390H110V435" stroke="#79dcb0" marker-end="url(#featured-pvArrowAC)" opacity=".9"/>
+     <path d="M990 333V392H760V420" stroke="#7dc8ed" marker-start="url(#featured-pvArrowGrid)" marker-end="url(#featured-pvArrowGrid)" stroke-dasharray="8 7"/>
+     <path d="M820 452H895" stroke="#7dc8ed" marker-start="url(#featured-pvArrowGrid)" marker-end="url(#featured-pvArrowGrid)" stroke-dasharray="8 7"/>
+    </g>
+    <g font-family="monospace" font-size="11"><text x="344" y="154" fill="#f5d28b">DC</text><text x="515" y="214" fill="#f5d28b">DC</text><text x="724" y="214" fill="#9ce8c4">AC</text><text x="885" y="234" fill="#9ce8c4">AC</text><text x="1080" y="415" fill="#9bdcf0">GRID EXCHANGE</text></g>
+    <text x="40" y="575" fill="#829da6" font-size="10" font-family="monospace">*String combiner applies where required by array/inverter design. Final protection and metering follow utility rules and the approved single-line diagram.</text>
+   </svg>
+  </div>
+  <div class="pv-simulator" aria-labelledby="featured-pv-sim-title">
+   <div class="pv-sim-heading"><div><span class="mono">LIVE POWER BALANCE / ILLUSTRATIVE</span><h3 id="featured-pv-sim-title" data-en="On-grid operating point" data-id="featured-Titik operasi PLTS on-grid">On-grid operating point</h3><p data-en="Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative instantaneous-power balance, not live telemetry; it excludes conversion and wiring losses and does not model energy over time." data-id="featured-Atur keluaran PV dan kebutuhan daya fasilitas untuk melihat bagaimana jaringan menyeimbangkan selisihnya. Ini adalah model neraca daya ilustratif, bukan data telemetri fasilitas secara langsung.">Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative power-balance model, not live plant telemetry.</p></div><span class="pv-sim-chip" data-en="NO BATTERY" data-id="featured-TANPA BATERAI">NO BATTERY</span></div>
+   <div class="pv-sim-controls">
+    <label class="pv-sim-control" for="pvOutput"><span><b data-en="PV generation" data-id="featured-Pembangkitan PV">PV generation</b><output id="featured-pvOutputValue" for="pvOutput">75 kW</output></span><input id="featured-pvOutput" type="range" min="0" max="120" step="1" value="75"><small data-en="Available AC power from the grid-following inverter" data-id="featured-Daya AC tersedia dari inverter grid-following">Available AC power from the grid-following inverter</small></label>
+    <label class="pv-sim-control" for="facilityLoad"><span><b data-en="Facility demand" data-id="featured-Kebutuhan daya fasilitas">Facility demand</b><output id="featured-facilityLoadValue" for="facilityLoad">90 kW</output></span><input id="featured-facilityLoad" type="range" min="0" max="120" step="1" value="90"><small data-en="Instantaneous active-power demand at the LV bus" data-id="featured-Kebutuhan daya aktif sesaat pada bus LV">Instantaneous active-power demand at the LV bus</small></label>
+   </div>
+   <div class="pv-sim-results" aria-live="polite">
+    <div class="pv-sim-result"><span data-en="PV serves load" data-id="featured-PV melayani beban">PV serves load</span><strong id="featured-pvSelfUse">75 kW</strong><small id="featured-pvSelfUsePct">83.3% of facility demand</small></div>
+    <div class="pv-sim-result import"><span data-en="Grid import" data-id="featured-Impor dari jaringan">Grid import</span><strong id="featured-pvGridImport">15 kW</strong><small data-en="Utility supplies the deficit" data-id="featured-Jaringan memasok kekurangan daya">Utility supplies the deficit</small></div>
+    <div class="pv-sim-result export"><span data-en="Grid export" data-id="featured-Ekspor ke jaringan">Grid export</span><strong id="featured-pvGridExport">0 kW</strong><small data-en="Surplus flows to the grid" data-id="featured-Surplus daya dialirkan ke jaringan">Surplus flows to the grid</small></div>
+   </div>
+   <div class="pv-sim-equation"><span data-en="PV → LV BUS → LOAD" data-id="featured-PV → BUS LV → BEBAN">PV → LV BUS → LOAD</span><b id="featured-pvBalanceText">75 kW PV + 15 kW grid = 90 kW load</b></div>
+  </div>
+  <div class="pv-caption">
+   <div><b>01 / DC GENERATION</b><span>PV modules produce DC electricity; string-level protection is applied as designed.</span></div>
+   <div><b>02 / POWER CONVERSION</b><span>Grid-following inverter performs MPPT and DC-to-AC conversion with anti-islanding protection.</span></div>
+   <div><b>03 / AC DISTRIBUTION</b><span>ACDB and the main LV panel provide switching, protection and facility distribution.</span></div>
+   <div><b>04 / GRID INTERACTION</b><span>Facility demand is served first; surplus or deficit is exchanged with PLN through approved metering.</span></div>
+  </div>
+  <p class="pv-footnote" data-en="Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements." data-id="featured-Visualisasi konseptual untuk portofolio, bukan gambar konstruksi. Desain single-line, koordinasi proteksi, pembatasan ekspor, dan skema meter aktual harus direkayasa sesuai profil beban lokasi dan persyaratan interkoneksi PLN.">Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements.</p>
+</div>
 <div class="outputs"><div class="mono" data-en="MODELLED PROJECT OUTPUT" data-id="HASIL PEMODELAN PROYEK">MODELLED PROJECT OUTPUT</div><div class="primarykpi"><strong>138.24 kWp</strong><span data-en="Rooftop PV system capacity" data-id="Kapasitas sistem PLTS atap">Rooftop PV system capacity</span></div><div class="emissions-viz" role="img" aria-label="Modelled emissions: 42.07 percent avoided and 57.93 percent remaining compared with baseline emissions of 193.42 tonnes of carbon dioxide equivalent">
 <h3 data-en="Modelled emissions impact" data-id="Dampak emisi hasil pemodelan">Modelled emissions impact</h3>
 <p data-en="Illustrative split against the baseline emissions inventory" data-id="Proporsi ilustratif terhadap inventarisasi emisi baseline">Illustrative split against the baseline emissions inventory</p>
@@ -407,117 +569,7 @@ h3{letter-spacing:-.018em}
 <div class="skill"><div class="skill-head"><span class="skill-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3 3.7-3.7Z"/></svg></span><small>06 / <span data-en="ENGINEERING" data-id="REKAYASA">ENGINEERING</span></small></div><h3 data-en="Engineering & product" data-id="Rekayasa & produk">Engineering & product</h3><p data-en="Material specification · Performance analysis · Technical datasheets · New product development · GD&T · MIG/TIG welding" data-id="Spesifikasi material · Analisis kinerja · Technical datasheet · Pengembangan produk baru · GD&T · Pengelasan MIG/TIG">Material specification · Performance analysis · Technical datasheets · New product development · GD&T · MIG/TIG welding</p></div>
 </div><div style="margin-top:30px"><div class="eyebrow" data-en="TOOLS & SOFTWARE" data-id="ALAT & PERANGKAT LUNAK">TOOLS & SOFTWARE</div><div class="pill">Microsoft Excel</div><div class="pill">Power BI</div><div class="pill">Tableau</div><div class="pill">Python</div><div class="pill">R</div><div class="pill">MATLAB</div><div class="pill">MS Project</div><div class="pill">Visio</div><div class="pill">Minitab</div><div class="pill">SPSS</div><div class="pill">Accurate</div><div class="pill">PVsyst</div><div class="pill">SimaPro</div><div class="pill">OpenLCA</div></div></div></section>
 
-<section class="section pv-section" id="pv-on-grid">
- <div class="wrap">
-  <div class="sectionhead">
-   <div><div class="eyebrow">06 / <span data-en="ENERGY SYSTEMS VISUALIZATION" data-id="VISUALISASI SISTEM ENERGI">ENERGY SYSTEMS VISUALIZATION</span></div>
-   <h2 data-en="Industrial solar PV.<br><em>Grid-connected architecture.</em>" data-id="PLTS industri.<br><em>Arsitektur terhubung jaringan.</em>">Industrial solar PV.<br><em>Grid-connected architecture.</em></h2></div>
-   <p data-en="Conceptual 3D system schematic of an on-grid photovoltaic installation, showing the DC generation path, conversion and protection stages, AC distribution, facility loads, and bidirectional utility exchange." data-id="Skema konseptual 3D instalasi fotovoltaik on-grid yang memperlihatkan jalur pembangkitan DC, konversi dan proteksi, distribusi AC, beban fasilitas, serta pertukaran energi dua arah dengan jaringan PLN.">Conceptual 3D system schematic of an on-grid photovoltaic installation, showing the DC generation path, conversion and protection stages, AC distribution, facility loads, and bidirectional utility exchange.</p>
-  </div>
-  <div class="pv-shell">
-   <svg class="pv-svg" viewBox="0 0 1200 590" role="img" aria-labelledby="pvTitle pvDesc">
-    <title id="pvTitle">Industrial on-grid solar PV system architecture</title>
-    <desc id="pvDesc">PV modules feed DC protection and a grid-tie inverter. AC output passes through ACDB to the main low-voltage switchboard, which supplies industrial loads and connects through a bidirectional meter to the PLN utility grid. No battery is included.</desc>
-    <defs>
-     <linearGradient id="pvPanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ee6c2"/><stop offset="1" stop-color="#237d8b"/></linearGradient>
-     <linearGradient id="pvBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ad8ee"/><stop offset="1" stop-color="#2874a4"/></linearGradient>
-     <linearGradient id="pvGold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe0a0"/><stop offset="1" stop-color="#b77b32"/></linearGradient>
-     <linearGradient id="pvFace" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#284b59"/><stop offset="1" stop-color="#142b39"/></linearGradient>
-     <filter id="pvShadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="8"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-     <marker id="pvArrowDC" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#f1bd62"/></marker>
-     <marker id="pvArrowAC" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#79dcb0"/></marker>
-     <marker id="pvArrowGrid" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#7dc8ed"/></marker>
-    </defs>
-    <g opacity=".17" stroke="#9bc1c8" stroke-width="1"><path d="M25 510H1170M25 450H1170M25 390H1170M25 330H1170M25 270H1170M25 210H1170"/><path d="M100 35V540M220 35V540M340 35V540M460 35V540M580 35V540M700 35V540M820 35V540M940 35V540M1060 35V540"/></g>
-    <text x="38" y="38" fill="#8fe0bf" font-size="13" font-family="monospace" letter-spacing="2">SINGLE-LINE CONCEPT / ON-GRID PV</text>
-    <text x="1160" y="38" text-anchor="end" fill="#9eb8c0" font-size="11" font-family="monospace">DC → AC → LV BUS → GRID / LOAD</text>
-    <!-- PV array isometric structure -->
-    <g filter="url(#pvShadow)">
-     <path d="M70 165L230 115L325 155L165 207Z" fill="#0b1b28" stroke="#8fe0bf" stroke-width="2"/>
-     <path d="M70 165L165 207V224L70 181Z" fill="#1c4650"/><path d="M165 207L325 155V173L165 224Z" fill="#173b48"/>
-     <g fill="url(#pvPanel)" stroke="#c5ffe5" stroke-width="1.5">
-      <path d="M82 164L151 142L181 155L112 178Z"/><path d="M157 140L226 118L256 131L187 153Z"/><path d="M119 181L188 158L218 171L149 194Z"/><path d="M194 157L263 135L293 148L224 170Z"/>
-     </g>
-     <g stroke="#d9fff0" stroke-width="1" opacity=".55"><path d="M117 153L147 166M192 130L222 144M154 171L184 184M229 147L259 160"/></g>
-     <path d="M90 225L305 225" stroke="#81b9a8" stroke-width="4"/><path d="M115 182L115 225M270 170L270 225" stroke="#6f9b9a" stroke-width="5"/>
-    </g>
-    <g fill="#f5d28b" font-family="monospace"><text x="195" y="85" text-anchor="middle" font-size="14">PV MODULE ARRAY</text><text x="195" y="101" text-anchor="middle" font-size="11" fill="#b8cbd0">Solar DC generation</text></g>
-    <!-- DC protection -->
-    <g filter="url(#pvShadow)">
-     <path d="M370 183L435 163L492 184L427 205Z" fill="#4b6670" stroke="#f1bd62" stroke-width="1.5"/>
-     <path d="M370 183V280L427 302V205Z" fill="#203d49" stroke="#8caeb5"/><path d="M427 205L492 184V262L427 302Z" fill="url(#pvFace)" stroke="#8caeb5"/>
-     <rect x="388" y="218" width="24" height="40" rx="3" fill="#b77b32"/><path d="M400 225V249" stroke="#fff0c8" stroke-width="3"/><circle cx="456" cy="225" r="7" fill="#f1bd62"/>
-    </g>
-    <text x="430" y="330" text-anchor="middle" fill="#f5d28b" font-size="13" font-family="monospace">DC PROTECTION</text><text x="430" y="347" text-anchor="middle" fill="#a9bec5" font-size="11">Isolator · SPD · string combiner*</text>
-    <!-- Inverter -->
-    <g filter="url(#pvShadow)">
-     <path d="M535 160L630 132L705 160L610 190Z" fill="#527c8a" stroke="#8ad8ee" stroke-width="1.5"/>
-     <path d="M535 160V295L610 326V190Z" fill="#21485b" stroke="#8ad8ee"/><path d="M610 190L705 160V290L610 326Z" fill="url(#pvBlue)" stroke="#b9efff"/>
-     <rect x="627" y="213" width="58" height="48" rx="4" fill="#12364a" opacity=".9"/><path d="M639 239L649 225L660 246L672 229" fill="none" stroke="#8fe0bf" stroke-width="3"/><circle cx="643" cy="278" r="4" fill="#9cf0c3"/><circle cx="661" cy="278" r="4" fill="#f1bd62"/>
-    </g>
-    <text x="620" y="355" text-anchor="middle" fill="#9fe5f5" font-size="13" font-family="monospace">GRID-TIE INVERTER</text><text x="620" y="372" text-anchor="middle" fill="#a9bec5" font-size="11">MPPT · DC/AC conversion · anti-islanding</text>
-    <!-- ACDB -->
-    <g filter="url(#pvShadow)">
-     <path d="M750 205L810 185L870 207L810 228Z" fill="#4b6670" stroke="#79dcb0" stroke-width="1.5"/><path d="M750 205V290L810 312V228Z" fill="#1d4650" stroke="#79dcb0"/><path d="M810 228L870 207V290L810 312Z" fill="#214b50" stroke="#79dcb0"/>
-     <rect x="824" y="238" width="29" height="35" rx="3" fill="#0d2b36"/><path d="M838 243V267M830 255H846" stroke="#8fe0bf" stroke-width="2"/>
-    </g>
-    <text x="810" y="338" text-anchor="middle" fill="#8fe0bf" font-size="13" font-family="monospace">ACDB / PROTECTION</text><text x="810" y="355" text-anchor="middle" fill="#a9bec5" font-size="11">AC breaker · SPD · protection</text>
-    <!-- Main LV panel -->
-    <g filter="url(#pvShadow)">
-     <path d="M920 155L990 132L1060 158L990 182Z" fill="#54717a" stroke="#8ad8ee" stroke-width="1.5"/><path d="M920 155V307L990 333V182Z" fill="#204557" stroke="#8ad8ee"/><path d="M990 182L1060 158V309L990 333Z" fill="url(#pvBlue)" stroke="#b9efff"/>
-     <rect x="1005" y="208" width="39" height="81" rx="3" fill="#153748"/><path d="M1014 220H1035M1014 236H1035M1014 252H1035" stroke="#8fe0bf" stroke-width="3"/><circle cx="1024" cy="273" r="5" fill="#f1bd62"/>
-    </g>
-    <text x="990" y="365" text-anchor="middle" fill="#9fe5f5" font-size="13" font-family="monospace">MAIN LV PANEL</text><text x="990" y="382" text-anchor="middle" fill="#a9bec5" font-size="11">Main busbar · incomer · feeder</text>
-    <!-- Utility and facility endpoint cards -->
-    <g transform="translate(55 400)">
-     <path d="M0 35L65 12L126 35L61 58Z" fill="#234a55" stroke="#8fe0bf"/><path d="M0 35V92L61 116V58Z" fill="#173744" stroke="#8fe0bf"/><path d="M61 58L126 35V92L61 116Z" fill="#285260" stroke="#8fe0bf"/>
-     <path d="M22 53L61 68L101 53M22 70L61 85L101 70" fill="none" stroke="#9be4c4" stroke-width="3"/>
-     <text x="63" y="140" text-anchor="middle" fill="#d9f5e7" font-size="13" font-family="monospace">INDUSTRIAL LOAD</text><text x="63" y="156" text-anchor="middle" fill="#a9bec5" font-size="11">Motors · process · lighting</text>
-    </g>
-    <g transform="translate(845 420)">
-     <path d="M0 48L50 20L100 48V105H0Z" fill="#214653" stroke="#8ad8ee" stroke-width="2"/><path d="M-9 48L50 12L109 48" fill="none" stroke="#8ad8ee" stroke-width="4"/><rect x="16" y="65" width="19" height="40" fill="#102d3b"/><rect x="58" y="65" width="25" height="18" fill="#9bdcf0"/><path d="M50 12V-4M43 3L50 -4L57 3" stroke="#8ad8ee" stroke-width="2"/>
-     <text x="50" y="132" text-anchor="middle" fill="#d9f5e7" font-size="13" font-family="monospace">PLN GRID</text><text x="50" y="148" text-anchor="middle" fill="#a9bec5" font-size="11">Utility network</text>
-    </g>
-    <!-- Bidirectional meter -->
-    <g filter="url(#pvShadow)">
-     <path d="M700 420L760 399L820 420L760 442Z" fill="#6a8590" stroke="#7dc8ed" stroke-width="1.5"/><path d="M700 420V484L760 506V442Z" fill="#20495a" stroke="#7dc8ed"/><path d="M760 442L820 420V484L760 506Z" fill="#27627a" stroke="#7dc8ed"/><rect x="773" y="444" width="33" height="26" rx="3" fill="#102e3c"/><path d="M778 457H801M790 450L783 457L790 464M795 450L802 457L795 464" stroke="#8ad8ee" stroke-width="1.5"/>
-    </g>
-    <text x="760" y="535" text-anchor="middle" fill="#9fe5f5" font-size="12" font-family="monospace">BIDIRECTIONAL METER</text>
-    <text x="760" y="551" text-anchor="middle" fill="#a9bec5" font-size="10">Import / export kWh</text>
-    <!-- Electrical paths -->
-    <g fill="none" stroke-linecap="round" stroke-width="4">
-     <path d="M325 170H370" stroke="#f1bd62" marker-end="url(#pvArrowDC)"/><path d="M492 230H535" stroke="#f1bd62" marker-end="url(#pvArrowDC)"/>
-     <path d="M705 230H750" stroke="#79dcb0" marker-end="url(#pvArrowAC)"/><path d="M870 250H920" stroke="#79dcb0" marker-end="url(#pvArrowAC)"/>
-     <path d="M990 333V390H110V435" stroke="#79dcb0" marker-end="url(#pvArrowAC)" opacity=".9"/>
-     <path d="M990 333V392H760V420" stroke="#7dc8ed" marker-start="url(#pvArrowGrid)" marker-end="url(#pvArrowGrid)" stroke-dasharray="8 7"/>
-     <path d="M820 452H895" stroke="#7dc8ed" marker-start="url(#pvArrowGrid)" marker-end="url(#pvArrowGrid)" stroke-dasharray="8 7"/>
-    </g>
-    <g font-family="monospace" font-size="11"><text x="344" y="154" fill="#f5d28b">DC</text><text x="515" y="214" fill="#f5d28b">DC</text><text x="724" y="214" fill="#9ce8c4">AC</text><text x="885" y="234" fill="#9ce8c4">AC</text><text x="1080" y="415" fill="#9bdcf0">GRID EXCHANGE</text></g>
-    <text x="40" y="575" fill="#829da6" font-size="10" font-family="monospace">*String combiner applies where required by array/inverter design. Final protection and metering follow utility rules and the approved single-line diagram.</text>
-   </svg>
-  </div>
-  <div class="pv-simulator" aria-labelledby="pv-sim-title">
-   <div class="pv-sim-heading"><div><span class="mono">LIVE POWER BALANCE / ILLUSTRATIVE</span><h3 id="pv-sim-title" data-en="On-grid operating point" data-id="Titik operasi PLTS on-grid">On-grid operating point</h3><p data-en="Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative instantaneous-power balance, not live telemetry; it excludes conversion and wiring losses and does not model energy over time." data-id="Atur keluaran PV dan kebutuhan daya fasilitas untuk melihat bagaimana jaringan menyeimbangkan selisihnya. Ini adalah model neraca daya ilustratif, bukan data telemetri fasilitas secara langsung.">Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative power-balance model, not live plant telemetry.</p></div><span class="pv-sim-chip" data-en="NO BATTERY" data-id="TANPA BATERAI">NO BATTERY</span></div>
-   <div class="pv-sim-controls">
-    <label class="pv-sim-control" for="pvOutput"><span><b data-en="PV generation" data-id="Pembangkitan PV">PV generation</b><output id="pvOutputValue" for="pvOutput">75 kW</output></span><input id="pvOutput" type="range" min="0" max="120" step="1" value="75"><small data-en="Available AC power from the grid-following inverter" data-id="Daya AC tersedia dari inverter grid-following">Available AC power from the grid-following inverter</small></label>
-    <label class="pv-sim-control" for="facilityLoad"><span><b data-en="Facility demand" data-id="Kebutuhan daya fasilitas">Facility demand</b><output id="facilityLoadValue" for="facilityLoad">90 kW</output></span><input id="facilityLoad" type="range" min="0" max="120" step="1" value="90"><small data-en="Instantaneous active-power demand at the LV bus" data-id="Kebutuhan daya aktif sesaat pada bus LV">Instantaneous active-power demand at the LV bus</small></label>
-   </div>
-   <div class="pv-sim-results" aria-live="polite">
-    <div class="pv-sim-result"><span data-en="PV serves load" data-id="PV melayani beban">PV serves load</span><strong id="pvSelfUse">75 kW</strong><small id="pvSelfUsePct">83.3% of facility demand</small></div>
-    <div class="pv-sim-result import"><span data-en="Grid import" data-id="Impor dari jaringan">Grid import</span><strong id="pvGridImport">15 kW</strong><small data-en="Utility supplies the deficit" data-id="Jaringan memasok kekurangan daya">Utility supplies the deficit</small></div>
-    <div class="pv-sim-result export"><span data-en="Grid export" data-id="Ekspor ke jaringan">Grid export</span><strong id="pvGridExport">0 kW</strong><small data-en="Surplus flows to the grid" data-id="Surplus daya dialirkan ke jaringan">Surplus flows to the grid</small></div>
-   </div>
-   <div class="pv-sim-equation"><span data-en="PV → LV BUS → LOAD" data-id="PV → BUS LV → BEBAN">PV → LV BUS → LOAD</span><b id="pvBalanceText">75 kW PV + 15 kW grid = 90 kW load</b></div>
-  </div>
-  <div class="pv-caption">
-   <div><b>01 / DC GENERATION</b><span>PV modules produce DC electricity; string-level protection is applied as designed.</span></div>
-   <div><b>02 / POWER CONVERSION</b><span>Grid-following inverter performs MPPT and DC-to-AC conversion with anti-islanding protection.</span></div>
-   <div><b>03 / AC DISTRIBUTION</b><span>ACDB and the main LV panel provide switching, protection and facility distribution.</span></div>
-   <div><b>04 / GRID INTERACTION</b><span>Facility demand is served first; surplus or deficit is exchanged with PLN through approved metering.</span></div>
-  </div>
-  <p class="pv-footnote" data-en="Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements." data-id="Visualisasi konseptual untuk portofolio, bukan gambar konstruksi. Desain single-line, koordinasi proteksi, pembatasan ekspor, dan skema meter aktual harus direkayasa sesuai profil beban lokasi dan persyaratan interkoneksi PLN.">Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements.</p>
- </div>
-</section>
+
 
 <section class="section paper" id="education"><div class="wrap split"><div class="splithead"><div class="eyebrow">06 / <span data-en="EDUCATION & CREDENTIALS" data-id="PENDIDIKAN & KREDENSIAL">EDUCATION & CREDENTIALS</span></div><h2 data-en="Technical depth.<br><em>Continuous learning.</em>" data-id="Kedalaman teknis.<br><em>Pembelajaran berkelanjutan.</em>">Technical depth.<br><em>Continuous learning.</em></h2></div><div>
 <div class="edurow"><div class="date">2024 — 2026</div><div><h3 data-en="Master of Engineering, Systems and Industrial Engineering" data-id="Magister Teknik Sistem dan Industri">Master of Engineering, Systems and Industrial Engineering</h3><p data-en="Institut Teknologi Sepuluh Nopember (ITS), Surabaya · GPA 3.50 / 4.00" data-id="Institut Teknologi Sepuluh Nopember (ITS), Surabaya · IPK 3,50 / 4,00">Institut Teknologi Sepuluh Nopember (ITS), Surabaya · GPA 3.50 / 4.00</p><p data-en="Management System Engineering and Manufacture Laboratory" data-id="Laboratorium Management System Engineering and Manufacture">Management System Engineering and Manufacture Laboratory</p></div></div>
