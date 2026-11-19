@@ -591,6 +591,77 @@ footer .foot a{color:#c3d8c7}
  .venn-intersection strong{font-size:8px}
 }
 
+
+
+/* Final responsive composition: centred Venn, balanced rhythm, expertise rail */
+.heroart.venn-art{
+ min-height:0;height:auto;display:flex;flex-direction:column;justify-content:center;
+ padding:44px 14px 35px;overflow:hidden;border-radius:14px;
+}
+.venn-stage{
+ position:relative;inset:auto;width:100%;max-width:500px;height:clamp(300px,82vw,410px);
+ margin:0 auto;flex:0 0 auto;
+}
+.venn-circle{
+ width:min(244px,47%);height:auto;aspect-ratio:1;padding-top:clamp(25px,7.4vw,37px);
+}
+.venn-ops{left:2%;right:auto;top:3px}
+.venn-fin{left:auto;right:2%;top:3px}
+.venn-energy{left:50%;right:auto;top:clamp(116px,32vw,164px);transform:translateX(-50%);padding-top:clamp(88px,25vw,128px)}
+.venn-intersection{
+ left:50%;top:50%;transform:translate(-50%,-50%);width:164px;height:116px;
+ max-width:48%;padding:10px 8px;border-radius:16px;z-index:8;
+}
+.venn-intersection .intersection-kicker{font-size:clamp(5px,.55vw,7px);letter-spacing:.12em}
+.venn-intersection strong{font-size:clamp(8px,1vw,11px);line-height:1.22;letter-spacing:.035em}
+.venn-intersection strong span{white-space:nowrap}
+.venn-intersection i{margin-top:2px}
+.venn-art .art-head{left:18px;right:18px;top:16px}
+.venn-art .art-bottom{left:17px;right:17px;bottom:13px}
+.hero-grid{gap:clamp(28px,3.2vw,42px)}
+.herofoot{margin-top:24px}
+.expertise-rail{
+ display:grid;grid-template-columns:1.05fr repeat(4,minmax(0,1fr));align-items:center;gap:12px;
+ margin-top:26px;padding:17px 0 4px;border-top:1px solid #ffffff2b;
+}
+.expertise-label{font:700 9px 'DM Mono';letter-spacing:.16em;color:#d7b887}
+.expertise-item{display:flex;align-items:center;gap:9px;min-width:0;color:#e7eee8;font:600 11px/1.35 Manrope}
+.expertise-item b{font:9px 'DM Mono';color:#9bc9ae;flex:0 0 auto}
+.section{padding:clamp(48px,5.1vw,68px) 0}
+.sectionhead{margin-bottom:25px}
+.split{gap:clamp(30px,4vw,54px)}
+.job,.research,.edurow{padding:18px 0}
+@media(max-width:1000px){
+ .heroart.venn-art{max-width:680px;width:100%;margin:0 auto;padding-top:44px;padding-bottom:35px}
+ .venn-stage{height:410px}
+ .venn-circle{width:min(244px,47%)}
+ .venn-energy{top:164px;padding-top:128px}
+ .expertise-rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 18px}
+ .expertise-label{grid-column:1/-1}
+}
+@media(max-width:600px){
+ .heroart.venn-art{min-height:0;padding:43px 10px 34px}
+ .venn-stage{height:clamp(292px,82vw,330px)}
+ .venn-circle{width:47%;padding-top:clamp(23px,7.4vw,30px)}
+ .venn-ops{left:1%;top:2px}
+ .venn-fin{right:1%;top:2px}
+ .venn-energy{top:clamp(112px,32vw,128px);padding-top:clamp(82px,25vw,100px)}
+ .venn-intersection{width:164px;height:108px;max-width:52%;padding:8px 5px}
+ .venn-intersection .intersection-kicker{font-size:5px}
+ .venn-intersection strong{font-size:clamp(7px,2.1vw,9px)}
+ .venn-art .art-head{left:12px;right:12px;top:14px}
+ .venn-art .art-bottom{left:10px;right:10px;bottom:11px;font-size:6px;letter-spacing:.07em}
+ .expertise-rail{margin-top:20px;gap:12px 10px;padding-top:14px}
+ .expertise-item{font-size:10px;gap:7px}
+ .section{padding:46px 0}
+ .sectionhead{margin-bottom:21px}
+}
+@media(max-width:370px){
+ .venn-stage{height:292px}
+ .venn-intersection{width:150px;height:100px}
+ .venn-intersection strong{font-size:7px}
+ .expertise-item{font-size:9px}
+}
 </style>
 </head>
 <body data-current-lang="en">
@@ -626,7 +697,7 @@ footer .foot a{color:#c3d8c7}
 <div class="venn-intersection" aria-label="Sustainable Industrial Systems"><span class="intersection-kicker">INTEGRATED OUTCOME</span><strong><span>SUSTAINABLE</span><span>INDUSTRIAL</span><span>SYSTEMS</span></strong><i></i></div>
 </div>
 <div class="art-bottom"><span>EFFICIENCY <i>×</i> VIABILITY <i>×</i> SUSTAINABILITY</span><span>AG / 2026</span></div>
-</div></div><div class="herofoot"><span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span><span>AGUS RIANTO / 2026</span></div></div></section>
+</div></div><div class="herofoot"><span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span><span>AGUS RIANTO / 2026</span></div><div class="expertise-rail" aria-label="Core areas of expertise"><div class="expertise-label" data-en="CORE EXPERTISE" data-id="KEAHLIAN UTAMA">CORE EXPERTISE</div><div class="expertise-item"><b>01</b><span data-en="Industrial Operations" data-id="Operasi Industri">Industrial Operations</span></div><div class="expertise-item"><b>02</b><span data-en="Techno-economic Modelling" data-id="Pemodelan Tekno-ekonomi">Techno-economic Modelling</span></div><div class="expertise-item"><b>03</b><span data-en="Energy Transition" data-id="Transisi Energi">Energy Transition</span></div><div class="expertise-item"><b>04</b><span data-en="Industrial Decarbonisation" data-id="Dekarbonisasi Industri">Industrial Decarbonisation</span></div></div></div></section>
 <section class="proof"><div class="wrap proofgrid">
 <div class="metric"><strong>5<i>+</i></strong><div><b data-en="Years of experience" data-id="Tahun pengalaman">Years of experience</b><small data-en="Manufacturing & industrial systems" data-id="Manufaktur & sistem industri">Manufacturing & industrial systems</small></div></div>
 <div class="metric"><strong>12<i>%</i></strong><div><b data-en="Lead-time reduction" data-id="Penurunan lead time">Lead-time reduction</b><small data-en="Production planning improvement" data-id="Perbaikan perencanaan produksi">Production planning improvement</small></div></div>
