@@ -438,6 +438,159 @@ h1,h2,h3{font-feature-settings:"ss01" on}
 @media(max-width:600px){.wrap{width:calc(100% - 32px)}.section{padding:66px 0}.proofgrid{grid-template-columns:1fr 1fr}.metric strong{font-size:29px}.pv-sim-heading{display:block}.pv-sim-chip{display:inline-block;margin-top:12px}.pv-allocation-legend{gap:8px}.pv-allocation-legend strong{font-size:19px}.pv-caption{grid-template-columns:1fr}.case-pv-visual .pv-shell{padding:6px}.pv-svg{min-width:0}.pv-annual-balance{padding:16px}.pv-demand-card,.pv-split-card{padding:16px}}
 @media(prefers-reduced-motion:reduce){.card,.skill,.value-card{transition:none}.card:hover,.skill:hover,.value-card:hover{transform:none}}
 
+
+/* Executive portfolio art direction — warm mineral palette, tighter rhythm */
+:root{
+ --canvas:#f2f0e9;--ink:#182b32;--muted:#5d6c6c;--line:#d9ddd5;
+ --forest:#245d50;--jade:#62a88c;--copper:#bd8058;--ochre:#d5aa68;
+ --plum:#76617d;--sky:#6597a8;--navy:#142b35;
+}
+html{scroll-padding-top:78px}
+body{background:linear-gradient(145deg,#f4f1e9 0%,#edf1eb 42%,#f3eee8 100%);color:#1b3036;font-size:15px;line-height:1.68}
+.wrap{width:min(1240px,calc(100% - 56px))}
+.header{background:linear-gradient(105deg,#142b35f5 0%,#1c453fF5 58%,#3d3949f5 100%);border-bottom-color:#ffffff25}
+.brand span{color:#a8d4b7}
+.links a:hover{color:#e6bd80}
+.lang button.active{background:linear-gradient(120deg,#b7d8c2,#e9d5ad);color:#173039}
+.navcta{border-color:#d2ad78}
+.hero{padding:clamp(58px,6vw,82px) 0 34px;background:radial-gradient(ellipse at 84% 12%,#b47c5638,transparent 32%),radial-gradient(ellipse at 15% 95%,#4e9a7b35,transparent 36%),linear-gradient(118deg,#142a34 0%,#1b4845 52%,#393b49 100%)}
+.hero:before{background-image:linear-gradient(#d8e7df0b 1px,transparent 1px),linear-gradient(90deg,#d8e7df0b 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,#000,transparent 96%)}
+.hero-grid{grid-template-columns:minmax(0,1.02fr) minmax(440px,.98fr);gap:clamp(28px,4vw,54px)}
+.hero h1{font-size:clamp(42px,5.2vw,66px);max-width:720px;line-height:1.04}
+.hero .lead{font-size:clamp(16px,1.5vw,18px);max-width:610px;color:#d7e3dd}
+.hero .eyebrow{color:#b9d9bd}
+.hero .meta{margin:22px 0;color:#b3c3be}
+.hero .btn{border-radius:7px;padding:12px 17px}
+.hero .primary{background:linear-gradient(115deg,#c4dfc9,#ead7b4);border:0}
+.hero .ghost{border-color:#a3c4b7;color:#f1f4ed}
+.heroart.venn-art{
+ min-height:454px;border-radius:14px;
+ background:radial-gradient(ellipse at 22% 24%,#4e9c7d55,transparent 39%),radial-gradient(ellipse at 80% 78%,#a77b5840,transparent 42%),linear-gradient(145deg,#172f3a 0%,#1b4144 55%,#3b3946 100%);
+ border:1px solid #c5dfcf55;box-shadow:0 24px 58px #06171d55,inset 0 1px #ffffff22
+}
+.venn-stage{inset:43px 4px 35px}
+.venn-circle{width:244px;height:244px;padding-top:37px;backdrop-filter:blur(1px)}
+.venn-ops{left:calc(50% - 228px);top:13px;background:radial-gradient(circle at 35% 28%,#56c69aab,#1b816b70 72%);border-color:#9ce6bd;box-shadow:inset 0 0 24px #9de6c02b,0 8px 26px #061a1b30}
+.venn-fin{left:calc(50% - 16px);top:13px;background:radial-gradient(circle at 65% 28%,#e9b76cb0,#a96d4275 72%);border-color:#f2ce91;box-shadow:inset 0 0 24px #ffe1a12b,0 8px 26px #061a1b30}
+.venn-energy{left:calc(50% - 122px);top:163px;padding-top:128px;background:radial-gradient(circle at 50% 75%,#68b9d5b0,#286d9a7a 72%);border-color:#a3dff0;box-shadow:inset 0 0 24px #b2e6f22b,0 8px 26px #061a1b30}
+.venn-intersection{
+ left:50%;top:51%;width:164px;height:116px;padding:12px 13px;
+ border:1px solid #e8f3dfd9;border-radius:17px;
+ background:linear-gradient(145deg,#1c3c3df5 0%,#172c38f7 55%,#433c46f5 100%);
+ box-shadow:0 0 0 6px #e8f3df1a,0 12px 35px #06131f85,inset 0 1px #ffffff40;
+ display:flex;align-items:center;justify-content:center;gap:5px
+}
+.venn-intersection .intersection-kicker{display:block;font:700 7px 'DM Mono';letter-spacing:.15em;color:#c5d9c6;margin:0;text-align:center}
+.venn-intersection strong{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;font:800 11px/1.17 Manrope;letter-spacing:.045em;color:#fff;text-align:center;text-shadow:0 2px 9px #081c26}
+.venn-intersection strong span{display:block;white-space:nowrap}
+.venn-intersection i{width:35px;height:3px;flex:0 0 auto;border-radius:4px;background:linear-gradient(90deg,#6dd0a2,#e6b66c,#7ec8e5);margin:1px 0 0}
+.venn-art .art-head{color:#d1e0d8}
+.venn-art .art-live{color:#c7d8ca}
+.venn-art .art-bottom{color:#b7c9c3}
+.herofoot{margin-top:32px;color:#9bb0a9}
+.proof{background:linear-gradient(100deg,#fffdf8 0%,#edf3eb 48%,#f5eee4 100%);border-color:#dce0d7}
+.proofgrid{padding:20px 0;gap:14px}
+.metric{padding:7px 14px 7px 0;border-color:#d3dcd4}
+.metric strong{font-size:clamp(27px,3vw,35px);color:#234a48}
+.metric strong i{color:#b17b50}
+.metric b{color:#233c40;font-size:12px;font-weight:800}
+.metric small{color:#647472}
+.section{padding:clamp(58px,6.3vw,82px) 0}
+.sectionhead{margin-bottom:28px}
+.sectionhead h2,.splithead h2{color:#1b3539}
+.sectionhead>p{color:#586b68}
+.section.white{background:linear-gradient(135deg,#fffefa 0%,#f2f4ed 58%,#f7eee5 100%)}
+.section.paper{background:linear-gradient(135deg,#ecefe8 0%,#f5f0e7 52%,#edf2ee 100%)}
+.split{grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:clamp(32px,5vw,68px)}
+.splithead h2{font-size:clamp(33px,3.8vw,46px)}
+.copy p{color:#536562}
+.copy .big{font-size:clamp(18px,1.8vw,21px);color:#233d40}
+.facts{gap:12px;margin-top:20px}
+.fact{border-color:#cbd7cf}
+.fact small{color:#658078}
+.cards{gap:16px}
+.card{border-color:#d8ded7;border-radius:12px;background:linear-gradient(145deg,#fffefa,#f3f5ef);box-shadow:0 8px 24px #233a3210}
+.visual{height:166px;border-radius:0;background:linear-gradient(125deg,#1b4842,#477e6b 55%,#b07b56)}
+.visual.gold{background:linear-gradient(125deg,#3d3542,#8c654c 55%,#d3a76b)}
+.visual.sage{background:linear-gradient(125deg,#193e4a,#397c82 55%,#7e9c85)}
+.body{padding:19px 21px 22px}
+.body h3{color:#213c3c}
+.body p{color:#5e706d}
+.status{color:#397c65}
+.more{color:#97633e}
+.skills{gap:13px}
+.skill{border-radius:10px;padding:18px;background:linear-gradient(145deg,#fffefa,#f0f4ed);border-color:#d7dfd7}
+.skill:nth-child(3n+2){background:linear-gradient(145deg,#fffaf2,#f5ece0);border-color:#e5d9c9}
+.skill:nth-child(3n){background:linear-gradient(145deg,#f7fbfa,#eaf1f0);border-color:#d5e0de}
+.skill-icon{background:linear-gradient(145deg,#e0eee4,#f2e7d6);color:#356e5b;border-color:#d2dfd5}
+.skill:nth-child(3n+2) .skill-icon{background:linear-gradient(145deg,#f3e1c9,#fbf3e7);color:#996744;border-color:#e7d4bd}
+.skill:nth-child(3n) .skill-icon{background:linear-gradient(145deg,#dcebf0,#eef2f4);color:#477b8b;border-color:#d0dfe4}
+.skill h3{color:#203b3c}
+.skill p{color:#5b6e6d}
+.value-card{border-radius:10px}
+.case{background:radial-gradient(ellipse at 90% 12%,#a86e4b3b,transparent 35%),radial-gradient(ellipse at 5% 90%,#4c9b7b30,transparent 38%),linear-gradient(125deg,#142a34 0%,#1b4844 56%,#3b3946 100%)}
+.casegrid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,4vw,54px)}
+.case h2{font-size:clamp(32px,3.8vw,46px)}
+.outputs{border-radius:12px;background:linear-gradient(145deg,#ffffff12,#d8b17b0a);border-color:#c8dfd044;box-shadow:0 18px 40px #071b2433}
+.job,.research,.edurow{gap:24px;padding:20px 0;border-color:#d1d9d1}
+.job h3,.research h3,.edurow h3{color:#213b3d}
+.company,.research p,.edurow p{color:#5e706e}
+.job ul{color:#536762}
+.pill{border-radius:99px;background:linear-gradient(120deg,#fffdf7,#e9f0e8);border-color:#d6dfd6;color:#42635a}
+.cta{padding:62px 0;background:radial-gradient(ellipse at 85% 10%,#ad7b5938,transparent 34%),linear-gradient(120deg,#142a34,#1d4a45 58%,#3c3948);color:#fff}
+.contactgrid{gap:clamp(28px,4vw,48px)}
+.contactcard{border-radius:12px;background:linear-gradient(145deg,#ffffff12,#e3b67a0c);border-color:#d3e0d044}
+.email{color:#b5dfc1;border-color:#b5dfc1}
+footer{background:linear-gradient(100deg,#101f29,#1c3b3b 58%,#332f3c);color:#b0c0bb}
+footer .foot b{color:#f4f2e9}
+footer .foot a{color:#c3d8c7}
+@media(max-width:1000px){
+ .hero-grid{grid-template-columns:1fr;gap:30px}
+ .heroart.venn-art{max-width:680px;width:100%;margin:0 auto;min-height:430px}
+ .casegrid{grid-template-columns:1fr;gap:28px}
+ .outputs{max-width:none}
+}
+@media(max-width:850px){
+ .wrap{width:min(100% - 40px,1240px)}
+ .split{gap:25px}
+ .section{padding:60px 0}
+ .hero{padding-top:58px}
+ .herofoot{margin-top:24px}
+}
+@media(max-width:600px){
+ .wrap{width:calc(100% - 32px)}
+ .hero{padding:48px 0 28px}
+ .hero h1{font-size:clamp(38px,10vw,48px)}
+ .heroart.venn-art{min-height:390px}
+ .venn-stage{inset:42px 0 32px}
+ .venn-circle{width:184px;height:184px;padding-top:30px}
+ .venn-ops{left:calc(50% - 174px);top:14px}
+ .venn-fin{left:calc(50% - 10px);top:14px}
+ .venn-energy{left:calc(50% - 92px);top:128px;padding-top:100px}
+ .venn-intersection{top:51%;width:137px;height:102px;padding:9px}
+ .venn-intersection .intersection-kicker{font-size:6px}
+ .venn-intersection strong{font-size:9px}
+ .venn-intersection i{width:27px}
+ .venn-circle strong{font-size:10px}
+ .venn-circle small{font-size:6px}
+ .section{padding:52px 0}
+ .sectionhead{margin-bottom:23px}
+ .cards{gap:13px}
+ .body{padding:17px}
+ .proofgrid{padding:16px 0}
+ .metric{padding-right:6px}
+ .metric strong{font-size:25px}
+ .cta{padding:52px 0}
+}
+@media(max-width:390px){
+ .venn-circle{width:166px;height:166px}
+ .venn-ops{left:calc(50% - 157px)}
+ .venn-fin{left:calc(50% - 9px)}
+ .venn-energy{left:calc(50% - 83px);top:118px;padding-top:91px}
+ .venn-intersection{width:126px;height:94px}
+ .venn-intersection strong{font-size:8px}
+}
+
 </style>
 </head>
 <body data-current-lang="en">
@@ -470,7 +623,7 @@ h1,h2,h3{font-feature-settings:"ss01" on}
 <div class="venn-circle venn-ops"><span class="venn-number">01</span><strong data-en="OPERATIONS" data-id="OPERASI">OPERATIONS</strong><small data-en="PROCESS · QUALITY · FLOW" data-id="PROSES · MUTU · ALUR">PROCESS · QUALITY · FLOW</small></div>
 <div class="venn-circle venn-fin"><span class="venn-number">02</span><strong data-en="FINANCE" data-id="KEUANGAN">FINANCE</strong><small data-en="COST · VALUE · INVESTMENT" data-id="BIAYA · NILAI · INVESTASI">COST · VALUE · INVESTMENT</small></div>
 <div class="venn-circle venn-energy"><span class="venn-number">03</span><strong data-en="ENERGY" data-id="ENERGI">ENERGY</strong><small data-en="SOLAR PV · CARBON · LCA" data-id="PLTS · KARBON · LCA">SOLAR PV · CARBON · LCA</small></div>
-<div class="venn-intersection" aria-label="Sustainable Industrial Systems"><strong>SUSTAINABLE<br>INDUSTRIAL<br>SYSTEMS</strong><i></i></div>
+<div class="venn-intersection" aria-label="Sustainable Industrial Systems"><span class="intersection-kicker">INTEGRATED OUTCOME</span><strong><span>SUSTAINABLE</span><span>INDUSTRIAL</span><span>SYSTEMS</span></strong><i></i></div>
 </div>
 <div class="art-bottom"><span>EFFICIENCY <i>×</i> VIABILITY <i>×</i> SUSTAINABILITY</span><span>AG / 2026</span></div>
 </div></div><div class="herofoot"><span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span><span>AGUS RIANTO / 2026</span></div></div></section>
