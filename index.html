@@ -497,7 +497,7 @@ h3{letter-spacing:-.018em}
    </svg>
   </div>
   <div class="pv-simulator" aria-labelledby="pv-sim-title">
-   <div class="pv-sim-heading"><div><span class="mono">LIVE POWER BALANCE / ILLUSTRATIVE</span><h3 id="pv-sim-title" data-en="On-grid operating point" data-id="Titik operasi PLTS on-grid">On-grid operating point</h3><p data-en="Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative power-balance model, not live plant telemetry." data-id="Atur keluaran PV dan kebutuhan daya fasilitas untuk melihat bagaimana jaringan menyeimbangkan selisihnya. Ini adalah model neraca daya ilustratif, bukan data telemetri fasilitas secara langsung.">Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative power-balance model, not live plant telemetry.</p></div><span class="pv-sim-chip" data-en="NO BATTERY" data-id="TANPA BATERAI">NO BATTERY</span></div>
+   <div class="pv-sim-heading"><div><span class="mono">LIVE POWER BALANCE / ILLUSTRATIVE</span><h3 id="pv-sim-title" data-en="On-grid operating point" data-id="Titik operasi PLTS on-grid">On-grid operating point</h3><p data-en="Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative instantaneous-power balance, not live telemetry; it excludes conversion and wiring losses and does not model energy over time." data-id="Atur keluaran PV dan kebutuhan daya fasilitas untuk melihat bagaimana jaringan menyeimbangkan selisihnya. Ini adalah model neraca daya ilustratif, bukan data telemetri fasilitas secara langsung.">Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative power-balance model, not live plant telemetry.</p></div><span class="pv-sim-chip" data-en="NO BATTERY" data-id="TANPA BATERAI">NO BATTERY</span></div>
    <div class="pv-sim-controls">
     <label class="pv-sim-control" for="pvOutput"><span><b data-en="PV generation" data-id="Pembangkitan PV">PV generation</b><output id="pvOutputValue" for="pvOutput">75 kW</output></span><input id="pvOutput" type="range" min="0" max="120" step="1" value="75"><small data-en="Available AC power from the grid-following inverter" data-id="Daya AC tersedia dari inverter grid-following">Available AC power from the grid-following inverter</small></label>
     <label class="pv-sim-control" for="facilityLoad"><span><b data-en="Facility demand" data-id="Kebutuhan daya fasilitas">Facility demand</b><output id="facilityLoadValue" for="facilityLoad">90 kW</output></span><input id="facilityLoad" type="range" min="0" max="120" step="1" value="90"><small data-en="Instantaneous active-power demand at the LV bus" data-id="Kebutuhan daya aktif sesaat pada bus LV">Instantaneous active-power demand at the LV bus</small></label>
@@ -608,9 +608,11 @@ h3{letter-spacing:-.018em}
       document.getElementById("pvSelfUsePct").textContent = selfUse.toFixed(1) + (document.documentElement.lang === "id" ? "% dari kebutuhan daya" : "% of facility demand");
       document.getElementById("pvGridImport").textContent = fmt(gridImport) + " kW";
       document.getElementById("pvGridExport").textContent = fmt(gridExport) + " kW";
-      document.getElementById("pvBalanceText").textContent = gridImport > 0
-        ? (document.documentElement.lang === "id" ? fmt(pvToLoad) + " kW PV + " + fmt(gridImport) + " kW jaringan = " + fmt(load) + " kW beban" : fmt(pvToLoad) + " kW PV + " + fmt(gridImport) + " kW grid = " + fmt(load) + " kW load")
-        : (document.documentElement.lang === "id" ? fmt(pvToLoad) + " kW PV + " + fmt(gridExport) + " kW ekspor = " + fmt(pv) + " kW PV" : fmt(pvToLoad) + " kW PV + " + fmt(gridExport) + " kW exported = " + fmt(pv) + " kW PV");
+      document.getElementById("pvBalanceText").textContent = pv === 0 && load === 0
+        ? (document.documentElement.lang === "id" ? "Tidak ada pembangkitan atau kebutuhan daya" : "No generation or demand")
+        : gridImport > 0
+          ? (document.documentElement.lang === "id" ? fmt(pvToLoad) + " kW PV + " + fmt(gridImport) + " kW jaringan = " + fmt(load) + " kW beban" : fmt(pvToLoad) + " kW PV + " + fmt(gridImport) + " kW grid = " + fmt(load) + " kW load")
+          : (document.documentElement.lang === "id" ? fmt(pvToLoad) + " kW PV + " + fmt(gridExport) + " kW ekspor = " + fmt(pv) + " kW PV" : fmt(pvToLoad) + " kW PV + " + fmt(gridExport) + " kW exported = " + fmt(pv) + " kW PV");
       pvOutput.setAttribute("aria-valuetext", fmt(pv) + " kilowatts");
       facilityLoad.setAttribute("aria-valuetext", fmt(load) + " kilowatts");
     };
