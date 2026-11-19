@@ -242,20 +242,79 @@ h3{letter-spacing:-.018em}
  body{font-size:15px}
 }
 
+
+/* Responsive navigation, accessibility and interactive PV power-balance panel */
+.header .nav{position:relative}
+.mobile-menu-toggle{display:none;width:40px;height:38px;border:1px solid #ffffff45;border-radius:4px;background:#ffffff0b;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.mobile-menu-toggle span{display:block;width:17px;height:2px;background:#e8f0eb;border-radius:2px;transition:transform .2s ease,opacity .2s ease}
+.mobile-menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.mobile-menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+:where(a,button,input):focus-visible{outline:3px solid #e2b875;outline-offset:3px}
+.pv-simulator{margin-top:22px;padding:25px;background:linear-gradient(145deg,#132c3b,#1d3b47 58%,#1b302f);border:1px solid #7cb7a45c;border-radius:7px;color:#edf4ef;box-shadow:0 18px 40px #0c1d2926;position:relative;overflow:hidden}
+.pv-simulator:before{content:"";position:absolute;inset:0;background:linear-gradient(125deg,#ffffff08,transparent 38%),radial-gradient(circle at 100% 0%,#75c4a51c,transparent 38%);pointer-events:none}
+.pv-sim-heading,.pv-sim-controls,.pv-sim-results,.pv-sim-equation{position:relative;z-index:1}
+.pv-sim-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.pv-sim-heading .mono{font-size:9px;color:#9fd5ba;letter-spacing:.13em}
+.pv-sim-heading h3{font:800 23px/1.15 Manrope;margin:8px 0;color:#f5f8f5}
+.pv-sim-heading p{font-size:12px;line-height:1.6;color:#b8c9ca;max-width:650px;margin:0}
+.pv-sim-chip{white-space:nowrap;padding:7px 10px;border:1px solid #8fc5a75c;border-radius:99px;color:#b7dfc4;font:9px 'DM Mono';letter-spacing:.08em}
+.pv-sim-controls{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+.pv-sim-control{display:block;padding:16px;background:#ffffff0a;border:1px solid #ffffff18;border-radius:5px}
+.pv-sim-control>span{display:flex;justify-content:space-between;gap:10px;align-items:center;color:#e9f0eb;font-size:12px}
+.pv-sim-control output{font:700 17px Manrope;color:#f2cb87;font-variant-numeric:tabular-nums}
+.pv-sim-control input{width:100%;margin:16px 0 7px;accent-color:#8fd1ad;cursor:pointer}
+.pv-sim-control small{display:block;color:#9fb2b5;font-size:10px;line-height:1.45}
+.pv-sim-results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.pv-sim-result{padding:15px 16px;background:#0d202b80;border:1px solid #ffffff16;border-radius:4px}
+.pv-sim-result span{display:block;color:#aabdc0;font:9px 'DM Mono';letter-spacing:.08em;text-transform:uppercase}
+.pv-sim-result strong{display:block;font:800 27px Manrope;letter-spacing:-.04em;color:#b9e3c9;margin:8px 0 3px;font-variant-numeric:tabular-nums}
+.pv-sim-result small{color:#9eb1b4;font-size:10px}
+.pv-sim-result.import strong{color:#f1c47f}
+.pv-sim-result.export strong{color:#8dd7ef}
+.pv-sim-equation{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid #ffffff20}
+.pv-sim-equation span{color:#9ed5b6;font:9px 'DM Mono';letter-spacing:.1em}
+.pv-sim-equation b{font:600 12px Manrope;color:#e7eeea;text-align:right}
+@media(max-width:850px){
+ .mobile-menu-toggle{display:flex;order:0}
+ .header .nav{gap:12px}
+ .links{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;padding:12px 18px 18px;background:#101d2b;border:1px solid #ffffff20;border-top:0;box-shadow:0 16px 28px #07131d40;flex-direction:column;gap:0}
+ .links.is-open{display:flex}
+ .links a{padding:12px 3px;border-bottom:1px solid #ffffff16}
+ .links a:last-child{border-bottom:0}
+ .actions{margin-left:auto}
+}
+@media(max-width:600px){
+ .pv-simulator{padding:18px}
+ .pv-sim-heading{display:block}
+ .pv-sim-chip{display:inline-block;margin-top:12px}
+ .pv-sim-heading h3{font-size:20px}
+ .pv-sim-controls{grid-template-columns:1fr;gap:10px;margin-top:17px}
+ .pv-sim-results{grid-template-columns:1fr;gap:8px}
+ .pv-sim-result{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 10px}
+ .pv-sim-result span{grid-column:1}
+ .pv-sim-result strong{grid-column:2;grid-row:1/3;margin:0}
+ .pv-sim-result small{grid-column:1}
+ .pv-sim-equation{align-items:flex-start;flex-direction:column}
+ .pv-sim-equation b{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){.mobile-menu-toggle span{transition:none}}
+
 </style>
 </head>
 <body data-current-lang="en">
 <a class="skip" href="#content" data-en="Skip to content" data-id="Langsung ke konten">Skip to content</a>
 <header class="header"><div class="wrap nav">
 <a class="brand" href="#top">AGUS RIANTO<span>.</span></a>
-<nav class="links" aria-label="Main navigation">
+<button class="mobile-menu-toggle" type="button" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+<nav class="links" id="primaryNav" aria-label="Main navigation">
 <a href="#about" data-en="About" data-id="Profil">About</a>
 <a href="#work" data-en="Selected work" data-id="Karya pilihan">Selected work</a>
 <a href="#experience" data-en="Experience" data-id="Pengalaman">Experience</a>
 <a href="#expertise" data-en="Expertise" data-id="Keahlian">Expertise</a>
 <a href="#contact" data-en="Contact" data-id="Kontak">Contact</a>
 </nav>
-<div class="actions"><div class="lang" aria-label="Language selector">
+<div class="actions"><div class="lang" role="group" aria-label="Language selector">
 <button type="button" data-lang-switch="en" class="active" aria-pressed="true">EN</button>
 <button type="button" data-lang-switch="id" aria-pressed="false">ID</button>
 </div><a class="navcta" href="#contact" data-en="Let's connect ↗" data-id="Mari terhubung ↗">Let's connect ↗</a></div>
@@ -437,6 +496,19 @@ h3{letter-spacing:-.018em}
     <text x="40" y="575" fill="#829da6" font-size="10" font-family="monospace">*String combiner applies where required by array/inverter design. Final protection and metering follow utility rules and the approved single-line diagram.</text>
    </svg>
   </div>
+  <div class="pv-simulator" aria-labelledby="pv-sim-title">
+   <div class="pv-sim-heading"><div><span class="mono">LIVE POWER BALANCE / ILLUSTRATIVE</span><h3 id="pv-sim-title">On-grid operating point</h3><p>Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative power-balance model, not live plant telemetry.</p></div><span class="pv-sim-chip">NO BATTERY</span></div>
+   <div class="pv-sim-controls">
+    <label class="pv-sim-control" for="pvOutput"><span><b>PV generation</b><output id="pvOutputValue" for="pvOutput">75 kW</output></span><input id="pvOutput" type="range" min="0" max="120" step="1" value="75"><small>Available AC power from the grid-following inverter</small></label>
+    <label class="pv-sim-control" for="facilityLoad"><span><b>Facility demand</b><output id="facilityLoadValue" for="facilityLoad">90 kW</output></span><input id="facilityLoad" type="range" min="0" max="120" step="1" value="90"><small>Instantaneous active-power demand at the LV bus</small></label>
+   </div>
+   <div class="pv-sim-results" aria-live="polite">
+    <div class="pv-sim-result"><span>PV serves load</span><strong id="pvSelfUse">75 kW</strong><small id="pvSelfUsePct">83.3% of facility demand</small></div>
+    <div class="pv-sim-result import"><span>Grid import</span><strong id="pvGridImport">15 kW</strong><small>Utility supplies the deficit</small></div>
+    <div class="pv-sim-result export"><span>Grid export</span><strong id="pvGridExport">0 kW</strong><small>Surplus flows to the grid</small></div>
+   </div>
+   <div class="pv-sim-equation"><span>PV → LV BUS → LOAD</span><b id="pvBalanceText">75 kW PV + 15 kW grid = 90 kW load</b></div>
+  </div>
   <div class="pv-caption">
    <div><b>01 / DC GENERATION</b><span>PV modules produce DC electricity; string-level protection is applied as designed.</span></div>
    <div><b>02 / POWER CONVERSION</b><span>Grid-following inverter performs MPPT and DC-to-AC conversion with anti-islanding protection.</span></div>
@@ -493,6 +565,58 @@ h3{letter-spacing:-.018em}
       url.searchParams.set("lang", selected);
       window.history.replaceState({}, "", url.pathname + url.search + url.hash);
     }
+  }
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const primaryNav = document.getElementById("primaryNav");
+  if (menuToggle && primaryNav) {
+    const closeMenu = () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      primaryNav.classList.remove("is-open");
+    };
+    menuToggle.addEventListener("click", () => {
+      const opening = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(opening));
+      menuToggle.setAttribute("aria-label", opening ? "Close navigation" : "Open navigation");
+      primaryNav.classList.toggle("is-open", opening);
+    });
+    primaryNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 850) closeMenu();
+    });
+  }
+  const pvOutput = document.getElementById("pvOutput");
+  const facilityLoad = document.getElementById("facilityLoad");
+  if (pvOutput && facilityLoad) {
+    const fmt = (value) => Number(value).toLocaleString(document.documentElement.lang === "id" ? "id-ID" : "en-US", { maximumFractionDigits: 0 });
+    const updatePowerBalance = () => {
+      const pv = Number(pvOutput.value);
+      const load = Number(facilityLoad.value);
+      const pvToLoad = Math.min(pv, load);
+      const gridImport = Math.max(load - pv, 0);
+      const gridExport = Math.max(pv - load, 0);
+      const selfUse = load > 0 ? (pvToLoad / load) * 100 : 0;
+      document.getElementById("pvOutputValue").textContent = fmt(pv) + " kW";
+      document.getElementById("facilityLoadValue").textContent = fmt(load) + " kW";
+      document.getElementById("pvSelfUse").textContent = fmt(pvToLoad) + " kW";
+      document.getElementById("pvSelfUsePct").textContent = selfUse.toFixed(1) + "% of facility demand";
+      document.getElementById("pvGridImport").textContent = fmt(gridImport) + " kW";
+      document.getElementById("pvGridExport").textContent = fmt(gridExport) + " kW";
+      document.getElementById("pvBalanceText").textContent = gridImport > 0
+        ? fmt(pvToLoad) + " kW PV + " + fmt(gridImport) + " kW grid = " + fmt(load) + " kW load"
+        : fmt(pvToLoad) + " kW PV + " + fmt(gridExport) + " kW exported = " + fmt(pv) + " kW PV";
+      pvOutput.setAttribute("aria-valuetext", fmt(pv) + " kilowatts");
+      facilityLoad.setAttribute("aria-valuetext", fmt(load) + " kilowatts");
+    };
+    pvOutput.addEventListener("input", updatePowerBalance);
+    facilityLoad.addEventListener("input", updatePowerBalance);
+    updatePowerBalance();
   }
   buttons.forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.langSwitch)));
   const requested = new URLSearchParams(window.location.search).get("lang");
