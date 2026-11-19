@@ -666,7 +666,7 @@ footer .foot a{color:#c3d8c7}
 /* PV architecture: clear centered heading, aligned component labels, responsive figure */
 .case-pv-visual .pv-svg{shape-rendering:geometricPrecision;text-rendering:geometricPrecision}
 .pv-figure-heading text,.pv-component-label text{paint-order:stroke;stroke:#0b2532;stroke-width:.35px;stroke-linejoin:round}
-.pv-component-label rect{filter:url(#pvDrop)}
+.pv-component-label rect{filter:none;fill-opacity:.97;stroke-width:1.1}
 .outputs-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:34px;padding-bottom:14px;border-bottom:1px solid #ffffff26}
 .outputs-heading>.mono{font:800 10px/1.4 'DM Mono',monospace;letter-spacing:.14em;color:#b9e4c9;flex:0 0 auto}
 .outputs-heading-note{max-width:245px;text-align:right;color:#d9bd91;font:700 8px/1.65 'DM Mono',monospace;letter-spacing:.12em}
@@ -796,10 +796,10 @@ footer .foot a{color:#c3d8c7}
  <linearGradient id="pvBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9bdcf5"/><stop offset="1" stop-color="#3679b1"/></linearGradient>
  <linearGradient id="pvBuilding" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6b8991"/><stop offset="1" stop-color="#294958"/></linearGradient>
  <filter id="pvDrop" x="-30%" y="-30%" width="170%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="9"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <marker id="pvDCArrow" markerWidth="11" markerHeight="11" refX="8" refY="5.5" orient="auto"><path d="M0 0L10 5.5L0 11Z" fill="#f2bd68"/></marker>
- <marker id="pvACArrow" markerWidth="11" markerHeight="11" refX="8" refY="5.5" orient="auto"><path d="M0 0L10 5.5L0 11Z" fill="#70d9b0"/></marker>
- <marker id="pvLoadArrow" markerWidth="11" markerHeight="11" refX="8" refY="5.5" orient="auto"><path d="M0 0L10 5.5L0 11Z" fill="#b4d98c"/></marker>
- <marker id="pvGridArrow" markerWidth="11" markerHeight="11" refX="8" refY="5.5" orient="auto-start-reverse"><path d="M0 0L10 5.5L0 11Z" fill="#7ecaf0"/></marker>
+ <marker id="pvDCArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto"><path d="M0 0L6.5 3.5L0 7Z" fill="#f2bd68"/></marker>
+ <marker id="pvACArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto"><path d="M0 0L10 5.5L0 11Z" fill="#70d9b0"/></marker>
+ <marker id="pvLoadArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto"><path d="M0 0L10 5.5L0 11Z" fill="#b4d98c"/></marker>
+ <marker id="pvGridArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto-start-reverse"><path d="M0 0L10 5.5L0 11Z" fill="#7ecaf0"/></marker>
 </defs>
 <rect x="1" y="1" width="1438" height="698" rx="18" fill="url(#pvSky)" stroke="#7ca8b0" stroke-opacity=".32"/>
 <g opacity=".12" stroke="#b9d7d8" stroke-width="1"><path d="M35 100H1405M35 180H1405M35 260H1405M35 340H1405M35 420H1405M35 500H1405M35 580H1405"/><path d="M120 55V650M240 55V650M360 55V650M480 55V650M600 55V650M720 55V650M840 55V650M960 55V650M1080 55V650M1200 55V650M1320 55V650"/></g>
@@ -835,7 +835,7 @@ footer .foot a{color:#c3d8c7}
  <path d="M420 198L480 177L540 198L480 220Z" fill="#809ba0" stroke="#f2bd68" stroke-width="2"/>
  <path d="M420 198V302L480 325V220Z" fill="#315566" stroke="#c5a46c"/>
  <path d="M480 220L540 198V302L480 325Z" fill="url(#pvMetal)" stroke="#d0e0df"/>
- <rect x="496" y="235" width="28" height="49" rx="4" fill="#17394a"/><path d="M510 241V272" stroke="#f4c878" stroke-width="4"/><circle cx="510" cy="289" r="4" fill="#8fe0bd"/>
+ <rect x="492" y="231" width="34" height="62" rx="4" fill="#17394a" stroke="#e2c17e" stroke-width="1"/><rect x="498" y="239" width="22" height="12" rx="2" fill="#254e5b" stroke="#d7b46e" stroke-width=".7"/><path d="M509 255V279" stroke="#f4c878" stroke-width="3"/><circle cx="509" cy="286" r="3.2" fill="#8fe0bd"/><path d="M497 260H502M516 260H521M497 270H502M516 270H521" stroke="#b9d4d4" stroke-width="1"/>
 </g>
 <g class="pv-component-label"><rect x="390" y="333" width="180" height="57" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#d7b46e" stroke-opacity=".7"/><text x="480" y="352" text-anchor="middle" fill="#ffdda0" font-family="monospace" font-size="11" font-weight="700" letter-spacing=".45">DC PROTECTION</text><text x="480" y="369" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">STRING FUSE · ISOLATOR</text><text x="480" y="381" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">SURGE PROTECTION · SPD</text></g>
 <!-- Grid-following inverter -->
@@ -843,9 +843,7 @@ footer .foot a{color:#c3d8c7}
  <path d="M610 183L694 153L778 183L694 214Z" fill="#9db7b9" stroke="#8edcf0" stroke-width="2"/>
  <path d="M610 183V314L694 346V214Z" fill="#27566c" stroke="#80c9e4"/>
  <path d="M694 214L778 183V314L694 346Z" fill="url(#pvBlue)" stroke="#c4effb"/>
- <rect x="712" y="225" width="48" height="73" rx="5" fill="#15394d" stroke="#a5d9ea"/>
- <rect x="722" y="237" width="28" height="16" rx="2" fill="#204f62"/><path d="M722 276L731 262L740 279L751 263" fill="none" stroke="#8fe4c0" stroke-width="3"/>
- <circle cx="727" cy="287" r="3.5" fill="#9be8c1"/><circle cx="744" cy="287" r="3.5" fill="#f3c878"/>
+ <rect x="708" y="224" width="55" height="82" rx="6" fill="#123447" stroke="#c5ebf2" stroke-width="1.3"/><rect x="716" y="232" width="39" height="18" rx="3" fill="#1d5363" stroke="#8ed8db" stroke-width=".8"/><text x="735.5" y="244.5" text-anchor="middle" fill="#baf2dc" font-family="monospace" font-size="7" font-weight="700">INV-01</text><rect x="716" y="258" width="39" height="30" rx="3" fill="#0b2738" stroke="#6eaec0" stroke-width=".8"/><path d="M720 278L728 269L735 278L744 265L751 273" fill="none" stroke="#8fe4c0" stroke-width="1.8"/><circle cx="724" cy="296" r="2.5" fill="#9be8c1"/><circle cx="735" cy="296" r="2.5" fill="#f3c878"/><circle cx="746" cy="296" r="2.5" fill="#8fcdf0"/>
 </g>
 <g class="pv-component-label"><rect x="600" y="350" width="188" height="57" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#7fcce4" stroke-opacity=".72"/><text x="694" y="369" text-anchor="middle" fill="#9edff2" font-family="monospace" font-size="11" font-weight="700" letter-spacing=".35">GRID-TIE INVERTER</text><text x="694" y="386" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">MPPT · DC / AC</text><text x="694" y="398" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">ANTI-ISLANDING</text></g>
 <!-- AC protection / ACDB -->
@@ -853,7 +851,7 @@ footer .foot a{color:#c3d8c7}
  <path d="M842 205L902 184L962 205L902 227Z" fill="#9cb8b3" stroke="#70d9b0" stroke-width="2"/>
  <path d="M842 205V300L902 322V227Z" fill="#245b56" stroke="#78d6ae"/>
  <path d="M902 227L962 205V300L902 322Z" fill="url(#pvTeal)" stroke="#c2f4df"/>
- <rect x="919" y="238" width="27" height="49" rx="3" fill="#173c3e"/><path d="M932 245V278M924 261H940" stroke="#a6efcf" stroke-width="2.5"/>
+ <rect x="916" y="234" width="33" height="58" rx="3" fill="#123b3b" stroke="#b6e8d2" stroke-width="1"/><path d="M924 245H941M924 254H941M924 263H941M924 272H941" stroke="#a6efcf" stroke-width="1.4"/><circle cx="932.5" cy="282" r="3" fill="#f2c879"/>
 </g>
 <g class="pv-component-label"><rect x="810" y="326" width="184" height="57" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#78d9b2" stroke-opacity=".72"/><text x="902" y="345" text-anchor="middle" fill="#8fe4bf" font-family="monospace" font-size="10" font-weight="700" letter-spacing=".35">ACDB / AC PROTECTION</text><text x="902" y="362" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">AC BREAKER · ISOLATOR</text><text x="902" y="374" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">SURGE PROTECTION · SPD</text></g>
 <!-- Main LV switchboard -->
@@ -895,15 +893,15 @@ footer .foot a{color:#c3d8c7}
 <text x="535" y="650" text-anchor="middle" fill="#a6def4" font-family="monospace" font-size="13" font-weight="700">PLN UTILITY GRID</text>
 <!-- Correct power paths: DC string -> inverter -> ACDB -> LV bus; bus feeds facility and exchanges with grid -->
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
- <path d="M377 216H420" stroke="#f2bd68" stroke-width="5" marker-end="url(#pvDCArrow)"/>
+ <path d="M377 216H420" stroke="#f2bd68" stroke-width="2.6" marker-end="url(#pvDCArrow)"/>
  <path d="M540 250H610" stroke="#f2bd68" stroke-width="5" marker-end="url(#pvDCArrow)"/>
- <path d="M778 250H842" stroke="#70d9b0" stroke-width="5" marker-end="url(#pvACArrow)"/>
+ <path d="M778 250H842" stroke="#70d9b0" stroke-width="2.6" marker-end="url(#pvACArrow)"/>
  <path d="M962 250H1040" stroke="#70d9b0" stroke-width="5" marker-end="url(#pvACArrow)"/>
- <path d="M1110 359V430H1215V448" stroke="#b4d98c" stroke-width="5" marker-end="url(#pvLoadArrow)"/>
- <path d="M1040 295H1000V530H894" stroke="#7ecaf0" stroke-width="4.5" marker-start="url(#pvGridArrow)" marker-end="url(#pvGridArrow)" stroke-dasharray="10 8"/>
+ <path d="M1180 300H1268V448" stroke="#b4d98c" stroke-width="2.6" marker-end="url(#pvLoadArrow)"/>
+ <path d="M1040 295H1000V530H894" stroke="#7ecaf0" stroke-width="2.3" marker-start="url(#pvGridArrow)" marker-end="url(#pvGridArrow)" stroke-dasharray="7 7"/>
  <path d="M770 532H650V550H575" stroke="#7ecaf0" stroke-width="4.5" marker-start="url(#pvGridArrow)" marker-end="url(#pvGridArrow)" stroke-dasharray="10 8"/>
 </g>
-<g font-family="monospace" font-size="12" font-weight="700"><text x="390" y="197" fill="#ffdda0">DC</text><text x="565" y="232" fill="#ffdda0">DC</text><text x="797" y="232" fill="#8fe4bf">AC</text><text x="980" y="232" fill="#8fe4bf">AC</text><text x="1130" y="448" fill="#d6efc4">LOAD FEEDER</text><text x="935" y="516" fill="#a6def4">PCC / GRID EXCHANGE</text></g>
+<g font-family="monospace" font-size="9" font-weight="700" letter-spacing=".8"><text x="390" y="204" fill="#ffdda0">DC</text><text x="565" y="232" fill="#ffdda0">DC</text><text x="797" y="232" fill="#8fe4bf">AC</text><text x="980" y="232" fill="#8fe4bf">AC</text><text x="1280" y="408" fill="#d6efc4">LOAD</text><text x="935" y="516" fill="#a6def4">PCC / GRID EXCHANGE</text></g>
 <g transform="translate(42 88)"><rect width="290" height="38" rx="7" fill="#102a38" stroke="#d4ae70" stroke-opacity=".55"/><circle cx="18" cy="19" r="5" fill="#f2bd68"/><text x="32" y="23" fill="#f7dfb3" font-family="monospace" font-size="10" letter-spacing="1">DC CIRCUIT</text><circle cx="135" cy="19" r="5" fill="#70d9b0"/><text x="149" y="23" fill="#c5f0dc" font-family="monospace" font-size="10" letter-spacing="1">AC CIRCUIT</text><circle cx="250" cy="19" r="5" fill="#7ecaf0"/><text x="264" y="23" fill="#c8eafa" font-family="monospace" font-size="10" letter-spacing="1">GRID</text></g>
 </svg>
   </div>
