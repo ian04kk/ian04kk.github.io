@@ -784,125 +784,185 @@ footer .foot a{color:#c3d8c7}
 <div class="case-pv-heading"><span class="mono" data-en="ENGINEERING SIMULATION / 3D ON-GRID PV SYSTEM" data-id="SIMULASI REKAYASA / SISTEM PLTS ON-GRID 3D">ENGINEERING SIMULATION / 3D ON-GRID PV SYSTEM</span><p data-en="Conceptual system architecture and interactive instantaneous power balance. No battery is modelled." data-id="Arsitektur sistem konseptual dan neraca daya sesaat interaktif. Sistem tidak menggunakan baterai.">Conceptual system architecture and interactive instantaneous power balance. No battery is modelled.</p></div>
 <div class="pv-shell">
    <svg class="pv-svg" viewBox="0 0 1440 700" role="img" aria-labelledby="pvTitle pvDesc">
-<title id="pvTitle">Isometric industrial rooftop solar PV on-grid system</title>
-<desc id="pvDesc">Solar modules feed DC string protection, then a grid-following inverter and AC protection. The inverter connects to the main low-voltage busbar. The busbar supplies the industrial facility and exchanges surplus or deficit energy with the PLN grid through a bidirectional meter. There is no battery.</desc>
+<title id="pvTitle">Industrial rooftop PV — on-grid electrical architecture</title>
+<desc id="pvDesc">Engineering concept diagram. PV modules rated 138.24 kWp connect through DC string protection, a three-phase grid-tie inverter, AC protection and the main low-voltage switchboard. The switchboard supplies the industrial load and connects through a bidirectional meter to the PLN utility grid. No battery storage.</desc>
 <defs>
- <linearGradient id="pvSky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#193d4b"/><stop offset=".55" stop-color="#173342"/><stop offset="1" stop-color="#122735"/></linearGradient>
- <linearGradient id="pvPanelTop" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ce8d1"/><stop offset=".55" stop-color="#278da5"/><stop offset="1" stop-color="#18506f"/></linearGradient>
- <linearGradient id="pvPanelSide" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#24647a"/><stop offset="1" stop-color="#102d45"/></linearGradient>
- <linearGradient id="pvMetal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c6d8d7"/><stop offset=".42" stop-color="#688995"/><stop offset="1" stop-color="#304f60"/></linearGradient>
- <linearGradient id="pvTeal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8be4bd"/><stop offset="1" stop-color="#238d82"/></linearGradient>
- <linearGradient id="pvAmber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe0a1"/><stop offset="1" stop-color="#bd7d32"/></linearGradient>
- <linearGradient id="pvBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9bdcf5"/><stop offset="1" stop-color="#3679b1"/></linearGradient>
- <linearGradient id="pvBuilding" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6b8991"/><stop offset="1" stop-color="#294958"/></linearGradient>
- <filter id="pvDrop" x="-30%" y="-30%" width="170%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="9"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <marker id="pvDCArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto"><path d="M0 0L6.5 3.5L0 7Z" fill="#f2bd68"/></marker>
- <marker id="pvACArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto"><path d="M0 0L10 5.5L0 11Z" fill="#70d9b0"/></marker>
- <marker id="pvLoadArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto"><path d="M0 0L10 5.5L0 11Z" fill="#b4d98c"/></marker>
- <marker id="pvGridArrow" markerWidth="7" markerHeight="7" refX="5.6" refY="3.5" orient="auto-start-reverse"><path d="M0 0L10 5.5L0 11Z" fill="#7ecaf0"/></marker>
+ <linearGradient id="pvBg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102c3a"/><stop offset="1" stop-color="#173d48"/></linearGradient>
+ <linearGradient id="pvGlass2" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#254b59"/><stop offset="1" stop-color="#173441"/></linearGradient>
+ <linearGradient id="pvSolar2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8fe0dc"/><stop offset="1" stop-color="#287d91"/></linearGradient>
+ <linearGradient id="pvMetal2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d0e0dc"/><stop offset="1" stop-color="#718d94"/></linearGradient>
+ <filter id="pvShadow2" x="-20%" y="-20%" width="140%" height="150%"><feGaussianBlur in="SourceAlpha" stdDeviation="7"/><feOffset dy="6"/><feComponentTransfer><feFuncA type="linear" slope=".22"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <marker id="pvArrowDC2" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#f0bd68"/></marker>
+ <marker id="pvArrowAC2" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#78d9b1"/></marker>
+ <marker id="pvArrowGrid2" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto-start-reverse"><path d="M0 0L7 4L0 8Z" fill="#83c9ef"/></marker>
+ <marker id="pvArrowLoad2" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#b6d98e"/></marker>
 </defs>
-<rect x="1" y="1" width="1438" height="698" rx="18" fill="url(#pvSky)" stroke="#7ca8b0" stroke-opacity=".32"/>
-<g opacity=".12" stroke="#b9d7d8" stroke-width="1"><path d="M35 100H1405M35 180H1405M35 260H1405M35 340H1405M35 420H1405M35 500H1405M35 580H1405"/><path d="M120 55V650M240 55V650M360 55V650M480 55V650M600 55V650M720 55V650M840 55V650M960 55V650M1080 55V650M1200 55V650M1320 55V650"/></g>
-<!-- Centered title hierarchy and compact system-status plates -->
-<g class="pv-figure-heading">
- <rect x="442" y="13" width="556" height="58" rx="11" fill="#0b2532" fill-opacity=".94" stroke="#8bcdb5" stroke-opacity=".62"/>
- <path d="M462 25V59" stroke="#82d7b3" stroke-width="3" stroke-linecap="round"/>
- <text x="720" y="38" text-anchor="middle" fill="#e5f7ed" font-family="monospace" font-size="16" font-weight="700" letter-spacing="2">SYSTEM ARCHITECTURE</text>
- <text x="720" y="56" text-anchor="middle" fill="#a9c9c9" font-family="monospace" font-size="10" font-weight="600" letter-spacing="2.2">INDUSTRIAL ROOFTOP PV</text>
- <rect x="42" y="22" width="220" height="39" rx="8" fill="#102d3b" stroke="#6e9f9e" stroke-opacity=".55"/>
- <text x="152" y="38" text-anchor="middle" fill="#a8e4c7" font-family="monospace" font-size="8" font-weight="700" letter-spacing="1.3">ENGINEERING SCHEMATIC</text>
- <text x="152" y="51" text-anchor="middle" fill="#a9bec4" font-family="monospace" font-size="8" letter-spacing="1.1">SYSTEM MAP / 01</text>
- <rect x="1178" y="22" width="217" height="39" rx="8" fill="#102d3b" stroke="#6e9f9e" stroke-opacity=".55"/>
- <circle cx="1195" cy="41" r="3.5" fill="#79d9ad"/>
- <text x="1207" y="38" fill="#bfe8d3" font-family="monospace" font-size="8" font-weight="700" letter-spacing=".8">ON-GRID · THREE-PHASE LV</text>
- <text x="1207" y="51" fill="#a9bec4" font-family="monospace" font-size="8" letter-spacing="1.1">NO BATTERY STORAGE</text>
+<rect x="1" y="1" width="1438" height="698" rx="18" fill="url(#pvBg2)" stroke="#6e9ba2" stroke-opacity=".5"/>
+<g opacity=".12" stroke="#a9d1d0" stroke-width="1"><path d="M32 120H1408M32 200H1408M32 280H1408M32 360H1408M32 440H1408M32 520H1408M32 600H1408"/><path d="M120 86V650M240 86V650M360 86V650M480 86V650M600 86V650M720 86V650M840 86V650M960 86V650M1080 86V650M1200 86V650M1320 86V650"/></g>
+<!-- Header -->
+<g font-family="Arial, sans-serif">
+ <text x="720" y="43" text-anchor="middle" fill="#eaf6f1" font-size="21" font-weight="800" letter-spacing="2.4">SYSTEM ARCHITECTURE</text>
+ <text x="720" y="68" text-anchor="middle" fill="#9fc4c4" font-size="11" font-weight="700" letter-spacing="3">INDUSTRIAL ROOFTOP PV · ON-GRID · THREE-PHASE LV</text>
+ <rect x="42" y="25" width="190" height="42" rx="8" fill="#0b2430" stroke="#719c9d" stroke-opacity=".7"/>
+ <text x="137" y="43" text-anchor="middle" fill="#9ee0c2" font-size="9" font-weight="800" letter-spacing="1.2">ENGINEERING SCHEMATIC</text>
+ <text x="137" y="57" text-anchor="middle" fill="#a9c2c7" font-size="8" letter-spacing="1">SYSTEM MAP / 01</text>
+ <rect x="1208" y="25" width="190" height="42" rx="8" fill="#0b2430" stroke="#719c9d" stroke-opacity=".7"/>
+ <circle cx="1225" cy="46" r="4" fill="#8bdfb6"/>
+ <text x="1237" y="43" fill="#c6ead8" font-size="9" font-weight="800" letter-spacing=".7">GRID CONNECTED</text>
+ <text x="1237" y="57" fill="#a9c2c7" font-size="8" letter-spacing="1">NO BATTERY STORAGE</text>
 </g>
-<!-- Isometric solar array -->
-<g filter="url(#pvDrop)">
- <path d="M48 208L230 145L377 197L193 264Z" fill="#0e2735" stroke="#7ed8c0" stroke-width="2"/>
- <path d="M48 208L193 264V284L48 229Z" fill="#174355" stroke="#39788a"/>
- <path d="M193 264L377 197V218L193 284Z" fill="#123447" stroke="#39788a"/>
- <g fill="url(#pvPanelTop)" stroke="#b7f4e6" stroke-width="1.4">
-  <path d="M65 203L126 182L163 195L102 217Z"/><path d="M132 180L193 159L230 172L169 194Z"/><path d="M199 157L260 136L297 149L236 171Z"/>
-  <path d="M111 226L172 205L209 218L148 240Z"/><path d="M178 203L239 182L276 195L215 217Z"/><path d="M245 180L306 159L343 172L282 194Z"/>
+<!-- Main conversion chain: five equal, aligned equipment modules -->
+<g filter="url(#pvShadow2)">
+ <rect x="42" y="160" width="220" height="250" rx="12" fill="url(#pvGlass2)" stroke="#d8b46e" stroke-opacity=".8"/>
+ <rect x="312" y="160" width="220" height="250" rx="12" fill="url(#pvGlass2)" stroke="#d8b46e" stroke-opacity=".8"/>
+ <rect x="582" y="160" width="220" height="250" rx="12" fill="url(#pvGlass2)" stroke="#86cfe5" stroke-opacity=".8"/>
+ <rect x="852" y="160" width="220" height="250" rx="12" fill="url(#pvGlass2)" stroke="#78d9b1" stroke-opacity=".8"/>
+ <rect x="1122" y="160" width="220" height="250" rx="12" fill="url(#pvGlass2)" stroke="#86cfe5" stroke-opacity=".8"/>
+</g>
+<g font-family="Arial, sans-serif">
+ <!-- PV module array -->
+ <g transform="translate(84 190)">
+  <path d="M0 47L88 16L150 38L62 70Z" fill="#102b3b" stroke="#9be6d4" stroke-width="2"/>
+  <path d="M10 45L45 33L68 41L33 54ZM51 31L86 19L109 27L74 39ZM91 45L126 33L148 41L113 53ZM51 57L86 45L109 53L74 65Z" fill="url(#pvSolar2)" stroke="#d5fff0" stroke-width="1"/>
+  <path d="M32 54L32 67M74 39L74 52M113 53L113 66M62 70V84M120 51V66" stroke="#a7c5c2" stroke-width="3"/>
  </g>
- <g stroke="#d8fff2" stroke-width="1" opacity=".55"><path d="M100 191L137 204M167 168L204 181M234 145L271 158M146 214L183 227M213 191L250 204M280 168L317 181"/></g>
- <path d="M91 270L297 270M117 246L117 270M273 226L273 270" fill="none" stroke="#8ab5a9" stroke-width="5"/>
+ <g text-anchor="middle">
+  <text x="152" y="304" fill="#ffdda0" font-size="14" font-weight="800" letter-spacing=".6">PV MODULE ARRAY</text>
+  <text x="152" y="333" fill="#f3f7f4" font-size="22" font-weight="800">138.24 kWp</text>
+  <text x="152" y="359" fill="#b9cdd0" font-size="10" font-weight="700" letter-spacing="1.5">DC GENERATION</text>
+  <text x="152" y="389" fill="#91b5b9" font-size="9" letter-spacing="1">ROOFTOP PV FIELD</text>
+ </g>
+ <!-- DC protection enclosure -->
+ <g transform="translate(376 192)">
+  <path d="M0 20L58 0L116 20L58 41Z" fill="#c4d6d0" stroke="#f0c778" stroke-width="1.5"/>
+  <path d="M0 20V93L58 115V41Z" fill="#315c68" stroke="#b5c9c5"/>
+  <path d="M58 41L116 20V93L58 115Z" fill="url(#pvMetal2)" stroke="#e2eee7"/>
+  <rect x="72" y="42" width="29" height="42" rx="3" fill="#153b49" stroke="#f0c778"/>
+  <path d="M86 49V73M79 59H93" stroke="#f4d18b" stroke-width="2.5"/>
+  <circle cx="86" cy="78" r="3" fill="#8ee0b8"/>
+ </g>
+ <g text-anchor="middle">
+  <text x="422" y="330" fill="#ffdda0" font-size="14" font-weight="800">DC PROTECTION</text>
+  <text x="422" y="355" fill="#dbe7e4" font-size="10" font-weight="700">STRING FUSE · ISOLATOR</text>
+  <text x="422" y="372" fill="#dbe7e4" font-size="10" font-weight="700">SURGE PROTECTION · SPD</text>
+  <text x="422" y="393" fill="#91b5b9" font-size="9" letter-spacing="1">DC COMBINER / ISOLATION</text>
+ </g>
+ <!-- Inverter -->
+ <g transform="translate(636 188)">
+  <path d="M0 18L66 0L132 18L66 39Z" fill="#bdd5d9" stroke="#8ed7e9" stroke-width="1.5"/>
+  <path d="M0 18V102L66 125V39Z" fill="#28576d" stroke="#9bd7e6"/>
+  <path d="M66 39L132 18V102L66 125Z" fill="#4d91a7" stroke="#c3eaf0"/>
+  <rect x="80" y="45" width="39" height="55" rx="4" fill="#123547" stroke="#bce6e8"/>
+  <rect x="86" y="51" width="27" height="13" rx="2" fill="#1c5362"/>
+  <text x="99.5" y="60" text-anchor="middle" fill="#b9f1db" font-size="7" font-weight="800">INV</text>
+  <path d="M86 84L93 75L100 84L108 70" fill="none" stroke="#8fe3bd" stroke-width="2"/>
+  <circle cx="90" cy="92" r="2" fill="#8fe3bd"/><circle cx="100" cy="92" r="2" fill="#f2c879"/><circle cx="110" cy="92" r="2" fill="#8ecff0"/>
+ </g>
+ <g text-anchor="middle">
+  <text x="692" y="330" fill="#a7e4f1" font-size="14" font-weight="800">GRID-TIE INVERTER</text>
+  <text x="692" y="355" fill="#dbe7e4" font-size="10" font-weight="700">MPPT · DC / AC CONVERSION</text>
+  <text x="692" y="372" fill="#dbe7e4" font-size="10" font-weight="700">ANTI-ISLANDING FUNCTION</text>
+  <text x="692" y="393" fill="#91b5b9" font-size="9" letter-spacing="1">THREE-PHASE OUTPUT</text>
+ </g>
+ <!-- ACDB -->
+ <g transform="translate(904 194)">
+  <path d="M0 18L54 0L108 18L54 37Z" fill="#b8d7ca" stroke="#7ce0b5" stroke-width="1.5"/>
+  <path d="M0 18V91L54 110V37Z" fill="#28645d" stroke="#8ce0bf"/>
+  <path d="M54 37L108 18V91L54 110Z" fill="#58a58e" stroke="#c6f0dc"/>
+  <rect x="68" y="43" width="27" height="43" rx="3" fill="#143e3c" stroke="#c1f1d9"/>
+  <path d="M75 51H88M75 60H88M75 69H88" stroke="#9fe8c8" stroke-width="2"/>
+  <circle cx="81.5" cy="79" r="3" fill="#f3ca7d"/>
+ </g>
+ <g text-anchor="middle">
+  <text x="962" y="330" fill="#8fe5bd" font-size="14" font-weight="800">ACDB</text>
+  <text x="962" y="355" fill="#dbe7e4" font-size="10" font-weight="700">AC BREAKER · ISOLATOR</text>
+  <text x="962" y="372" fill="#dbe7e4" font-size="10" font-weight="700">SURGE PROTECTION · SPD</text>
+  <text x="962" y="393" fill="#91b5b9" font-size="9" letter-spacing="1">AC DISTRIBUTION / PROTECTION</text>
+ </g>
+ <!-- Main LV switchboard -->
+ <g transform="translate(1170 185)">
+  <path d="M0 21L68 0L136 21L68 44Z" fill="#c1d7dc" stroke="#91d8ed" stroke-width="1.5"/>
+  <path d="M0 21V112L68 136V44Z" fill="#28566b" stroke="#a1d9e8"/>
+  <path d="M68 44L136 21V112L68 136Z" fill="#4b8ba1" stroke="#c5eaf1"/>
+  <rect x="84" y="49" width="37" height="72" rx="3" fill="#14384c" stroke="#c3e8ef"/>
+  <path d="M91 63H113M91 77H113M91 91H113" stroke="#a5e7d2" stroke-width="2.5"/>
+  <circle cx="102" cy="108" r="4" fill="#f3c879"/>
+ </g>
+ <g text-anchor="middle">
+  <text x="1232" y="340" fill="#a9e3f3" font-size="13" font-weight="800">MAIN LV SWITCHBOARD</text>
+  <text x="1232" y="365" fill="#dbe7e4" font-size="10" font-weight="700">LV BUSBAR · INCOMER</text>
+  <text x="1232" y="382" fill="#dbe7e4" font-size="10" font-weight="700">OUTGOING FEEDERS</text>
+  <text x="1232" y="400" fill="#91b5b9" font-size="9" letter-spacing="1">FACILITY DISTRIBUTION</text>
+ </g>
 </g>
-<g class="pv-component-label"><rect x="116" y="84" width="188" height="62" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#d7b46e" stroke-opacity=".7"/><text x="210" y="104" text-anchor="middle" fill="#ffe0a1" font-family="monospace" font-size="12" font-weight="700" letter-spacing=".6">PV MODULE ARRAY</text><text x="210" y="123" text-anchor="middle" fill="#e4edf0" font-family="monospace" font-size="11" font-weight="700">138.24 kWp</text><text x="210" y="137" text-anchor="middle" fill="#b7cbd0" font-family="monospace" font-size="8" letter-spacing="1.2">DC GENERATION</text></g>
-<!-- DC protection enclosure -->
-<g filter="url(#pvDrop)">
- <path d="M420 198L480 177L540 198L480 220Z" fill="#809ba0" stroke="#f2bd68" stroke-width="2"/>
- <path d="M420 198V302L480 325V220Z" fill="#315566" stroke="#c5a46c"/>
- <path d="M480 220L540 198V302L480 325Z" fill="url(#pvMetal)" stroke="#d0e0df"/>
- <rect x="492" y="231" width="34" height="62" rx="4" fill="#17394a" stroke="#e2c17e" stroke-width="1"/><rect x="498" y="239" width="22" height="12" rx="2" fill="#254e5b" stroke="#d7b46e" stroke-width=".7"/><path d="M509 255V279" stroke="#f4c878" stroke-width="3"/><circle cx="509" cy="286" r="3.2" fill="#8fe0bd"/><path d="M497 260H502M516 260H521M497 270H502M516 270H521" stroke="#b9d4d4" stroke-width="1"/>
+<!-- Straight, consistent power-flow arrows -->
+<g fill="none" stroke-linecap="round">
+ <path d="M264 282H306" stroke="#f0bd68" stroke-width="3" marker-end="url(#pvArrowDC2)"/>
+ <path d="M534 282H576" stroke="#f0bd68" stroke-width="3" marker-end="url(#pvArrowDC2)"/>
+ <path d="M804 282H846" stroke="#78d9b1" stroke-width="3" marker-end="url(#pvArrowAC2)"/>
+ <path d="M1074 282H1116" stroke="#78d9b1" stroke-width="3" marker-end="url(#pvArrowAC2)"/>
 </g>
-<g class="pv-component-label"><rect x="390" y="333" width="180" height="57" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#d7b46e" stroke-opacity=".7"/><text x="480" y="352" text-anchor="middle" fill="#ffdda0" font-family="monospace" font-size="11" font-weight="700" letter-spacing=".45">DC PROTECTION</text><text x="480" y="369" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">STRING FUSE · ISOLATOR</text><text x="480" y="381" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">SURGE PROTECTION · SPD</text></g>
-<!-- Grid-following inverter -->
-<g filter="url(#pvDrop)">
- <path d="M610 183L694 153L778 183L694 214Z" fill="#9db7b9" stroke="#8edcf0" stroke-width="2"/>
- <path d="M610 183V314L694 346V214Z" fill="#27566c" stroke="#80c9e4"/>
- <path d="M694 214L778 183V314L694 346Z" fill="url(#pvBlue)" stroke="#c4effb"/>
- <rect x="708" y="224" width="55" height="82" rx="6" fill="#123447" stroke="#c5ebf2" stroke-width="1.3"/><rect x="716" y="232" width="39" height="18" rx="3" fill="#1d5363" stroke="#8ed8db" stroke-width=".8"/><text x="735.5" y="244.5" text-anchor="middle" fill="#baf2dc" font-family="monospace" font-size="7" font-weight="700">INV-01</text><rect x="716" y="258" width="39" height="30" rx="3" fill="#0b2738" stroke="#6eaec0" stroke-width=".8"/><path d="M720 278L728 269L735 278L744 265L751 273" fill="none" stroke="#8fe4c0" stroke-width="1.8"/><circle cx="724" cy="296" r="2.5" fill="#9be8c1"/><circle cx="735" cy="296" r="2.5" fill="#f3c878"/><circle cx="746" cy="296" r="2.5" fill="#8fcdf0"/>
+<g font-family="Arial, sans-serif" font-size="9" font-weight="800" letter-spacing="1">
+ <text x="285" y="266" text-anchor="middle" fill="#f5d18f">DC</text>
+ <text x="555" y="266" text-anchor="middle" fill="#f5d18f">DC</text>
+ <text x="825" y="266" text-anchor="middle" fill="#a5e8c9">AC</text>
+ <text x="1095" y="266" text-anchor="middle" fill="#a5e8c9">AC</text>
 </g>
-<g class="pv-component-label"><rect x="600" y="350" width="188" height="57" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#7fcce4" stroke-opacity=".72"/><text x="694" y="369" text-anchor="middle" fill="#9edff2" font-family="monospace" font-size="11" font-weight="700" letter-spacing=".35">GRID-TIE INVERTER</text><text x="694" y="386" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">MPPT · DC / AC</text><text x="694" y="398" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">ANTI-ISLANDING</text></g>
-<!-- AC protection / ACDB -->
-<g filter="url(#pvDrop)">
- <path d="M842 205L902 184L962 205L902 227Z" fill="#9cb8b3" stroke="#70d9b0" stroke-width="2"/>
- <path d="M842 205V300L902 322V227Z" fill="#245b56" stroke="#78d6ae"/>
- <path d="M902 227L962 205V300L902 322Z" fill="url(#pvTeal)" stroke="#c2f4df"/>
- <rect x="916" y="234" width="33" height="58" rx="3" fill="#123b3b" stroke="#b6e8d2" stroke-width="1"/><path d="M924 245H941M924 254H941M924 263H941M924 272H941" stroke="#a6efcf" stroke-width="1.4"/><circle cx="932.5" cy="282" r="3" fill="#f2c879"/>
+<!-- Utility interface and facility load -->
+<g font-family="Arial, sans-serif">
+ <text x="720" y="466" text-anchor="middle" fill="#d9e9e5" font-size="11" font-weight="800" letter-spacing="2">POINT OF COMMON COUPLING (PCC) & FACILITY CONNECTION</text>
+ <!-- Utility grid card -->
+ <rect x="72" y="510" width="300" height="132" rx="11" fill="#183d50" stroke="#83c9ef" stroke-opacity=".85"/>
+ <g transform="translate(112 532)" stroke="#8bcdf0" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M34 0L7 82M34 0L61 82M15 57H53M11 69H57M2 22H66M0 31H68M15 57L53 22M53 57L15 22"/>
+  <path d="M-5 22H73M0 31H68" stroke-width="3"/>
+ </g>
+ <text x="225" y="554" text-anchor="middle" fill="#a8e2f5" font-size="14" font-weight="800">PLN UTILITY GRID</text>
+ <text x="225" y="579" text-anchor="middle" fill="#c8dadd" font-size="10">Three-phase distribution network</text>
+ <text x="225" y="603" text-anchor="middle" fill="#91b9c7" font-size="9" letter-spacing="1">IMPORT / EXPORT INTERFACE</text>
+ <!-- Bidirectional meter -->
+ <rect x="570" y="510" width="300" height="132" rx="11" fill="#183d50" stroke="#83c9ef" stroke-opacity=".85"/>
+ <g transform="translate(610 535)">
+  <rect x="0" y="0" width="64" height="76" rx="7" fill="#285d70" stroke="#9ddcf0" stroke-width="2"/>
+  <rect x="10" y="10" width="44" height="24" rx="3" fill="#0d2d3b" stroke="#8bcfe4"/>
+  <path d="M17 23H47" stroke="#9ce7d0" stroke-width="2"/>
+  <circle cx="20" cy="51" r="4" fill="#9ce7d0"/><circle cx="44" cy="51" r="4" fill="#f0c879"/>
+  <path d="M14 65H50" stroke="#a6d9e6" stroke-width="2"/>
+ </g>
+ <text x="755" y="554" text-anchor="middle" fill="#a8e2f5" font-size="14" font-weight="800">BIDIRECTIONAL METER</text>
+ <text x="755" y="579" text-anchor="middle" fill="#c8dadd" font-size="10">Import / export energy measurement</text>
+ <text x="755" y="603" text-anchor="middle" fill="#91b9c7" font-size="9" letter-spacing="1">kWh · PCC METERING</text>
+ <!-- Industrial load -->
+ <rect x="1068" y="510" width="300" height="132" rx="11" fill="#1b403d" stroke="#b6d98e" stroke-opacity=".9"/>
+ <g transform="translate(1102 538)" stroke="#b8d991" stroke-width="2" fill="none" stroke-linejoin="round">
+  <path d="M0 35L44 12L88 35V77H0Z" fill="#315c52"/>
+  <path d="M-7 35L44 7L95 35" stroke-width="3"/>
+  <path d="M12 48H30V77H12ZM43 48H62V65H43ZM69 48H81V77H69Z" fill="#153d3a"/>
+  <path d="M6 82H92" stroke-width="3"/>
+ </g>
+ <text x="1234" y="554" text-anchor="middle" fill="#c7e8a7" font-size="14" font-weight="800">INDUSTRIAL LOAD</text>
+ <text x="1234" y="579" text-anchor="middle" fill="#d2e0d4" font-size="10">Factory LV distribution & demand</text>
+ <text x="1234" y="603" text-anchor="middle" fill="#a9c9a0" font-size="9" letter-spacing="1">SELF-CONSUMPTION</text>
 </g>
-<g class="pv-component-label"><rect x="810" y="326" width="184" height="57" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#78d9b2" stroke-opacity=".72"/><text x="902" y="345" text-anchor="middle" fill="#8fe4bf" font-family="monospace" font-size="10" font-weight="700" letter-spacing=".35">ACDB / AC PROTECTION</text><text x="902" y="362" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">AC BREAKER · ISOLATOR</text><text x="902" y="374" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">SURGE PROTECTION · SPD</text></g>
-<!-- Main LV switchboard -->
-<g filter="url(#pvDrop)">
- <path d="M1040 194L1110 169L1180 194L1110 220Z" fill="#a9c4c9" stroke="#9bdcf5" stroke-width="2"/>
- <path d="M1040 194V333L1110 359V220Z" fill="#27536a" stroke="#82cde8"/>
- <path d="M1110 220L1180 194V333L1110 359Z" fill="url(#pvBlue)" stroke="#c7effa"/>
- <rect x="1126" y="239" width="39" height="82" rx="4" fill="#163b50" stroke="#a7deef"/>
- <path d="M1134 254H1157M1134 270H1157M1134 286H1157" stroke="#a4e6d0" stroke-width="3"/>
- <circle cx="1145" cy="307" r="5" fill="#f4c879"/>
-</g>
-<g class="pv-component-label"><rect x="1010" y="372" width="200" height="57" rx="8" fill="#0b2532" fill-opacity=".94" stroke="#83cce5" stroke-opacity=".72"/><text x="1110" y="391" text-anchor="middle" fill="#a6e2f5" font-family="monospace" font-size="10" font-weight="700" letter-spacing=".25">MAIN LV SWITCHBOARD</text><text x="1110" y="408" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">LV BUSBAR · INCOMER</text><text x="1110" y="420" text-anchor="middle" fill="#d3e0e2" font-family="monospace" font-size="8">OUTGOING FEEDERS</text></g>
-<!-- Industrial facility isometric building, separate load branch -->
-<g filter="url(#pvDrop)">
- <path d="M1080 495L1215 448L1350 495L1215 544Z" fill="#426875" stroke="#b6d98f" stroke-width="2"/>
- <path d="M1080 495V582L1215 631V544Z" fill="#244653" stroke="#6da28f"/>
- <path d="M1215 544L1350 495V582L1215 631Z" fill="url(#pvBuilding)" stroke="#8dbbb0"/>
- <path d="M1100 492L1215 452L1330 492" fill="none" stroke="#d3e5dc" stroke-width="3"/>
- <g fill="#17394a" stroke="#b3d6c7" stroke-width="1.4"><path d="M1102 515L1135 527V570L1102 558Z"/><path d="M1150 532L1183 544V587L1150 575Z"/><path d="M1240 552L1271 541V583L1240 594Z"/><path d="M1290 535L1321 524V566L1290 577Z"/></g>
- <g stroke="#d5b979" stroke-width="2"><path d="M1110 537L1127 543M1158 554L1175 560"/></g>
-</g>
-<text x="1215" y="660" text-anchor="middle" fill="#d6efc4" font-family="monospace" font-size="13" font-weight="700">INDUSTRIAL FACILITY / LOAD</text>
-<!-- Meter and utility connection at point of common coupling -->
-<g filter="url(#pvDrop)">
- <path d="M770 495L832 473L894 495L832 518Z" fill="#a7c2ca" stroke="#7ecaf0" stroke-width="2"/>
- <path d="M770 495V570L832 593V518Z" fill="#27546a" stroke="#7ecaf0"/>
- <path d="M832 518L894 495V570L832 593Z" fill="#3d7892" stroke="#a9e1f6"/>
- <rect x="844" y="527" width="37" height="39" rx="4" fill="#14394b" stroke="#b1e6f6"/>
- <path d="M851 539H873M851 549H873M862 532V558" stroke="#91d8ef" stroke-width="1.8"/>
-</g>
-<text x="832" y="620" text-anchor="middle" fill="#a6def4" font-family="monospace" font-size="13" font-weight="700">BIDIRECTIONAL METER</text>
-<text x="832" y="638" text-anchor="middle" fill="#bfd0d3" font-family="monospace" font-size="10">Import / export · kWh</text>
-<!-- PLN grid pylon -->
-<g transform="translate(470 478)" stroke="#8dcaf0" stroke-width="3" fill="none" opacity=".95">
- <path d="M65 0L25 145M65 0L105 145M38 98H92M31 123H99M18 42H112M10 57H120M27 42L103 98M103 42L27 98M38 98L92 123M92 98L38 123"/>
- <path d="M65 0V-14M18 42H112M10 57H120" stroke-width="4"/>
- <path d="M4 42H-5M126 42H135" stroke-width="2"/>
-</g>
-<text x="535" y="650" text-anchor="middle" fill="#a6def4" font-family="monospace" font-size="13" font-weight="700">PLN UTILITY GRID</text>
-<!-- Correct power paths: DC string -> inverter -> ACDB -> LV bus; bus feeds facility and exchanges with grid -->
+<!-- PCC connections: grid <-> meter <-> LV bus; LV bus -> facility -->
 <g fill="none" stroke-linecap="round" stroke-linejoin="round">
- <path d="M377 216H420" stroke="#f2bd68" stroke-width="2.6" marker-end="url(#pvDCArrow)"/>
- <path d="M540 250H610" stroke="#f2bd68" stroke-width="5" marker-end="url(#pvDCArrow)"/>
- <path d="M778 250H842" stroke="#70d9b0" stroke-width="2.6" marker-end="url(#pvACArrow)"/>
- <path d="M962 250H1040" stroke="#70d9b0" stroke-width="5" marker-end="url(#pvACArrow)"/>
- <path d="M1180 300H1268V448" stroke="#b4d98c" stroke-width="2.6" marker-end="url(#pvLoadArrow)"/>
- <path d="M1040 295H1000V530H894" stroke="#7ecaf0" stroke-width="2.3" marker-start="url(#pvGridArrow)" marker-end="url(#pvGridArrow)" stroke-dasharray="7 7"/>
- <path d="M770 532H650V550H575" stroke="#7ecaf0" stroke-width="4.5" marker-start="url(#pvGridArrow)" marker-end="url(#pvGridArrow)" stroke-dasharray="10 8"/>
+ <path d="M372 575H560" stroke="#83c9ef" stroke-width="3" marker-start="url(#pvArrowGrid2)" marker-end="url(#pvArrowGrid2)"/>
+ <path d="M870 575H1018" stroke="#83c9ef" stroke-width="3" marker-start="url(#pvArrowGrid2)" marker-end="url(#pvArrowGrid2)"/>
+ <path d="M1232 410V478H1218V500" stroke="#b6d98e" stroke-width="3" marker-end="url(#pvArrowLoad2)"/>
 </g>
-<g font-family="monospace" font-size="9" font-weight="700" letter-spacing=".8"><text x="390" y="204" fill="#ffdda0">DC</text><text x="565" y="232" fill="#ffdda0">DC</text><text x="797" y="232" fill="#8fe4bf">AC</text><text x="980" y="232" fill="#8fe4bf">AC</text><text x="1280" y="408" fill="#d6efc4">LOAD</text><text x="935" y="516" fill="#a6def4">PCC / GRID EXCHANGE</text></g>
-<g transform="translate(42 88)"><rect width="290" height="38" rx="7" fill="#102a38" stroke="#d4ae70" stroke-opacity=".55"/><circle cx="18" cy="19" r="5" fill="#f2bd68"/><text x="32" y="23" fill="#f7dfb3" font-family="monospace" font-size="10" letter-spacing="1">DC CIRCUIT</text><circle cx="135" cy="19" r="5" fill="#70d9b0"/><text x="149" y="23" fill="#c5f0dc" font-family="monospace" font-size="10" letter-spacing="1">AC CIRCUIT</text><circle cx="250" cy="19" r="5" fill="#7ecaf0"/><text x="264" y="23" fill="#c8eafa" font-family="monospace" font-size="10" letter-spacing="1">GRID</text></g>
+<g font-family="Arial, sans-serif" font-size="9" font-weight="800" letter-spacing="1">
+ <text x="466" y="558" text-anchor="middle" fill="#a8dff3">GRID EXCHANGE</text>
+ <text x="944" y="558" text-anchor="middle" fill="#a8dff3">PCC / LV BUS</text>
+ <text x="1250" y="461" fill="#c7e8a7">LOAD FEEDER</text>
+</g>
+<!-- Legend -->
+<g transform="translate(72 112)" font-family="Arial, sans-serif">
+ <rect width="410" height="28" rx="7" fill="#0b2531" stroke="#6c969c" stroke-opacity=".6"/>
+ <circle cx="17" cy="14" r="4" fill="#f0bd68"/><text x="28" y="18" fill="#f3d7a2" font-size="9" font-weight="700">DC CIRCUIT</text>
+ <circle cx="145" cy="14" r="4" fill="#78d9b1"/><text x="156" y="18" fill="#bcebd5" font-size="9" font-weight="700">AC CIRCUIT</text>
+ <circle cx="276" cy="14" r="4" fill="#83c9ef"/><text x="287" y="18" fill="#b9e2f4" font-size="9" font-weight="700">GRID / PCC</text>
+</g>
+<text x="720" y="675" text-anchor="middle" fill="#8eafb5" font-family="Arial, sans-serif" font-size="9" letter-spacing="1.2">CONCEPTUAL ENGINEERING DIAGRAM · NOT FOR CONSTRUCTION</text>
 </svg>
   </div>
   <div class="pv-simulator pv-annual-balance" aria-labelledby="pv-sim-title">
