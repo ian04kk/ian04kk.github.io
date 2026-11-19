@@ -172,20 +172,205 @@
 .emissions-legend .key.remaining{background:#c69c63}
 @media(max-width:560px){.emissions-legend{gap:8px}.emissions-legend strong{font-size:17px}}
 
+
+/* Portfolio visual upgrade: dimensional domains, high-contrast icons and PV on-grid schematic */
+.venn-art{perspective:1100px}
+.venn-stage{transform-style:preserve-3d;transform:rotateX(5deg)}
+.venn-circle{box-shadow:inset 0 2px 20px #ffffff25,inset 0 -22px 30px #06131d55,0 17px 26px #07141e66;backdrop-filter:blur(2px);transform:translateZ(12px)}
+.venn-circle:before{content:"";position:absolute;inset:7px 12px 48%;border-radius:50%;background:linear-gradient(180deg,#ffffff36,transparent);pointer-events:none}
+.venn-ops{background:radial-gradient(circle at 32% 23%,#79edbdc9 0%,#20a77e99 35%,#075947b8 100%);box-shadow:inset 0 2px 25px #d7ffeb55,inset 0 -25px 35px #032f2b88,0 18px 30px #031c1b88}
+.venn-fin{background:radial-gradient(circle at 68% 22%,#ffe2a1d9 0%,#d99b42a8 37%,#77451fc2 100%);box-shadow:inset 0 2px 25px #fff1cb66,inset 0 -25px 35px #4b2a1688,0 18px 30px #1d171188}
+.venn-energy{background:radial-gradient(circle at 50% 72%,#a2e9ffd1 0%,#399bc9a8 38%,#164e83c9 100%);box-shadow:inset 0 2px 25px #d9f6ff66,inset 0 -25px 35px #092c5988,0 18px 30px #071d3688}
+.venn-circle strong,.venn-circle small{position:relative;z-index:1}
+.venn-intersection{box-shadow:inset 0 2px 12px #ffffff25,0 12px 30px #06131d99,0 0 0 5px #e4eee31c,0 0 30px #d4e9dc55;transform:translate(-50%,-50%) translateZ(35px)}
+.skill-icon{background:linear-gradient(145deg,#e5f8ef,#b7e2d0);color:#087b55;border:1px solid #69c69b;box-shadow:0 5px 14px #087b5524}
+.skill:nth-child(2) .skill-icon{background:linear-gradient(145deg,#fff2d7,#f0cf91);color:#94600d;border-color:#dfb45e}
+.skill:nth-child(3) .skill-icon{background:linear-gradient(145deg,#e5efff,#b6d0fb);color:#245cba;border-color:#82a9e8}
+.skill:nth-child(4) .skill-icon{background:linear-gradient(145deg,#e1f7ff,#a8e3f4);color:#087da4;border-color:#6bc5e2}
+.skill:nth-child(5) .skill-icon{background:linear-gradient(145deg,#f0eaff,#d0bafa);color:#7040b0;border-color:#ad8ce3}
+.skill:nth-child(6) .skill-icon{background:linear-gradient(145deg,#ffe9e4,#f6b8a8);color:#b3422b;border-color:#e99b87}
+.skill-head small{font-weight:800;color:#354b5a;letter-spacing:.1em}
+.skill h3,.body h3,.job h3,.research h3,.edurow h3,.value-card h3{font-weight:800}
+.sectionhead>p{font-weight:500}
+.pv-section{background:linear-gradient(135deg,#101f2c 0%,#142d3b 48%,#183b42 100%);color:#f4f8f6;overflow:hidden}
+.pv-section .eyebrow{color:#8fe0bf}
+.pv-section .sectionhead>p{color:#b7c9ce}
+.pv-shell{border:1px solid #8db7b455;border-radius:12px;padding:clamp(12px,2.5vw,28px);background:linear-gradient(145deg,#ffffff0d,#ffffff04);box-shadow:0 28px 70px #07141c66,inset 0 1px #ffffff18}
+.pv-svg{display:block;width:100%;height:auto;overflow:visible}
+.pv-caption{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.pv-caption div{padding:13px 14px;border:1px solid #ffffff20;border-radius:7px;background:#ffffff08}
+.pv-caption b{display:block;font:800 11px Manrope;color:#dff5e9;letter-spacing:.06em}
+.pv-caption span{display:block;font-size:11px;color:#a9bec5;margin-top:4px}
+.pv-footnote{font-size:11px;color:#9fb6bd;margin:15px 2px 0}
+@media(max-width:760px){.pv-caption{grid-template-columns:1fr 1fr}.pv-shell{padding:8px}}
+@media(max-width:480px){.pv-caption{grid-template-columns:1fr}.pv-svg text{font-size:16px}}
+
+
+/* Editorial typography and layout refinement */
+:root{--text-measure:68ch}
+body{font-size:15.5px;line-height:1.72;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+p{max-width:var(--text-measure);line-height:1.75}
+h1,h2,h3,h4{line-height:1.18;text-wrap:balance}
+h1{letter-spacing:-.045em}
+h2{letter-spacing:-.035em}
+h3{letter-spacing:-.018em}
+.sectionhead{align-items:end;gap:clamp(24px,4vw,64px)}
+.sectionhead>div{min-width:0}
+.sectionhead>p{max-width:46ch;font-size:13px;line-height:1.75;font-weight:650;color:var(--muted)}
+.eyebrow,.tag,.date{font-weight:600}
+.body h3,.job h3,.research h3,.edurow h3,.value-card h3,.skill h3{font-weight:800;line-height:1.28}
+.body p,.job li,.research p,.detail,.value-card p,.skill p{line-height:1.75}
+.fact b,.metric b,.pv-caption b{font-weight:800}
+.venn-intersection{width:132px;height:104px;padding:10px}
+.venn-intersection strong{font-size:10px;line-height:1.22;letter-spacing:.035em}
+.venn-intersection span{display:none}
+.value-icon{background:linear-gradient(145deg,#fff0ca,#e7b35f);color:#74440b;border-color:#d39b42;box-shadow:0 5px 14px #9a641c30}
+.value-card:nth-child(2) .value-icon{background:linear-gradient(145deg,#e5efff,#9dbdf4);color:#174b9a;border-color:#729ce1}
+.value-card:nth-child(3) .value-icon{background:linear-gradient(145deg,#e5f8ef,#9ed9bd);color:#075d3e;border-color:#65b88e}
+.skill-icon svg,.value-icon svg{stroke-width:2.25}
+.node svg{filter:drop-shadow(0 1px 2px #0002)}
+.pv-caption b{font-size:11px;line-height:1.45}
+.pv-caption span{line-height:1.65}
+.pv-footnote{line-height:1.7}
+@media(max-width:760px){
+ .sectionhead{align-items:start;gap:12px}
+ .sectionhead>p{max-width:62ch}
+}
+@media(max-width:560px){
+ .venn-intersection{width:108px;height:86px}
+ .venn-intersection strong{font-size:8.5px}
+ body{font-size:15px}
+}
+
+
+/* Responsive navigation, accessibility and interactive PV power-balance panel */
+.header .nav{position:relative}
+.mobile-menu-toggle{display:none;width:40px;height:38px;border:1px solid #ffffff45;border-radius:4px;background:#ffffff0b;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.mobile-menu-toggle span{display:block;width:17px;height:2px;background:#e8f0eb;border-radius:2px;transition:transform .2s ease,opacity .2s ease}
+.mobile-menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.mobile-menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+:where(a,button,input):focus-visible{outline:3px solid #e2b875;outline-offset:3px}
+.pv-simulator{margin-top:22px;padding:25px;background:linear-gradient(145deg,#132c3b,#1d3b47 58%,#1b302f);border:1px solid #7cb7a45c;border-radius:7px;color:#edf4ef;box-shadow:0 18px 40px #0c1d2926;position:relative;overflow:hidden}
+.pv-simulator:before{content:"";position:absolute;inset:0;background:linear-gradient(125deg,#ffffff08,transparent 38%),radial-gradient(circle at 100% 0%,#75c4a51c,transparent 38%);pointer-events:none}
+.pv-sim-heading,.pv-sim-controls,.pv-sim-results,.pv-sim-equation{position:relative;z-index:1}
+.pv-sim-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.pv-sim-heading .mono{font-size:9px;color:#9fd5ba;letter-spacing:.13em}
+.pv-sim-heading h3{font:800 23px/1.15 Manrope;margin:8px 0;color:#f5f8f5}
+.pv-sim-heading p{font-size:12px;line-height:1.6;color:#b8c9ca;max-width:650px;margin:0}
+.pv-sim-chip{white-space:nowrap;padding:7px 10px;border:1px solid #8fc5a75c;border-radius:99px;color:#b7dfc4;font:9px 'DM Mono';letter-spacing:.08em}
+.pv-sim-controls{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+.pv-sim-control{display:block;padding:16px;background:#ffffff0a;border:1px solid #ffffff18;border-radius:5px}
+.pv-sim-control>span{display:flex;justify-content:space-between;gap:10px;align-items:center;color:#e9f0eb;font-size:12px}
+.pv-sim-control output{font:700 17px Manrope;color:#f2cb87;font-variant-numeric:tabular-nums}
+.pv-sim-control input{width:100%;margin:16px 0 7px;accent-color:#8fd1ad;cursor:pointer}
+.pv-sim-control small{display:block;color:#9fb2b5;font-size:10px;line-height:1.45}
+.pv-sim-results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.pv-sim-result{padding:15px 16px;background:#0d202b80;border:1px solid #ffffff16;border-radius:4px}
+.pv-sim-result span{display:block;color:#aabdc0;font:9px 'DM Mono';letter-spacing:.08em;text-transform:uppercase}
+.pv-sim-result strong{display:block;font:800 27px Manrope;letter-spacing:-.04em;color:#b9e3c9;margin:8px 0 3px;font-variant-numeric:tabular-nums}
+.pv-sim-result small{color:#9eb1b4;font-size:10px}
+.pv-sim-result.import strong{color:#f1c47f}
+.pv-sim-result.export strong{color:#8dd7ef}
+.pv-sim-equation{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid #ffffff20}
+.pv-sim-equation span{color:#9ed5b6;font:9px 'DM Mono';letter-spacing:.1em}
+.pv-sim-equation b{font:600 12px Manrope;color:#e7eeea;text-align:right}
+@media(max-width:850px){
+ .mobile-menu-toggle{display:flex;order:0}
+ .header .nav{gap:12px}
+ .links{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;padding:12px 18px 18px;background:#101d2b;border:1px solid #ffffff20;border-top:0;box-shadow:0 16px 28px #07131d40;flex-direction:column;gap:0}
+ .links.is-open{display:flex}
+ .links a{padding:12px 3px;border-bottom:1px solid #ffffff16}
+ .links a:last-child{border-bottom:0}
+ .actions{margin-left:auto}
+}
+@media(max-width:600px){
+ .pv-simulator{padding:18px}
+ .pv-sim-heading{display:block}
+ .pv-sim-chip{display:inline-block;margin-top:12px}
+ .pv-sim-heading h3{font-size:20px}
+ .pv-sim-controls{grid-template-columns:1fr;gap:10px;margin-top:17px}
+ .pv-sim-results{grid-template-columns:1fr;gap:8px}
+ .pv-sim-result{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 10px}
+ .pv-sim-result span{grid-column:1}
+ .pv-sim-result strong{grid-column:2;grid-row:1/3;margin:0}
+ .pv-sim-result small{grid-column:1}
+ .pv-sim-equation{align-items:flex-start;flex-direction:column}
+ .pv-sim-equation b{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){.mobile-menu-toggle span{transition:none}}
+
+
+/* Final legibility, Venn centering and featured solar case layout */
+:root{--ink:#13232d;--muted:#4e5f69}
+body{color:#172630}
+p,.copy p,.body p,.job li,.research p,.detail,.value-card p,.skill p{color:#40515b;font-weight:500}
+h1,h2,h3,h4,.sectionhead h2,.splithead h2,.case h2,.body h3,.job h3,.research h3,.edurow h3,.value-card h3,.skill h3{font-weight:800}
+.eyebrow,.tag,.date,.mono{font-weight:700}
+.sectionhead>p{color:#3e505a;font-weight:650}
+.case p{color:#e0e8ec;font-weight:550}
+.case .note{color:#e0e8ec;font-weight:550}
+.case-pv-visual{grid-column:1/-1;min-width:0;margin-top:6px}
+.case-pv-heading{margin:0 0 16px}
+.case-pv-heading .mono{display:block;color:#a8d5bd;font-size:11px;font-weight:700;letter-spacing:.12em}
+.case-pv-heading p{color:#d2dde2;font-size:13px;margin:8px 0 0;max-width:75ch}
+.case-pv-visual .pv-shell{width:100%;background:linear-gradient(145deg,#122a38,#1b3947);border-color:#6ea7aa88}
+.case-pv-visual .pv-simulator{margin-top:18px}
+.case-pv-visual .pv-caption b{color:#f0f8f3;font-weight:800}
+.case-pv-visual .pv-caption span{color:#d1e0e4}
+.proofgrid{grid-template-columns:repeat(5,minmax(0,1fr))}
+.toefl-metric strong{color:#2d7059}
+.toefl-metric{border-right:0}
+.heroart.venn-art{min-height:430px;overflow:hidden}
+.venn-stage{inset:48px 12px 42px;overflow:visible}
+.venn-circle{width:206px;height:206px;padding-top:32px;justify-content:flex-start}
+.venn-ops{left:calc(50% - 184px);top:12px}
+.venn-fin{left:calc(50% - 22px);top:12px}
+.venn-energy{left:calc(50% - 103px);top:145px;padding-top:112px}
+.venn-circle strong{font-size:12px;font-weight:800;letter-spacing:.07em}
+.venn-circle small{font-size:8px;font-weight:600;letter-spacing:.025em}
+.venn-intersection{left:50%;top:52%;transform:translate(-50%,-50%);width:142px;height:112px;padding:10px;display:flex;align-items:center;justify-content:center;text-align:center}
+.venn-intersection strong{display:block;width:100%;font:800 11px/1.18 Manrope;letter-spacing:.015em;text-align:center;overflow-wrap:normal;white-space:normal}
+.venn-intersection i{flex:none}
+.venn-art .art-bottom{left:12px;right:12px}
+@media(max-width:850px){
+ .proofgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .metric:nth-child(3){border-right:0}
+ .heroart.venn-art{min-height:410px}
+}
+@media(max-width:560px){
+ .proofgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .metric{border-right:0}
+ .heroart.venn-art{min-height:390px}
+ .venn-stage{inset:48px 0 36px}
+ .venn-circle{width:166px;height:166px;padding-top:27px}
+ .venn-ops{left:calc(50% - 160px);top:10px}
+ .venn-fin{left:calc(50% - 6px);top:10px}
+ .venn-energy{left:calc(50% - 83px);top:119px;padding-top:91px}
+ .venn-circle strong{font-size:10px}
+ .venn-circle small{font-size:6.5px}
+ .venn-intersection{top:51%;width:116px;height:90px;padding:7px}
+ .venn-intersection strong{font-size:9px;line-height:1.16}
+ .case-pv-visual{margin-top:0}
+ .case-pv-visual .pv-shell{padding:8px}
+ .case-pv-visual .pv-svg text{font-size:16px}
+}
+
 </style>
 </head>
 <body data-current-lang="en">
 <a class="skip" href="#content" data-en="Skip to content" data-id="Langsung ke konten">Skip to content</a>
 <header class="header"><div class="wrap nav">
 <a class="brand" href="#top">AGUS RIANTO<span>.</span></a>
-<nav class="links" aria-label="Main navigation">
+<button class="mobile-menu-toggle" type="button" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+<nav class="links" id="primaryNav" aria-label="Main navigation">
 <a href="#about" data-en="About" data-id="Profil">About</a>
 <a href="#work" data-en="Selected work" data-id="Karya pilihan">Selected work</a>
 <a href="#experience" data-en="Experience" data-id="Pengalaman">Experience</a>
 <a href="#expertise" data-en="Expertise" data-id="Keahlian">Expertise</a>
 <a href="#contact" data-en="Contact" data-id="Kontak">Contact</a>
 </nav>
-<div class="actions"><div class="lang" aria-label="Language selector">
+<div class="actions"><div class="lang" role="group" aria-label="Language selector">
 <button type="button" data-lang-switch="en" class="active" aria-pressed="true">EN</button>
 <button type="button" data-lang-switch="id" aria-pressed="false">ID</button>
 </div><a class="navcta" href="#contact" data-en="Let's connect ↗" data-id="Mari terhubung ↗">Let's connect ↗</a></div>
@@ -203,7 +388,7 @@
 <div class="venn-circle venn-ops"><span class="venn-number">01</span><strong data-en="OPERATIONS" data-id="OPERASI">OPERATIONS</strong><small data-en="PROCESS · QUALITY · FLOW" data-id="PROSES · MUTU · ALUR">PROCESS · QUALITY · FLOW</small></div>
 <div class="venn-circle venn-fin"><span class="venn-number">02</span><strong data-en="FINANCE" data-id="KEUANGAN">FINANCE</strong><small data-en="COST · VALUE · INVESTMENT" data-id="BIAYA · NILAI · INVESTASI">COST · VALUE · INVESTMENT</small></div>
 <div class="venn-circle venn-energy"><span class="venn-number">03</span><strong data-en="ENERGY" data-id="ENERGI">ENERGY</strong><small data-en="SOLAR PV · CARBON · LCA" data-id="PLTS · KARBON · LCA">SOLAR PV · CARBON · LCA</small></div>
-<div class="venn-intersection"><span>SHARED VALUE</span><strong>SUSTAINABLE<br>INDUSTRIAL<br>SYSTEMS</strong><i></i></div>
+<div class="venn-intersection" aria-label="Sustainable Industrial Systems"><strong>SUSTAINABLE<br>INDUSTRIAL<br>SYSTEMS</strong><i></i></div>
 </div>
 <div class="art-bottom"><span>EFFICIENCY <i>×</i> VIABILITY <i>×</i> SUSTAINABILITY</span><span>AG / 2026</span></div>
 </div></div><div class="herofoot"><span data-en="SCROLL TO EXPLORE" data-id="GULIR UNTUK MENJELAJAH">SCROLL TO EXPLORE</span><span>AGUS RIANTO / 2026</span></div></div></section>
@@ -212,6 +397,7 @@
 <div class="metric"><strong>12<i>%</i></strong><div><b data-en="Lead-time reduction" data-id="Penurunan lead time">Lead-time reduction</b><small data-en="Production planning improvement" data-id="Perbaikan perencanaan produksi">Production planning improvement</small></div></div>
 <div class="metric"><strong>5<i>%</i></strong><div><b data-en="Defect-rate reduction" data-id="Penurunan tingkat cacat">Defect-rate reduction</b><small data-en="Quality improvement" data-id="Perbaikan kualitas">Quality improvement</small></div></div>
 <div class="metric"><strong>24.6<i>%</i></strong><div><b data-en="Modelled project IRR" data-id="IRR proyek hasil pemodelan">Modelled project IRR</b><small data-en="Master's thesis · rooftop solar PV" data-id="Tesis magister · PLTS atap">Master's thesis · rooftop solar PV</small></div></div>
+<div class="metric toefl-metric"><strong>510</strong><div><b data-en="TOEFL ITP®" data-id="TOEFL ITP®">TOEFL ITP®</b><small data-en="English proficiency test" data-id="Tes kemahiran bahasa Inggris">English proficiency test</small></div></div>
 </div></section>
 <section class="section white" id="about"><div class="wrap split">
 <div class="splithead"><div class="eyebrow">01 / <span data-en="PROFILE" data-id="PROFIL">PROFILE</span></div><h2 data-en="An engineer's lens.<br><em>A business mindset.</em>" data-id="Perspektif seorang engineer.<br><em>Pola pikir bisnis.</em>">An engineer's lens.<br><em>A business mindset.</em></h2></div>
@@ -242,6 +428,111 @@
 <article class="card"><div class="visual gold"><div class="tag" data-en="04 / INDUSTRIAL DECARBONIZATION" data-id="04 / DEKARBONISASI INDUSTRI">04 / INDUSTRIAL DECARBONIZATION</div><div class="vtitle" data-en="NINE INDUSTRIAL<br>SECTORS" data-id="SEMBILAN SEKTOR<br>INDUSTRI">NINE INDUSTRIAL<br>SECTORS</div><div class="vfoot" data-en="MINISTRY OF INDUSTRY · 2026—PRESENT" data-id="KEMENTERIAN PERINDUSTRIAN · 2026—SEKARANG">MINISTRY OF INDUSTRY · 2026—PRESENT</div></div><div class="body"><span class="status amber" data-en="Planning · ToR under review" data-id="Perencanaan · TOR dalam reviu">Planning · ToR under review</span><h3 data-en="National industrial decarbonization program" data-id="Program dekarbonisasi industri nasional">National industrial decarbonization program</h3><p data-en="Planned baseline assessment and prioritization across nine industrial sectors: cement, iron and steel, fertilizer, chemicals, pulp and paper, textiles, glass and ceramics, automotive, and food and beverage. The six-month planned methodology comprises desk research, baseline analysis, FGDs with Kemenperin and industry representatives to validate existing conditions and technology needs, multi-criteria analysis, prioritization, and reporting." data-id="Rencana penilaian baseline dan penyusunan prioritas pada sembilan sektor industri: semen, besi dan baja, pupuk, kimia, pulp dan kertas, tekstil, kaca dan keramik, otomotif, serta makanan dan minuman. Metodologi enam bulan yang direncanakan mencakup desk research, analisis baseline, FGD bersama Kemenperin dan perwakilan industri untuk memvalidasi kondisi eksisting dan kebutuhan teknologi, analisis multikriteria, penyusunan prioritas, dan pelaporan.">Planned baseline assessment and prioritization across nine industrial sectors: cement, iron and steel, fertilizer, chemicals, pulp and paper, textiles, glass and ceramics, automotive, and food and beverage. The six-month planned methodology comprises desk research, baseline analysis, FGDs with Kemenperin and industry representatives to validate existing conditions and technology needs, multi-criteria analysis, prioritization, and reporting.</p><a class="more" href="#research" data-en="View research scope ↗" data-id="Lihat ruang lingkup riset ↗">View research scope ↗</a></div></article>
 </div></div></section>
 <section class="section case" id="case-solar"><div class="wrap casegrid"><div><div class="eyebrow" data-en="FEATURED CASE / 01 · MASTER'S THESIS" data-id="STUDI KASUS UTAMA / 01 · TESIS MAGISTER">FEATURED CASE / 01 · MASTER'S THESIS</div><h2 data-en="From emissions baseline to an <em>investment case.</em>" data-id="Dari baseline emisi menjadi <em>kajian investasi.</em>">From emissions baseline to an <em>investment case.</em></h2><p data-en="Simulation of Solar PV Design for Energy Efficiency Optimization through Self-Consumption, Tax Reduction, and Carbon Trading at PT XYZ." data-id="Simulasi perancangan PLTS untuk optimalisasi efisiensi energi melalui self-consumption, pengurangan pajak, dan perdagangan karbon pada PT XYZ.">Simulation of Solar PV Design for Energy Efficiency Optimization through Self-Consumption, Tax Reduction, and Carbon Trading at PT XYZ.</p><div class="note" data-en="The company is anonymized as PT XYZ. Results represent a modelled assessment, not a claim of an implemented installation." data-id="Nama perusahaan disamarkan sebagai PT XYZ. Hasil yang disajikan merupakan kajian berbasis pemodelan, bukan klaim bahwa instalasi telah diterapkan.">The company is anonymized as PT XYZ. Results represent a modelled assessment, not a claim of an implemented installation.</div></div>
+<div class="case-pv-visual">
+<div class="case-pv-heading"><span class="mono" data-en="ENGINEERING SIMULATION / 3D ON-GRID PV SYSTEM" data-id="SIMULASI REKAYASA / SISTEM PLTS ON-GRID 3D">ENGINEERING SIMULATION / 3D ON-GRID PV SYSTEM</span><p data-en="Conceptual system architecture and interactive instantaneous power balance. No battery is modelled." data-id="Arsitektur sistem konseptual dan neraca daya sesaat interaktif. Sistem tidak menggunakan baterai.">Conceptual system architecture and interactive instantaneous power balance. No battery is modelled.</p></div>
+<div class="pv-shell">
+   <svg class="pv-svg" viewBox="0 0 1200 590" role="img" aria-labelledby="pvTitle featured-pvDesc">
+    <title id="pvTitle">Industrial on-grid solar PV system architecture</title>
+    <desc id="pvDesc">PV modules feed DC protection and a grid-tie inverter. AC output passes through ACDB to the main low-voltage switchboard, which supplies industrial loads and connects through a bidirectional meter to the PLN utility grid. No battery is included.</desc>
+    <defs>
+     <linearGradient id="pvPanel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ee6c2"/><stop offset="1" stop-color="#237d8b"/></linearGradient>
+     <linearGradient id="pvBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ad8ee"/><stop offset="1" stop-color="#2874a4"/></linearGradient>
+     <linearGradient id="pvGold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe0a0"/><stop offset="1" stop-color="#b77b32"/></linearGradient>
+     <linearGradient id="pvFace" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#284b59"/><stop offset="1" stop-color="#142b39"/></linearGradient>
+     <filter id="pvShadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="8"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+     <marker id="pvArrowDC" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#f1bd62"/></marker>
+     <marker id="pvArrowAC" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#79dcb0"/></marker>
+     <marker id="pvArrowGrid" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#7dc8ed"/></marker>
+    </defs>
+    <g opacity=".17" stroke="#9bc1c8" stroke-width="1"><path d="M25 510H1170M25 450H1170M25 390H1170M25 330H1170M25 270H1170M25 210H1170"/><path d="M100 35V540M220 35V540M340 35V540M460 35V540M580 35V540M700 35V540M820 35V540M940 35V540M1060 35V540"/></g>
+    <text x="38" y="38" fill="#8fe0bf" font-size="13" font-family="monospace" letter-spacing="2">SINGLE-LINE CONCEPT / ON-GRID PV</text>
+    <text x="1160" y="38" text-anchor="end" fill="#9eb8c0" font-size="11" font-family="monospace">DC → AC → LV BUS → GRID / LOAD</text>
+    <!-- PV array isometric structure -->
+    <g filter="url(#pvShadow)">
+     <path d="M70 165L230 115L325 155L165 207Z" fill="#0b1b28" stroke="#8fe0bf" stroke-width="2"/>
+     <path d="M70 165L165 207V224L70 181Z" fill="#1c4650"/><path d="M165 207L325 155V173L165 224Z" fill="#173b48"/>
+     <g fill="url(#pvPanel)" stroke="#c5ffe5" stroke-width="1.5">
+      <path d="M82 164L151 142L181 155L112 178Z"/><path d="M157 140L226 118L256 131L187 153Z"/><path d="M119 181L188 158L218 171L149 194Z"/><path d="M194 157L263 135L293 148L224 170Z"/>
+     </g>
+     <g stroke="#d9fff0" stroke-width="1" opacity=".55"><path d="M117 153L147 166M192 130L222 144M154 171L184 184M229 147L259 160"/></g>
+     <path d="M90 225L305 225" stroke="#81b9a8" stroke-width="4"/><path d="M115 182L115 225M270 170L270 225" stroke="#6f9b9a" stroke-width="5"/>
+    </g>
+    <g fill="#f5d28b" font-family="monospace"><text x="195" y="85" text-anchor="middle" font-size="14">PV MODULE ARRAY</text><text x="195" y="101" text-anchor="middle" font-size="11" fill="#b8cbd0">Solar DC generation</text></g>
+    <!-- DC protection -->
+    <g filter="url(#pvShadow)">
+     <path d="M370 183L435 163L492 184L427 205Z" fill="#4b6670" stroke="#f1bd62" stroke-width="1.5"/>
+     <path d="M370 183V280L427 302V205Z" fill="#203d49" stroke="#8caeb5"/><path d="M427 205L492 184V262L427 302Z" fill="url(#pvFace)" stroke="#8caeb5"/>
+     <rect x="388" y="218" width="24" height="40" rx="3" fill="#b77b32"/><path d="M400 225V249" stroke="#fff0c8" stroke-width="3"/><circle cx="456" cy="225" r="7" fill="#f1bd62"/>
+    </g>
+    <text x="430" y="330" text-anchor="middle" fill="#f5d28b" font-size="13" font-family="monospace">DC PROTECTION</text><text x="430" y="347" text-anchor="middle" fill="#a9bec5" font-size="11">Isolator · SPD · string combiner*</text>
+    <!-- Inverter -->
+    <g filter="url(#pvShadow)">
+     <path d="M535 160L630 132L705 160L610 190Z" fill="#527c8a" stroke="#8ad8ee" stroke-width="1.5"/>
+     <path d="M535 160V295L610 326V190Z" fill="#21485b" stroke="#8ad8ee"/><path d="M610 190L705 160V290L610 326Z" fill="url(#pvBlue)" stroke="#b9efff"/>
+     <rect x="627" y="213" width="58" height="48" rx="4" fill="#12364a" opacity=".9"/><path d="M639 239L649 225L660 246L672 229" fill="none" stroke="#8fe0bf" stroke-width="3"/><circle cx="643" cy="278" r="4" fill="#9cf0c3"/><circle cx="661" cy="278" r="4" fill="#f1bd62"/>
+    </g>
+    <text x="620" y="355" text-anchor="middle" fill="#9fe5f5" font-size="13" font-family="monospace">GRID-TIE INVERTER</text><text x="620" y="372" text-anchor="middle" fill="#a9bec5" font-size="11">MPPT · DC/AC conversion · anti-islanding</text>
+    <!-- ACDB -->
+    <g filter="url(#pvShadow)">
+     <path d="M750 205L810 185L870 207L810 228Z" fill="#4b6670" stroke="#79dcb0" stroke-width="1.5"/><path d="M750 205V290L810 312V228Z" fill="#1d4650" stroke="#79dcb0"/><path d="M810 228L870 207V290L810 312Z" fill="#214b50" stroke="#79dcb0"/>
+     <rect x="824" y="238" width="29" height="35" rx="3" fill="#0d2b36"/><path d="M838 243V267M830 255H846" stroke="#8fe0bf" stroke-width="2"/>
+    </g>
+    <text x="810" y="338" text-anchor="middle" fill="#8fe0bf" font-size="13" font-family="monospace">ACDB / PROTECTION</text><text x="810" y="355" text-anchor="middle" fill="#a9bec5" font-size="11">AC breaker · SPD · protection</text>
+    <!-- Main LV panel -->
+    <g filter="url(#pvShadow)">
+     <path d="M920 155L990 132L1060 158L990 182Z" fill="#54717a" stroke="#8ad8ee" stroke-width="1.5"/><path d="M920 155V307L990 333V182Z" fill="#204557" stroke="#8ad8ee"/><path d="M990 182L1060 158V309L990 333Z" fill="url(#pvBlue)" stroke="#b9efff"/>
+     <rect x="1005" y="208" width="39" height="81" rx="3" fill="#153748"/><path d="M1014 220H1035M1014 236H1035M1014 252H1035" stroke="#8fe0bf" stroke-width="3"/><circle cx="1024" cy="273" r="5" fill="#f1bd62"/>
+    </g>
+    <text x="990" y="365" text-anchor="middle" fill="#9fe5f5" font-size="13" font-family="monospace">MAIN LV PANEL</text><text x="990" y="382" text-anchor="middle" fill="#a9bec5" font-size="11">Main busbar · incomer · feeder</text>
+    <!-- Utility and facility endpoint cards -->
+    <g transform="translate(55 400)">
+     <path d="M0 35L65 12L126 35L61 58Z" fill="#234a55" stroke="#8fe0bf"/><path d="M0 35V92L61 116V58Z" fill="#173744" stroke="#8fe0bf"/><path d="M61 58L126 35V92L61 116Z" fill="#285260" stroke="#8fe0bf"/>
+     <path d="M22 53L61 68L101 53M22 70L61 85L101 70" fill="none" stroke="#9be4c4" stroke-width="3"/>
+     <text x="63" y="140" text-anchor="middle" fill="#d9f5e7" font-size="13" font-family="monospace">INDUSTRIAL LOAD</text><text x="63" y="156" text-anchor="middle" fill="#a9bec5" font-size="11">Motors · process · lighting</text>
+    </g>
+    <g transform="translate(845 420)">
+     <path d="M0 48L50 20L100 48V105H0Z" fill="#214653" stroke="#8ad8ee" stroke-width="2"/><path d="M-9 48L50 12L109 48" fill="none" stroke="#8ad8ee" stroke-width="4"/><rect x="16" y="65" width="19" height="40" fill="#102d3b"/><rect x="58" y="65" width="25" height="18" fill="#9bdcf0"/><path d="M50 12V-4M43 3L50 -4L57 3" stroke="#8ad8ee" stroke-width="2"/>
+     <text x="50" y="132" text-anchor="middle" fill="#d9f5e7" font-size="13" font-family="monospace">PLN GRID</text><text x="50" y="148" text-anchor="middle" fill="#a9bec5" font-size="11">Utility network</text>
+    </g>
+    <!-- Bidirectional meter -->
+    <g filter="url(#pvShadow)">
+     <path d="M700 420L760 399L820 420L760 442Z" fill="#6a8590" stroke="#7dc8ed" stroke-width="1.5"/><path d="M700 420V484L760 506V442Z" fill="#20495a" stroke="#7dc8ed"/><path d="M760 442L820 420V484L760 506Z" fill="#27627a" stroke="#7dc8ed"/><rect x="773" y="444" width="33" height="26" rx="3" fill="#102e3c"/><path d="M778 457H801M790 450L783 457L790 464M795 450L802 457L795 464" stroke="#8ad8ee" stroke-width="1.5"/>
+    </g>
+    <text x="760" y="535" text-anchor="middle" fill="#9fe5f5" font-size="12" font-family="monospace">BIDIRECTIONAL METER</text>
+    <text x="760" y="551" text-anchor="middle" fill="#a9bec5" font-size="10">Import / export kWh</text>
+    <!-- Electrical paths -->
+    <g fill="none" stroke-linecap="round" stroke-width="4">
+     <path d="M325 170H370" stroke="#f1bd62" marker-end="url(#pvArrowDC)"/><path d="M492 230H535" stroke="#f1bd62" marker-end="url(#pvArrowDC)"/>
+     <path d="M705 230H750" stroke="#79dcb0" marker-end="url(#pvArrowAC)"/><path d="M870 250H920" stroke="#79dcb0" marker-end="url(#pvArrowAC)"/>
+     <path d="M990 333V390H110V435" stroke="#79dcb0" marker-end="url(#pvArrowAC)" opacity=".9"/>
+     <path d="M990 333V392H760V420" stroke="#7dc8ed" marker-start="url(#pvArrowGrid)" marker-end="url(#pvArrowGrid)" stroke-dasharray="8 7"/>
+     <path d="M820 452H895" stroke="#7dc8ed" marker-start="url(#pvArrowGrid)" marker-end="url(#pvArrowGrid)" stroke-dasharray="8 7"/>
+    </g>
+    <g font-family="monospace" font-size="11"><text x="344" y="154" fill="#f5d28b">DC</text><text x="515" y="214" fill="#f5d28b">DC</text><text x="724" y="214" fill="#9ce8c4">AC</text><text x="885" y="234" fill="#9ce8c4">AC</text><text x="1080" y="415" fill="#9bdcf0">GRID EXCHANGE</text></g>
+    <text x="40" y="575" fill="#829da6" font-size="10" font-family="monospace">*String combiner applies where required by array/inverter design. Final protection and metering follow utility rules and the approved single-line diagram.</text>
+   </svg>
+  </div>
+  <div class="pv-simulator" aria-labelledby="pv-sim-title">
+   <div class="pv-sim-heading"><div><span class="mono">LIVE POWER BALANCE / ILLUSTRATIVE</span><h3 id="pv-sim-title" data-en="On-grid operating point" data-id="Titik operasi PLTS on-grid">On-grid operating point</h3><p data-en="Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative instantaneous-power balance, not live telemetry; it excludes conversion and wiring losses and does not model energy over time." data-id="Atur keluaran PV dan kebutuhan daya fasilitas untuk melihat bagaimana jaringan menyeimbangkan selisihnya. Ini adalah model neraca daya ilustratif, bukan data telemetri fasilitas secara langsung.">Adjust PV output and facility demand to see how the grid balances the difference. This is an illustrative power-balance model, not live plant telemetry.</p></div><span class="pv-sim-chip" data-en="NO BATTERY" data-id="TANPA BATERAI">NO BATTERY</span></div>
+   <div class="pv-sim-controls">
+    <label class="pv-sim-control" for="pvOutput"><span><b data-en="PV generation" data-id="Pembangkitan PV">PV generation</b><output id="pvOutputValue" for="pvOutput">75 kW</output></span><input id="pvOutput" type="range" min="0" max="120" step="1" value="75"><small data-en="Available AC power from the grid-following inverter" data-id="Daya AC tersedia dari inverter grid-following">Available AC power from the grid-following inverter</small></label>
+    <label class="pv-sim-control" for="facilityLoad"><span><b data-en="Facility demand" data-id="Kebutuhan daya fasilitas">Facility demand</b><output id="facilityLoadValue" for="facilityLoad">90 kW</output></span><input id="facilityLoad" type="range" min="0" max="120" step="1" value="90"><small data-en="Instantaneous active-power demand at the LV bus" data-id="Kebutuhan daya aktif sesaat pada bus LV">Instantaneous active-power demand at the LV bus</small></label>
+   </div>
+   <div class="pv-sim-results" aria-live="polite">
+    <div class="pv-sim-result"><span data-en="PV serves load" data-id="PV melayani beban">PV serves load</span><strong id="pvSelfUse">75 kW</strong><small id="pvSelfUsePct">83.3% of facility demand</small></div>
+    <div class="pv-sim-result import"><span data-en="Grid import" data-id="Impor dari jaringan">Grid import</span><strong id="pvGridImport">15 kW</strong><small data-en="Utility supplies the deficit" data-id="Jaringan memasok kekurangan daya">Utility supplies the deficit</small></div>
+    <div class="pv-sim-result export"><span data-en="Grid export" data-id="Ekspor ke jaringan">Grid export</span><strong id="pvGridExport">0 kW</strong><small data-en="Surplus flows to the grid" data-id="Surplus daya dialirkan ke jaringan">Surplus flows to the grid</small></div>
+   </div>
+   <div class="pv-sim-equation"><span data-en="PV → LV BUS → LOAD" data-id="PV → BUS LV → BEBAN">PV → LV BUS → LOAD</span><b id="pvBalanceText">75 kW PV + 15 kW grid = 90 kW load</b></div>
+  </div>
+  <div class="pv-caption">
+   <div><b>01 / DC GENERATION</b><span>PV modules produce DC electricity; string-level protection is applied as designed.</span></div>
+   <div><b>02 / POWER CONVERSION</b><span>Grid-following inverter performs MPPT and DC-to-AC conversion with anti-islanding protection.</span></div>
+   <div><b>03 / AC DISTRIBUTION</b><span>ACDB and the main LV panel provide switching, protection and facility distribution.</span></div>
+   <div><b>04 / GRID INTERACTION</b><span>Facility demand is served first; surplus or deficit is exchanged with PLN through approved metering.</span></div>
+  </div>
+  <p class="pv-footnote" data-en="Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements." data-id="Visualisasi konseptual untuk portofolio, bukan gambar konstruksi. Desain single-line, koordinasi proteksi, pembatasan ekspor, dan skema meter aktual harus direkayasa sesuai profil beban lokasi dan persyaratan interkoneksi PLN.">Conceptual portfolio visualization, not a construction drawing. Actual single-line design, protection coordination, export limitation, and metering arrangement must be engineered to the site's load profile and PLN interconnection requirements.</p>
+</div>
 <div class="outputs"><div class="mono" data-en="MODELLED PROJECT OUTPUT" data-id="HASIL PEMODELAN PROYEK">MODELLED PROJECT OUTPUT</div><div class="primarykpi"><strong>138.24 kWp</strong><span data-en="Rooftop PV system capacity" data-id="Kapasitas sistem PLTS atap">Rooftop PV system capacity</span></div><div class="emissions-viz" role="img" aria-label="Modelled emissions: 42.07 percent avoided and 57.93 percent remaining compared with baseline emissions of 193.42 tonnes of carbon dioxide equivalent">
 <h3 data-en="Modelled emissions impact" data-id="Dampak emisi hasil pemodelan">Modelled emissions impact</h3>
 <p data-en="Illustrative split against the baseline emissions inventory" data-id="Proporsi ilustratif terhadap inventarisasi emisi baseline">Illustrative split against the baseline emissions inventory</p>
@@ -277,12 +568,15 @@
 <div class="skill"><div class="skill-head"><span class="skill-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16"/><path d="m7 15 4-4 3 2 5-7"/><circle cx="7" cy="15" r="1"/><circle cx="11" cy="11" r="1"/><circle cx="14" cy="13" r="1"/><circle cx="19" cy="6" r="1"/></svg></span><small>05 / <span data-en="ANALYTICS" data-id="ANALITIK">ANALYTICS</span></small></div><h3 data-en="Quantitative analysis" data-id="Analisis kuantitatif">Quantitative analysis</h3><p data-en="Monte Carlo simulation · Sobol indices · Permutation importance · Scenario analysis · Multi-criteria analysis · Statistical analysis" data-id="Simulasi Monte Carlo · Indeks Sobol · Permutation importance · Analisis skenario · Analisis multikriteria · Analisis statistik">Monte Carlo simulation · Sobol indices · Permutation importance · Scenario analysis · Multi-criteria analysis · Statistical analysis</p></div>
 <div class="skill"><div class="skill-head"><span class="skill-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 13l-3-3 3.7-3.7Z"/></svg></span><small>06 / <span data-en="ENGINEERING" data-id="REKAYASA">ENGINEERING</span></small></div><h3 data-en="Engineering & product" data-id="Rekayasa & produk">Engineering & product</h3><p data-en="Material specification · Performance analysis · Technical datasheets · New product development · GD&T · MIG/TIG welding" data-id="Spesifikasi material · Analisis kinerja · Technical datasheet · Pengembangan produk baru · GD&T · Pengelasan MIG/TIG">Material specification · Performance analysis · Technical datasheets · New product development · GD&T · MIG/TIG welding</p></div>
 </div><div style="margin-top:30px"><div class="eyebrow" data-en="TOOLS & SOFTWARE" data-id="ALAT & PERANGKAT LUNAK">TOOLS & SOFTWARE</div><div class="pill">Microsoft Excel</div><div class="pill">Power BI</div><div class="pill">Tableau</div><div class="pill">Python</div><div class="pill">R</div><div class="pill">MATLAB</div><div class="pill">MS Project</div><div class="pill">Visio</div><div class="pill">Minitab</div><div class="pill">SPSS</div><div class="pill">Accurate</div><div class="pill">PVsyst</div><div class="pill">SimaPro</div><div class="pill">OpenLCA</div></div></div></section>
+
+
+
 <section class="section paper" id="education"><div class="wrap split"><div class="splithead"><div class="eyebrow">06 / <span data-en="EDUCATION & CREDENTIALS" data-id="PENDIDIKAN & KREDENSIAL">EDUCATION & CREDENTIALS</span></div><h2 data-en="Technical depth.<br><em>Continuous learning.</em>" data-id="Kedalaman teknis.<br><em>Pembelajaran berkelanjutan.</em>">Technical depth.<br><em>Continuous learning.</em></h2></div><div>
 <div class="edurow"><div class="date">2024 — 2026</div><div><h3 data-en="Master of Engineering, Systems and Industrial Engineering" data-id="Magister Teknik Sistem dan Industri">Master of Engineering, Systems and Industrial Engineering</h3><p data-en="Institut Teknologi Sepuluh Nopember (ITS), Surabaya · GPA 3.50 / 4.00" data-id="Institut Teknologi Sepuluh Nopember (ITS), Surabaya · IPK 3,50 / 4,00">Institut Teknologi Sepuluh Nopember (ITS), Surabaya · GPA 3.50 / 4.00</p><p data-en="Management System Engineering and Manufacture Laboratory" data-id="Laboratorium Management System Engineering and Manufacture">Management System Engineering and Manufacture Laboratory</p></div></div>
 <div class="edurow"><div class="date">2018 — 2022</div><div><h3 data-en="Bachelor of Engineering, Industrial Engineering" data-id="Sarjana Teknik, Teknik Industri">Bachelor of Engineering, Industrial Engineering</h3><p data-en="Universitas 17 Agustus 1945 Surabaya · GPA 3.71 / 4.00 · Cum Laude" data-id="Universitas 17 Agustus 1945 Surabaya · IPK 3,71 / 4,00 · Cum Laude">Universitas 17 Agustus 1945 Surabaya · GPA 3.71 / 4.00 · Cum Laude</p></div></div>
 <div class="edurow"><div class="date">2013 — 2016</div><div><h3 data-en="Vocational High School, Light Vehicle Engineering" data-id="SMK Teknik Kendaraan Ringan">Vocational High School, Light Vehicle Engineering</h3><p>SMK Negeri 1 Nganjuk</p></div></div>
 <h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Certifications" data-id="Sertifikasi">Certifications</h3><div class="pill">ISO 9001:2015 Quality Management System</div><div class="pill">ISO 19011 Internal Auditor</div><div class="pill">ISO 2307:2020 Product Testing</div><div class="pill">ISO 1346:2019</div><div class="pill">Certified Supply Chain Analyst Professional (CSCAP)</div>
-<h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Selected honors" data-id="Penghargaan pilihan">Selected honors</h3><p style="font-size:13px;color:#65727b" data-en="4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016." data-id="Juara 4 tingkat regional Wilayah VII dan finalis tingkat provinsi, Kompetisi Debat Mahasiswa Indonesia (KDMI), Kemenristekdikti, 2019 · Penghargaan tugas akhir kategori media, Universitas 17 Agustus 1945 Surabaya, 2022 · Pendanaan MBKM Kredensial Mikro (KMMI), Kemendikbudristek: manajemen bisnis ayam ras petelur, Universitas Muhammadiyah Malang, 2021 · Juara 2 Lomba Debat Bahasa Indonesia, BEM Universitas 17 Agustus 1945 Surabaya, 2018 · Peringkat 1 seangkatan dan beasiswa prestasi, SMK Negeri 1 Nganjuk, 2013–2016.">4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016.</p><p style="font-size:13px;color:#65727b" data-en="<b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL 510)" data-id="<b>Bahasa:</b> Indonesia — Penutur asli · Inggris — Kemahiran kerja profesional (TOEFL 510)"><b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL 510)</p><h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Organizations & activities" data-id="Organisasi & kegiatan">Organizations & activities</h3><p style="font-size:13px;color:#65727b" data-en="Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews." data-id="Sudut Lensa, Kabupaten Nganjuk (2017–2018): menyelenggarakan lomba film pendek tingkat SMA/SMK se-Kabupaten Nganjuk (2017), menulis naskah film, dan bertugas sebagai jurnalis film dokumenter, dari riset hingga wawancara narasumber.">Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews.</p>
+<h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Selected honors" data-id="Penghargaan pilihan">Selected honors</h3><p style="font-size:13px;color:#65727b" data-en="4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016." data-id="Juara 4 tingkat regional Wilayah VII dan finalis tingkat provinsi, Kompetisi Debat Mahasiswa Indonesia (KDMI), Kemenristekdikti, 2019 · Penghargaan tugas akhir kategori media, Universitas 17 Agustus 1945 Surabaya, 2022 · Pendanaan MBKM Kredensial Mikro (KMMI), Kemendikbudristek: manajemen bisnis ayam ras petelur, Universitas Muhammadiyah Malang, 2021 · Juara 2 Lomba Debat Bahasa Indonesia, BEM Universitas 17 Agustus 1945 Surabaya, 2018 · Peringkat 1 seangkatan dan beasiswa prestasi, SMK Negeri 1 Nganjuk, 2013–2016.">4th place (Region VII) and provincial finalist — Indonesian Student Debate Competition (KDMI), Kemenristekdikti, 2019 · Notable undergraduate thesis award (media category), Universitas 17 Agustus 1945 Surabaya, 2022 · MBKM Micro-Credential (KMMI) funding, Kemendikbudristek: layer-hen business management, Universitas Muhammadiyah Malang, 2021 · 2nd place — Indonesian-language debate competition, Student Executive Board, Universitas 17 Agustus 1945 Surabaya, 2018 · Rank 1 in cohort and achievement scholarship, SMK Negeri 1 Nganjuk, 2013–2016.</p><p style="font-size:13px;color:#65727b" data-en="<b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL ITP®: 510)" data-id="<b>Bahasa:</b> Indonesia — Penutur asli · Inggris — Kemahiran kerja profesional (TOEFL ITP 510)"><b>Languages:</b> Indonesian — Native · English — Professional working proficiency (TOEFL ITP 510)</p><h3 style="margin:25px 0 8px;font:700 17px Manrope" data-en="Organizations & activities" data-id="Organisasi & kegiatan">Organizations & activities</h3><p style="font-size:13px;color:#65727b" data-en="Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews." data-id="Sudut Lensa, Kabupaten Nganjuk (2017–2018): menyelenggarakan lomba film pendek tingkat SMA/SMK se-Kabupaten Nganjuk (2017), menulis naskah film, dan bertugas sebagai jurnalis film dokumenter, dari riset hingga wawancara narasumber.">Sudut Lensa, Nganjuk Regency (2017–2018): organized a district-wide high school short film competition (2017), wrote film scripts, and served as journalist for a documentary, from research to interviews.</p>
 </div></div></section>
 <section class="cta" id="contact"><div class="wrap contactgrid"><div><div class="eyebrow">07 / <span data-en="GET IN TOUCH" data-id="HUBUNGI SAYA">GET IN TOUCH</span></div><h2 data-en="Let's turn insight into <em>action.</em>" data-id="Mari ubah insight menjadi <em>aksi.</em>">Let's turn insight into <em>action.</em></h2><p data-en="For professional opportunities, research collaboration, or conversations around industrial systems, energy, and business analysis." data-id="Untuk peluang profesional, kolaborasi riset, atau diskusi seputar sistem industri, energi, dan analisis bisnis.">For professional opportunities, research collaboration, or conversations around industrial systems, energy, and business analysis.</p><a class="email" href="mailto:ianrian980305@gmail.com">ianrian980305@gmail.com ↗</a></div>
 <div class="contactcard"><div class="mono" data-en="CONTACT DETAILS · AGUS RIANTO / 2026" data-id="DETAIL KONTAK · AGUS RIANTO / 2026">CONTACT DETAILS · AGUS RIANTO / 2026</div><small data-en="EMAIL" data-id="EMAIL">EMAIL</small><a href="mailto:ianrian980305@gmail.com">ianrian980305@gmail.com</a><small data-en="PHONE" data-id="TELEPON">PHONE</small><a href="tel:+628930082643">+62 893 008 2643</a><small data-en="LOCATION" data-id="LOKASI">LOCATION</small><span data-en="Nganjuk, East Java, Indonesia" data-id="Nganjuk, Jawa Timur, Indonesia">Nganjuk, East Java, Indonesia</span><div class="downloads"><a href="cv-english.html" data-en="English résumé ↗" data-id="CV Bahasa Inggris ↗">English résumé ↗</a><a href="cv-indonesia.html" data-en="Indonesian CV ↗" data-id="CV Bahasa Indonesia ↗">Indonesian CV ↗</a></div></div></div></section>
@@ -323,6 +617,61 @@
       url.searchParams.set("lang", selected);
       window.history.replaceState({}, "", url.pathname + url.search + url.hash);
     }
+  }
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const primaryNav = document.getElementById("primaryNav");
+  if (menuToggle && primaryNav) {
+    const closeMenu = () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      primaryNav.classList.remove("is-open");
+    };
+    menuToggle.addEventListener("click", () => {
+      const opening = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(opening));
+      menuToggle.setAttribute("aria-label", opening ? "Close navigation" : "Open navigation");
+      primaryNav.classList.toggle("is-open", opening);
+    });
+    primaryNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 850) closeMenu();
+    });
+  }
+  const pvOutput = document.getElementById("pvOutput");
+  const facilityLoad = document.getElementById("facilityLoad");
+  if (pvOutput && facilityLoad) {
+    const fmt = (value) => Number(value).toLocaleString(document.documentElement.lang === "id" ? "id-ID" : "en-US", { maximumFractionDigits: 0 });
+    const updatePowerBalance = () => {
+      const pv = Number(pvOutput.value);
+      const load = Number(facilityLoad.value);
+      const pvToLoad = Math.min(pv, load);
+      const gridImport = Math.max(load - pv, 0);
+      const gridExport = Math.max(pv - load, 0);
+      const selfUse = load > 0 ? (pvToLoad / load) * 100 : 0;
+      document.getElementById("pvOutputValue").textContent = fmt(pv) + " kW";
+      document.getElementById("facilityLoadValue").textContent = fmt(load) + " kW";
+      document.getElementById("pvSelfUse").textContent = fmt(pvToLoad) + " kW";
+      document.getElementById("pvSelfUsePct").textContent = selfUse.toFixed(1) + (document.documentElement.lang === "id" ? "% dari kebutuhan daya" : "% of facility demand");
+      document.getElementById("pvGridImport").textContent = fmt(gridImport) + " kW";
+      document.getElementById("pvGridExport").textContent = fmt(gridExport) + " kW";
+      document.getElementById("pvBalanceText").textContent = pv === 0 && load === 0
+        ? (document.documentElement.lang === "id" ? "Tidak ada pembangkitan atau kebutuhan daya" : "No generation or demand")
+        : gridImport > 0
+          ? (document.documentElement.lang === "id" ? fmt(pvToLoad) + " kW PV + " + fmt(gridImport) + " kW jaringan = " + fmt(load) + " kW beban" : fmt(pvToLoad) + " kW PV + " + fmt(gridImport) + " kW grid = " + fmt(load) + " kW load")
+          : (document.documentElement.lang === "id" ? fmt(pvToLoad) + " kW PV + " + fmt(gridExport) + " kW ekspor = " + fmt(pv) + " kW PV" : fmt(pvToLoad) + " kW PV + " + fmt(gridExport) + " kW exported = " + fmt(pv) + " kW PV");
+      pvOutput.setAttribute("aria-valuetext", fmt(pv) + " kilowatts");
+      facilityLoad.setAttribute("aria-valuetext", fmt(load) + " kilowatts");
+    };
+    pvOutput.addEventListener("input", updatePowerBalance);
+    facilityLoad.addEventListener("input", updatePowerBalance);
+    updatePowerBalance();
+    buttons.forEach((button) => button.addEventListener("click", () => window.setTimeout(updatePowerBalance, 0)));
   }
   buttons.forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.langSwitch)));
   const requested = new URLSearchParams(window.location.search).get("lang");
